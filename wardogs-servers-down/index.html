@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)</title>
+  <meta name="description" content="Is WARDOGS down? Queue, Access Denied, auth-failed after Hotfix #1. Status habit + launch timeline. Last checked 2026-09-14." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-servers-down/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)" />
+  <meta property="og:description" content="Is WARDOGS down? Queue, Access Denied, auth-failed after Hotfix #1. Status habit + launch timeline. Last checked 2026-09-14." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-servers-down/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)" />
+  <meta name="twitter:description" content="Is WARDOGS down? Queue, Access Denied, auth-failed after Hotfix #1. Status habit + launch timeline. Last checked 2026-09-14." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)", "item": "https://thewardogsguide.com/wardogs-servers-down/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Servers Down, Queue, or Access Denied on Steam (EA Status Hub)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#status-habit-every-incident">Status habit (every incident)</a></li>
+      <li><a href="#launch-outage-timeline">Launch outage timeline</a></li>
+      <li><a href="#symptom-matrix-outage-vs-queue-vs-auth-vs-local">Symptom matrix: outage vs queue vs auth vs local</a></li>
+      <li><a href="#wave-queue-do-dont">Wave queue: do / don’t</a></li>
+      <li><a href="#access-denied-auth-failed-after-hotfix-1">Access Denied / auth failed after Hotfix #1</a></li>
+      <li><a href="#rate-limit-context-press-reported">Rate-limit context (press-reported)</a></li>
+      <li><a href="#service-side-ladder">Service-side ladder</a></li>
+      <li><a href="#decision-tree-which-fix-page">Decision tree: which Fix page?</a></li>
+      <li><a href="#support-paste-block">Support paste block</a></li>
+      <li><a href="#region-and-peak-hours">Region and peak hours</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related">Related</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> Launch day (2026-09-10) slammed servers past <strong>~300,000</strong> concurrent (PC Gamer; secondary SteamDB cites ~337k). Bulkhead took services offline, posted on X, and shipped <strong>Launch Stability Hotfix #1</strong>. Expect <strong>wave queues</strong>, then — for some players — <strong>Access Denied / failed to authenticate / WD-LO14</strong> after the update. CM notes (via Bisect): thousands filtering in slowly. This hub is <strong>status triage</strong>, not a fake “FIXED” banner. JOIN TIMEDOUT → <a href="../wardogs-error-1628505091/">Error 1628505091</a>. Crash / Elytra → <a href="../wardogs-crashing/">Crashing</a>. Full code table → <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<figure class="shot"><img alt="Steam Launch Stability Hotfix #1 thread header (public Steam page, not live queue UI) — captured 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Launch Stability Hotfix #1 thread header (public Steam page, not live queue UI) — captured 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="status-habit-every-incident">Status habit (every incident)</h2>
+<p>Never publish a green “servers fixed forever” line. Use a dated checklist:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Where</th>
+<th>Result</th>
+<th>Time (TZ)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam News / WARDOGS announcements</td>
+<td>Steam App 1867240 news</td>
+<td>As of 2026-09-13: <strong>SCHEDULED MAINTENANCE &amp; PATCH 0.11</strong> (servers down ~1h Mon Sep 14 for server-browser update) + historical Hotfix #1</td>
+<td></td>
+</tr>
+<tr>
+<td>Hotfix / status Steam discussions</td>
+<td>e.g. Launch Stability Hotfix #1 thread</td>
+<td>Active flood vs quiet</td>
+<td></td>
+</tr>
+<tr>
+<td>Official X</td>
+<td>https://x.com/WARDOGS</td>
+<td>Latest apology / wave note</td>
+<td></td>
+</tr>
+<tr>
+<td>Official Discord (public invite)</td>
+<td>https://discord.gg/TxKKdspkCp — <strong>live</strong> 2026-09-13 (Discord API: guild <strong>WARDOGS</strong>, ~365k members)</td>
+<td>Announcement channel</td>
+<td></td>
+</tr>
+<tr>
+<td>Your own test: queue / join / error code</td>
+<td>In-client</td>
+<td>Connected / queued / exact code</td>
+<td></td>
+</tr>
+<tr>
+<td>Friends in <strong>same region</strong></td>
+<td>Voice / chat</td>
+<td>Can join? Y/N</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Editorial status line (update live):</strong> As of <strong>2026-09-13</strong>, Early Access is live; launch-day outage and Hotfix #1 are <strong>historical</strong>. Steam News also lists <strong>SCHEDULED MAINTENANCE &amp; PATCH 0.11</strong> for ~1 hour on <strong>Mon Sep 14, 2026</strong> (server browser / community servers focus) — not titled “Hotfix #2.” Whether <em>your</em> region is healthy <strong>now</strong> → re-run the table above. Do not copy Day-1 headlines as current truth.</p>
+<p><strong>CB2 → EA calendar caveat:</strong> Closed Beta 2 ended ~2026-09-06; EA unlocked <strong>2026-09-10</strong>. Gaps in that window were <strong>not</strong> a permanent “servers dead” state. After unlock, re-evaluate with live sources only.</p>
+<h3>Official status channels</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>URL</th>
+<th>Use for</th>
+<th>Caveat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam News (App 1867240)</td>
+<td>Store → News / Steam client</td>
+<td>Patch + Hotfix posts</td>
+<td>Always date-stamp</td>
+</tr>
+<tr>
+<td>Steam Discussions</td>
+<td>Hotfix #1: https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/</td>
+<td>Player flood vs quiet</td>
+<td>Community ≠ official def</td>
+</tr>
+<tr>
+<td>X / Twitter</td>
+<td>https://x.com/WARDOGS (PC Gamer quoted launch apology)</td>
+<td>Short status</td>
+<td>Screenshots age poorly</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>https://discord.gg/TxKKdspkCp</td>
+<td>CM notes / tickets</td>
+<td>Invite resolved live 2026-09-13 (guild WARDOGS); may still rotate later</td>
+</tr>
+<tr>
+<td>Steam Store social row</td>
+<td>Discord, X, TikTok, Facebook, Instagram, QQ on store page</td>
+<td>Discover official handles</td>
+<td>Not a live status feed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="launch-outage-timeline">Launch outage timeline</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What happened</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-10 (EA unlock)</td>
+<td>WARDOGS hits Steam top seller; peak <strong>over 300,000</strong> concurrent (PC Gamer). Secondary cites: SteamDB <strong>~337,157</strong> / press “nearly 338,000”</td>
+<td>Press + SteamDB cites</td>
+</tr>
+<tr>
+<td>Same day</td>
+<td>Players stuck in <strong>login queue</strong>; services slammed</td>
+<td>Press + community</td>
+</tr>
+<tr>
+<td>Same day</td>
+<td>Bulkhead takes servers offline to work a fix; X apology — issue “wasn’t present in the previous beta”</td>
+<td>Press quoting studio X</td>
+</tr>
+<tr>
+<td>Same day (CEO video, per PC Gamer)</td>
+<td>Long queues partly framed as <strong>rate-limited by Valve</strong> (CEO Joe Brammer) — <strong>press-reported</strong> (PC Gamer launch article); not a proven engineering root-cause for <em>your</em> error</td>
+<td>Press</td>
+</tr>
+<tr>
+<td>~1:02 PM PDT</td>
+<td>“Please prepare to download a new Steam client… logged out… server queue… waves” (PC Gamer)</td>
+<td>Press quoting studio</td>
+</tr>
+<tr>
+<td>Sep 10 ~1:28pm (Steam)</td>
+<td><strong>Launch Stability Hotfix #1</strong> — G_Medlin client update + controlled batches (~200+ MB per mp1st)</td>
+<td>Official Steam post</td>
+</tr>
+<tr>
+<td>Immediately after hotfix</td>
+<td>Community reports: Access Denied, authentication failed, <code>WD-LO14-c70b81e405df</code></td>
+<td>Community (not official defs)</td>
+</tr>
+<tr>
+<td>PC Gamer update ~3:13 PM PDT</td>
+<td>Reporter joined a full match; “plenty other servers” looking up</td>
+<td>Press snapshot — <strong>time-bound</strong></td>
+</tr>
+<tr>
+<td>Launch window (Bisect)</td>
+<td>CM LOSSY: thousands in login queue; some players put to <strong>back of the queue</strong>; response “much, much larger than the Beta”</td>
+<td>Press quoting Discord CM</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Steam Launch Stability Hotfix #1 — G_Medlin developer post Sep 10 (public Steam discussion) — captured 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Launch Stability Hotfix #1 — G_Medlin developer post Sep 10 (public Steam discussion) — captured 2026-09-13</figcaption></figure>
+<h3>Hotfix #1 — player-facing steps (studio)</h3>
+<ol>
+<li>Close WARDOGS (forced for logged-in players).</li>
+<li>Download the latest client update.</li>
+<li>Relaunch → return to <strong>login queue</strong>.</li>
+<li>Studio admits players in <strong>controlled batches</strong>, increasing throughput as servers populate cleanly.</li>
+<li>Studio: actively monitoring overnight; apology for inconvenience.</li>
+</ol>
+<p><strong>Intended targets (studio list):</strong> unable to join · unexpected kicks · extended login queues.</p>
+<p><strong>Press add-on (mp1st):</strong> developers may perform <strong>another</strong> server restart after the client hotfix — unexpected logout can be that restart, not a ban.</p>
+<hr/>
+<h2 id="symptom-matrix-outage-vs-queue-vs-auth-vs-local">Symptom matrix: outage vs queue vs auth vs local</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>Lean</th>
+<th>First move</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everyone offline; official “working on it”</td>
+<td>Service outage</td>
+<td>Wait; do not reinstall</td>
+<td>This page</td>
+</tr>
+<tr>
+<td>Long login queue, no error yet</td>
+<td>Wave / capacity</td>
+<td>Stay in queue; avoid spam cancel</td>
+<td>This page</td>
+</tr>
+<tr>
+<td><code>1147405316</code> — Server queue is full</td>
+<td>Capacity on that server</td>
+<td>Other server / later</td>
+<td><a href="../wardogs-error-codes/">Error hub</a></td>
+</tr>
+<tr>
+<td><code>1628505091</code> — JOIN TIMEDOUT</td>
+<td>Join handshake timeout</td>
+<td>Widespread vs local tree</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+<tr>
+<td>Access Denied (no ban reason) after Hotfix</td>
+<td>Auth / wave gate (community)</td>
+<td>Full Steam exit + retry later</td>
+<td>This page</td>
+</tr>
+<tr>
+<td>Failed to authenticate / online services</td>
+<td>Auth spillover</td>
+<td>Status → wait → then local</td>
+<td>This page + Crash triage</td>
+</tr>
+<tr>
+<td><code>1147405308</code> (public lead: authenticate / queue)</td>
+<td>Auth / queue</td>
+<td>Same as above</td>
+<td>Error hub</td>
+</tr>
+<tr>
+<td><code>1147405307</code> + Cheating / Permanent / banned</td>
+<td>Account action</td>
+<td>Screenshot + official appeal</td>
+<td>Error hub</td>
+</tr>
+<tr>
+<td><code>WD-LO14-…</code> (community post-hotfix)</td>
+<td>public lead — Steam Hotfix #1 reply <code>WD-LO14-c70b81e405df</code>; official meaning none found</td>
+<td>Do not invent meaning</td>
+<td>Error hub + Crash</td>
+</tr>
+<tr>
+<td>Crash dialog / Elytra / never reaches menu</td>
+<td>Local client</td>
+<td>Leave status hub</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Queue / auth: symptom → step</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>More likely</th>
+<th>Next</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Queue advances slowly; no error</td>
+<td>Wave admission working as designed</td>
+<td>Stay seated; screenshot position + clock</td>
+<td>Cancel every minute</td>
+</tr>
+<tr>
+<td>Queue kicks you to back (CM-reported pattern)</td>
+<td>Overload / fair-share churn</td>
+<td>Wait; re-check X/Discord once</td>
+<td>Accuse ban</td>
+</tr>
+<tr>
+<td>Auth error while friends still queued</td>
+<td>Shared auth shard stress</td>
+<td>Status check; Steam Exit once</td>
+<td>GPU driver wipe</td>
+</tr>
+<tr>
+<td>Auth error only on you; friends in-match</td>
+<td>Account/client/local</td>
+<td>Hotfix confirm → verify → Crash if launch fails</td>
+<td>Spam requeue</td>
+</tr>
+<tr>
+<td>Access Denied <strong>with</strong> Cheating + Permanent</td>
+<td>Ban-style dialog</td>
+<td>Error hub appeal path</td>
+<td>“Unban tools”</td>
+</tr>
+<tr>
+<td>Access Denied <strong>without</strong> ban fields</td>
+<td>Auth/wave spillover</td>
+<td>This ladder</td>
+<td>Assume permanent ban</td>
+</tr>
+<tr>
+<td>Blank browser after queue</td>
+<td>Service / region</td>
+<td>Status; one region check</td>
+<td>Distant-region hop as first fix</td>
+</tr>
+<tr>
+<td>Join timeout after successful queue exit</td>
+<td>Handshake</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+<td>Stay only on this page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="wave-queue-do-dont">Wave queue: do / don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Behavior</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stay in queue once you are in it</td>
+<td>CEO comment (via PC Gamer): “I wouldn’t leave the queue” during rate-limit talk — still a <strong>press-reported</strong> tip, not a law</td>
+</tr>
+<tr>
+<td>Finish Hotfix download before judging queue length</td>
+<td>Old client + new gate = false negatives</td>
+</tr>
+<tr>
+<td>Do not interpret “queue moved then kicked” as a ban</td>
+<td>Post-hotfix kicks → auth/wave path first; CM also described back-of-queue placements</td>
+</tr>
+<tr>
+<td>Screenshot queue position + clock if you need support later</td>
+<td>Timezones matter for incident matching</td>
+</tr>
+<tr>
+<td>Expect waves, not a single unlock</td>
+<td>Studio: controlled batches, then gradual increase</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Steam discussions pinned row including SCHEDULED MAINTENANCE &amp; PATCH 0.1 / Hotfix context (public Steam page, not live queue UI) — 2026-09-13" loading="lazy" src="../assets/shots/steam-discussions-pinned.webp"/><figcaption>Steam discussions pinned row including SCHEDULED MAINTENANCE &amp; PATCH 0.1 / Hotfix context (public Steam page, not live queue UI) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="access-denied-auth-failed-after-hotfix-1">Access Denied / auth failed after Hotfix #1</h2>
+<p><strong>Facts we can state:</strong> In the locked Hotfix #1 Steam thread, multiple players reported <strong>Access Denied</strong>, <strong>authentication doesn’t work</strong>, <strong>server auth failed</strong>, and <strong>failed to authenticate online services</strong> within minutes of the update. Separate posts mentioned <strong>Unable to launch</strong> with <code>WD-LO14-c70b81e405df</code>. Bisect (Sep 10) maps public lead <code>1147405308</code> to <em>Failed to Authenticate With Online Services</em> and quotes CM LOSSY on Discord about thousands filtering into servers.</p>
+<p><strong>Facts we must not invent:</strong> Official glossary entries for those strings; exact retry timers; “Valve rate-limit” as proven cause of <em>your</em> Access Denied; Discord ticket counts as forever-true.</p>
+<h3>Auth / Access Denied ladder</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Confirm Hotfix client finished downloading</td>
+<td>Steam → Downloads (mp1st: ~200+ MB class update)</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Steam → <strong>Exit</strong> (full quit), relaunch Steam, launch WARDOGS once</td>
+<td>Fresh ticket</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Re-check X / Steam News / Discord for a known auth incident</td>
+<td>If widespread → wait</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Verify library ownership / correct Steam account</td>
+<td>Wrong account ≠ outage</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Retry after a cooldown (15–30+ min during waves)</td>
+<td>Do not hammer</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Only if services look healthy: verify game files</td>
+<td>Last before reinstall</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>If crash/Elytra / WD-LO14 symptoms appear</td>
+<td>Switch to <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>If explicit ban text appears</td>
+<td>Screenshot → official appeal — not this ladder</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Ban ≠ every Access Denied.</strong> Explicit <em>Reason: Cheating</em> + <em>Permanent</em> + <em>banned</em> (public <code>1147405307</code> framing) is a different document — save it and use official support/appeal. Timeout and generic Access Denied are <strong>not</strong> that dialog.</p>
+<h3>Community paraphrases (Hotfix #1 thread — not definitions)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Player report</th>
+<th>Source</th>
+<th>Triage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kicked, then Access Denied after Hotfix</td>
+<td>Steam Hotfix #1 replies</td>
+<td>Auth/wave ladder</td>
+</tr>
+<tr>
+<td>“failed to authenticate online services” after update</td>
+<td>same</td>
+<td>Treat like <code>1147405308</code> cluster</td>
+</tr>
+<tr>
+<td>“server auth failed”</td>
+<td>same</td>
+<td>Servers hub, not Crash</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="rate-limit-context-press-reported">Rate-limit context (press-reported)</h2>
+<p>PC Gamer summarized a Bulkhead CEO video suggesting long queues were partly due to being <strong>rate-limited by Valve</strong>, with a desire for higher platform tiers. Quote (press): <em>“I wouldn’t leave the queue, I’d just stay in.”</em></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Press reported CEO mentioning Valve rate limits</td>
+<td>Cite PC Gamer (2026-09-10)</td>
+</tr>
+<tr>
+<td>Players should “just stay in queue”</td>
+<td>Press-quoted advice; sensible during waves, not a forever rule</td>
+</tr>
+<tr>
+<td>Buying a VPN bypasses Valve rate limits</td>
+<td><strong>Do not claim</strong></td>
+</tr>
+<tr>
+<td>CM “thousands in queue / some sent to back”</td>
+<td>Bisect quoting LOSSY — capacity/ops signal, not ban</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="service-side-ladder">Service-side ladder</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>Stop if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Confirm EA unlocked for your account/region</td>
+<td>Pre-unlock calendar confusion</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Official / Steam / X / Discord status check</td>
+<td>Widespread → wait</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Hotfix #1 close → download → relaunch</td>
+<td>Update stuck → Steam restart</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Sit wave queue; avoid spam</td>
+<td>Auth Denied flood → cooldown</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>One alternate server if browser works</td>
+<td>All servers fail → status</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Full Steam Exit + single retry</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Hotspot/Ethernet <strong>test</strong> only on local branch</td>
+<td>See <a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Verify files</td>
+<td>Still failing with crash → Crash page</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Reinstall</td>
+<td>Absolute last resort; never for capacity errors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="decision-tree-which-fix-page">Decision tree: which Fix page?</h2>
+<pre><code class="language-text">Can’t play WARDOGS right now?
+│
+├─ Crash / black screen / won’t start / Elytra repair / WD-LO14?
+│  └─ YES → ../wardogs-crashing/
+│
+├─ JOIN TIMEDOUT + 1628505091?
+│  └─ YES → ../wardogs-error-1628505091/
+│
+├─ Explicit Cheating + Permanent + banned text?
+│  └─ YES → ../wardogs-error-codes/ (appeal path) — not “wait it out”
+│
+├─ Queue / servers offline / Access Denied (no ban) / auth failed / queue full?
+│  └─ YES → THIS PAGE (../wardogs-servers-down/)
+│
+└─ Unknown numeric code?
+   └─ ../wardogs-error-codes/ → then bounce to the matching spoke
+</code></pre>
+<h3>Boundary cases</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Branch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Queue OK → join timeout</td>
+<td>1628505091 spoke</td>
+</tr>
+<tr>
+<td>Auth dialog with no crash dump</td>
+<td>Stay here</td>
+</tr>
+<tr>
+<td>Auth dialog <strong>and</strong> crash dump / Elytra log</td>
+<td>Crash spoke after one status check</td>
+</tr>
+<tr>
+<td>Pre-Sep 10 “can’t connect” screenshots</td>
+<td>Calendar, not evergreen outage</td>
+</tr>
+<tr>
+<td>Friends in-match; you Access Denied without ban text</td>
+<td>Local/account ladder (steps 1–6) before panic</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="support-paste-block">Support paste block</h2>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Client update / Hotfix #1: installed Y/N — date
+Symptom: queue / Access Denied / auth failed / can’t connect / no servers / WD-LO14…
+Exact on-screen text: 
+Time (timezone): 
+Region: 
+Widespread?: yes/no/unknown
+Status checks done: Steam News / X @WARDOGS / Discord / friends
+Already tried: Hotfix restart / Steam Exit / wait / verify
+Screenshot: attached
+</code></pre>
+<hr/>
+<h2 id="region-and-peak-hours">Region and peak hours</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Read</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failures only at evening peak in your region</td>
+<td>Capacity / route congestion</td>
+<td>Off-peak retry; other server</td>
+</tr>
+<tr>
+<td>Failures only on one named server</td>
+<td>Session/instance problem</td>
+<td>Pick another; don’t chase 1–2 slots</td>
+</tr>
+<tr>
+<td>Failures everywhere + official quiet</td>
+<td>Could still be regional ISP routing</td>
+<td>Hotspot test; then wait</td>
+</tr>
+<tr>
+<td>Friends join instantly; you never leave queue</td>
+<td>Account/client/local path</td>
+<td>Hotfix confirm + Steam Exit + verify</td>
+</tr>
+<tr>
+<td>Pre-EA “can’t connect” screenshots from Sep 7–9</td>
+<td>Calendar gap, not evergreen outage</td>
+<td>Ignore as current evidence</td>
+</tr>
+<tr>
+<td>Post-Hotfix auth storm then quiet</td>
+<td>Spillover cleared for many; not for all</td>
+<td>Re-check live status before deep repair</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Do / Don’t for status incidents</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date-stamp every “down” claim</td>
+<td>Recycle Sep 10 headlines as today’s status</td>
+</tr>
+<tr>
+<td>Keep Hotfix client current</td>
+<td>Assume beta stability = EA stability</td>
+</tr>
+<tr>
+<td>Separate queue full vs auth vs timeout</td>
+<td>Call every failure a ban</td>
+</tr>
+<tr>
+<td>Link Crash when the client dies locally</td>
+<td>Change GPU settings to “fix” servers</td>
+</tr>
+<tr>
+<td>Treat Valve rate-limit talk as press context</td>
+<td>Promise VPN bypasses platform limits</td>
+</tr>
+<tr>
+<td>Quote CM queue notes as ops context</td>
+<td>Invent official error-code dictionaries</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Are WARDOGS servers down right now?</strong><br/>
+A: Re-run the status habit table (Steam News, Hotfix thread quiet vs flood, X @WARDOGS, Discord, your own join test). Launch-day downtime (Sep 10) is documented by PC Gamer + studio posts; that is <strong>not</strong> automatically true on 2026-09-13. Never trust an undated blog “FIXED” badge.</p>
+<p><strong>Q: How bad was launch concurrency?</strong><br/>
+A: PC Gamer: peak <strong>over 300,000</strong> and Steam top seller. Secondary public cites put SteamDB near <strong>337k–338k</strong>. Treat “over 300k” as the press-safe floor; exact SteamDB peak → cite SteamDB live if you need precision.</p>
+<p><strong>Q: Why was launch so rough after multiple betas?</strong><br/>
+A: Studio (via X, quoted by PC Gamer) said the issue “wasn’t present in the previous beta.” Final closed beta even invited players to “obliterate our servers.” Peak concurrency still overwhelmed live EA.</p>
+<p><strong>Q: What is Launch Stability Hotfix #1?</strong><br/>
+A: A Sep 10 client update from G_Medlin for unable-to-join, unexpected kicks, and extended queues, with controlled batch login afterward. mp1st described a <strong>200+ MB</strong> download and possible further server restarts.</p>
+<p><strong>Q: Access Denied after the hotfix — am I banned?</strong><br/>
+A: Treat as auth/wave first unless the dialog explicitly states cheating/permanent ban language. Steam Hotfix replies (paraphrased) flooded with Access Denied / auth failed without ban fields. See Error hub for <code>1147405307</code> contrast.</p>
+<p><strong>Q: What does community manager LOSSY say about the queue?</strong><br/>
+A: Bisect quotes LOSSY: thousands in the login queue slowly filtering in; some players put to the back of the queue; response much larger than Beta — hang tight. That is ops messaging, not an error-code definition.</p>
+<p><strong>Q: Did Valve rate-limit WARDOGS?</strong><br/>
+A: PC Gamer reported CEO Joe Brammer comments suggesting rate limits contributed to long queues, plus “I wouldn’t leave the queue.” Treat as <strong>press-reported</strong> (not proven for your session). Do <strong>not</strong> claim a VPN bypasses platform limits.</p>
+<p><strong>Q: Should I reinstall because the queue is long?</strong><br/>
+A: No. Reinstalling does not add server capacity or raise platform rate limits.</p>
+<p><strong>Q: Where does JOIN TIMEDOUT go?</strong><br/>
+A: <a href="../wardogs-error-1628505091/">WARDOGS Error 1628505091</a>.</p>
+<p><strong>Q: Where do Elytra / crash-to-desktop / WD-LO14 issues go?</strong><br/>
+A: <a href="../wardogs-crashing/">Crashing or Won’t Launch — Elytra</a>. Store feature tag (2026-09-13): <strong>Uses Kernel Level Anti-Cheat Elytra</strong>.</p>
+<p><strong>Q: Which official channels should I watch?</strong><br/>
+A: Steam News for App 1867240 (incl. Patch 0.11 maintenance notice), X https://x.com/WARDOGS, and Discord invite https://discord.gg/TxKKdspkCp (resolved live 2026-09-13 to guild WARDOGS).</p>
+<hr/>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="../wardogs-error-1628505091/">Error 1628505091 / JOIN TIMEDOUT</a></li>
+<li><a href="../wardogs-error-codes/">Error Codes Hub</a></li>
+<li><a href="../wardogs-crashing/">Crashing / Won’t Launch — Elytra</a></li>
+<li><a href="../how-to-play-wardogs/">How to Play — First Match</a> — once you can connect</li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>PC Gamer — servers down / 300k launch rush (Sep 10, 2026): https://www.pcgamer.com/games/fps/wardogs-servers-go-down-as-over-300-000-people-rush-to-play-on-launch-day/  </li>
+<li>Steam — Launch Stability Hotfix #1: https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>mp1st — Hotfix / 200+ MB / extra server restart: https://mp1st.com/news/war-dogs-receives-hotfix-launch-day-players-encounter-server-instability-downtime  </li>
+<li>BisectHosting — 1147405308 authenticate + CM LOSSY quote: https://www.bisecthosting.com/blog/wardogs-error-code-1147405308-failed-to-authenticate-with-online-services-what-it-means-how-to-fix  </li>
+<li>GearUP — error code dialogs (capacity / timeout / ban framing): https://www.gearupbooster.com/blog/wardogs-error-codes.html  </li>
+<li>Nerdschalk — 1628505091: https://nerdschalk.com/fix-wardogs-error-1628505091-failed-to-connect/  </li>
+<li>ValoSettings — SteamDB peak cite ~337,157: https://www.valosettings.com/news/wardogs-server-status-is-wardogs-down-now/  </li>
+<li>Steam Store — WARDOGS (Elytra, social links): https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>X — @WARDOGS: https://x.com/WARDOGS  </li>
+<li>Discord invite (public, confirm the invite is current): https://discord.gg/TxKKdspkCp</li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-error-1628505091/">Error 1628505091 / JOIN TIMEDOUT</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-error-codes/">WARDOGS error codes hub</a></li>
+      <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

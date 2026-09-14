@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)</title>
+  <meta name="description" content="WARDOGS maps and objectives: Control Zone rules, Bakurani/Ozeti/Zestafona status, POI types. Editorial, not a map tool. Last checked 2026-09-13." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-maps/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)" />
+  <meta property="og:description" content="WARDOGS maps and objectives: Control Zone rules, Bakurani/Ozeti/Zestafona status, POI types. Editorial, not a map tool. Last checked 2026-09-13." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-maps/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)" />
+  <meta name="twitter:description" content="WARDOGS maps and objectives: Control Zone rules, Bakurani/Ozeti/Zestafona status, POI types. Editorial, not a map tool. Last checked 2026-09-13." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Info", "item": "https://thewardogsguide.com/wardogs-info/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)", "item": "https://thewardogsguide.com/wardogs-maps/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/">Fixes</a>
+        <a href="../wardogs-maps/" aria-current="page" class="is-active">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip is-active">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-info/">Info</a></li>
+        <li aria-current="page">WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 13 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Maps and Objectives — Control Zones, POIs, and Match Goals (EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#match-goals-at-a-glance-store-press-indie-framing">Match goals at a glance (store + press + indie framing)</a></li>
+      <li><a href="#known-maps-bakurani-ozeti-zestafona-status-dated-leads">Known maps: Bakurani / Ozeti / Zestafona (status + dated leads)</a></li>
+      <li><a href="#bakurani-play-areas-allthings-sep-13-2026">Bakurani play areas (allthings Sep 13, 2026)</a></li>
+      <li><a href="#ozeti-play-areas-allthings-sep-13-2026">Ozeti play areas (allthings Sep 13, 2026)</a></li>
+      <li><a href="#zestafona-status-caution">Zestafona (status caution)</a></li>
+      <li><a href="#tower-count-conflict-table-maps-towers-page">Tower-count conflict table (maps ↔ towers page)</a></li>
+      <li><a href="#control-zone-rules-what-matters-in-a-fight">Control Zone rules (what matters in a fight)</a></li>
+      <li><a href="#poi-types-towers-settlements-industry">POI types: towers, settlements, industry</a></li>
+      <li><a href="#hot-zone-vs-control-zone-vs-towers-one-screen-summary">Hot Zone vs Control Zone vs towers (one-screen summary)</a></li>
+      <li><a href="#first-match-map-orientation-10-minutes">First-match map orientation (10 minutes)</a></li>
+      <li><a href="#what-this-page-is-not">What this page is not</a></li>
+      <li><a href="#callout-sheet-template">Callout sheet template</a></li>
+      <li><a href="#squad-map-callouts-editorial">Squad map callouts (editorial)</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read">Also read</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> Editorial maps &amp; objectives page for Steam Early Access WARDOGS — not an interactive MetaForge-style map clone. Store-backed match framing (Steam store 2026-09-13): <strong>PC Windows</strong>, <strong>~100 players / 3 teams</strong>, <strong>Control Zone ~2×2 km</strong>, <strong>first to 100 points</strong>. MetaForge map hub captured 2026-09-13 lists <strong>Bakurani</strong>, <strong>Ozeti</strong>, and <strong>Zestafona</strong> each as <strong>Playable now</strong> (earlier “not yet in rotation” copy is outdated vs this capture). Play-area rotations and tower counts below remain <strong>dated third-party leads</strong> — live play-area counts stay public leads until match HUD screenshots. POI types: <strong>towers</strong>, <strong>settlements</strong>, <strong>industry</strong>, plus FOB/build space. <strong>Hot Zone</strong> double-cash (store) + presence-double public lead → <a href="../wardogs-towers-hot-zone/">Towers + Hot Zone</a>. First-match checklist → <a href="../how-to-play-wardogs/">How to Play</a>. Cash rules → <a href="../wardogs-economy-starter-loadout/">Economy</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<figure class="shot"><img alt="MetaForge WARDOGS interactive maps hub — Bakurani / Ozeti / Zestafona cards (public page, not live client) — captured 2026-09-13" loading="lazy" src="../assets/shots/metaforge-maps-list.webp"/><figcaption>MetaForge WARDOGS interactive maps hub — Bakurani / Ozeti / Zestafona cards (public page, not live client) — captured 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="match-goals-at-a-glance-store-press-indie-framing">Match goals at a glance (store + press + indie framing)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Store / press lead</th>
+<th>Indie map-guide lead</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform</td>
+<td>PC Windows Steam Early Access (EA since Sep 10 2026)</td>
+<td>—</td>
+<td>Confirmed store</td>
+</tr>
+<tr>
+<td>Players / teams</td>
+<td>~100 players, 3 teams (Steam store About + EA blurb, 2026-09-13)</td>
+<td>~33 per faction; Lonestar / Valkyra / Manticore (MetaForge 2026-09-13)</td>
+<td>Store framing confirmed; lobby UI labels still public lead</td>
+</tr>
+<tr>
+<td><strong>Control Zone</strong> size</td>
+<td>~<strong>2×2 km</strong> (Steam store About, 2026-09-13)</td>
+<td>Play area ~<strong>500–550 m</strong> radius; scoring core ~<strong>85 m</strong> (allthings)</td>
+<td><strong>Size conflict</strong> — store 2×2 km vs indie core; public lead — allthings for core</td>
+</tr>
+<tr>
+<td>Win condition</td>
+<td>First to <strong>100 points</strong> (Steam store About, 2026-09-13)</td>
+<td>Same</td>
+<td>Store win condition confirmed; tick UI labels still public lead</td>
+</tr>
+<tr>
+<td>Point ticks</td>
+<td>Press/community often cite timed ticks</td>
+<td>~<strong>30 seconds</strong>; most bodies in zone (games.gg / allthings)</td>
+<td>public lead — games.gg / allthings</td>
+</tr>
+<tr>
+<td><strong>Hot Zone</strong></td>
+<td>Store: <strong>double cash</strong> (Steam store About, 2026-09-13)</td>
+<td>Double presence + extra cash (MetaForge + allthings + games.gg, 2026-09-13)</td>
+<td>Cash = store fact; presence = public lead — MetaForge/allthings/games.gg agree</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>Cash persists match to match (store)</td>
+<td>Economy page</td>
+<td>HUD</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Win-condition decision tree</h3>
+<pre><code>Are you inside the active Control Zone scoring rules? NO → Reposition toward zone / team objective (HUD markers) YES → Is your team leading toward 100 pts? ├─ YES → Hold POIs, deny enemy ticks, don’t grief bankroll └─ NO → Contested POI (tower / settlement / industry) or Hot Zone plan
+Need double cash? → Hot Zone path on./wardogs-towers-hot-zone/
+Still learning spawns?./how-to-play-wardogs/</code></pre>
+<hr/>
+<h2 id="known-maps-bakurani-ozeti-zestafona-status-dated-leads">Known maps: Bakurani / Ozeti / Zestafona (status + dated leads)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Map name</th>
+<th>In EA rotation? (dated lead)</th>
+<th>UI label exact?</th>
+<th>Notes / POI density lead</th>
+<th>Last checked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bakurani</td>
+<td>MetaForge hub: <strong>Playable now</strong> (capture 2026-09-13)</td>
+<td>public lead — MetaForge card title</td>
+<td>River-valley; 3 play areas (allthings)</td>
+<td>2026-09-13</td>
+</tr>
+<tr>
+<td>Ozeti</td>
+<td>MetaForge hub: <strong>Playable now</strong> (capture 2026-09-13)</td>
+<td>public lead — MetaForge card title</td>
+<td>Western Europe river basin; Control Zone rotates among <strong>four</strong> positions (MetaForge)</td>
+<td>2026-09-13</td>
+</tr>
+<tr>
+<td>Zestafona</td>
+<td>MetaForge hub: <strong>Playable now</strong> (capture 2026-09-13; earlier “not yet in rotation” wording obsolete vs this capture)</td>
+<td>public lead — MetaForge card title</td>
+<td>North America river-bend (MetaForge); allthings guide also exists</td>
+<td>2026-09-13</td>
+</tr>
+<tr>
+<td>Other / renamed</td>
+<td>public lead — older MetaForge “Kavkazi” naming</td>
+<td>—</td>
+<td>Confirm load-screen UI name in-match</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="bakurani-play-areas-allthings-sep-13-2026">Bakurani play areas (allthings Sep 13, 2026)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Play area</th>
+<th>Position lead</th>
+<th>Pick weight</th>
+<th>Drill towers (dated)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>SW of centre</td>
+<td><strong>2×</strong> (most common)</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>Farmland</td>
+<td>N of centre</td>
+<td>1×</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>Lumberyard</td>
+<td>SE of centre</td>
+<td>1×</td>
+<td><strong>3</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Terrain sketch (editorial, not a pin dump): apartments/residential, factory + containers, hill town + bridge, sunflower fields/church, lumber hills, market swamp, north river, scrub flanks. Overall towers table elsewhere cites <strong>7 + 4 abandoned</strong> — <strong>conflicts</strong> with play-area 5/5/3; prefer play-area counts + live screenshot.</p>
+<p><strong>Approach tip (allthings):</strong> no respawn countdown — die → HQ; travel time is the tax. Valley road is fast and ambushed; budget transport (Economy).</p>
+<hr/>
+<h2 id="ozeti-play-areas-allthings-sep-13-2026">Ozeti play areas (allthings Sep 13, 2026)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Play area</th>
+<th>In rotation?</th>
+<th>Towers in radius (dated)</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Yes (equal odds)</td>
+<td><strong>4</strong></td>
+<td>Town + stadium; busiest</td>
+</tr>
+<tr>
+<td>Church</td>
+<td>Yes</td>
+<td><strong>3</strong></td>
+<td>High ground under church</td>
+</tr>
+<tr>
+<td>River</td>
+<td>Yes</td>
+<td><strong>2</strong></td>
+<td>Greener NW; fewer code sources</td>
+</tr>
+<tr>
+<td>Farmland</td>
+<td><strong>No</strong> — transit only</td>
+<td>1 tower cited in zone definition</td>
+<td>Corridor, not objective host</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Battlefield span cited ~16.32 km; contested circle stays small. MetaForge: <strong>Control Zone</strong> rotates among <strong>four positions</strong> language vs allthings three-of-four — note as soft conflict on wording.</p>
+<hr/>
+<h2 id="zestafona-status-caution">Zestafona (status caution)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Dated lead</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Playability</td>
+<td>MetaForge hub (2026-09-13 capture): <strong>Playable now</strong> (supersedes earlier “not yet in rotation” copy)</td>
+<td>public lead — MetaForge; confirm via load screen</td>
+</tr>
+<tr>
+<td>Towers</td>
+<td>Discussed; counts unknown / unverified for live matches</td>
+<td>Do not invent</td>
+</tr>
+<tr>
+<td>Interactive tools</td>
+<td>MetaForge / wardogstools / artillery maps may show terrain</td>
+<td>Not a substitute for rotation proof</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="tower-count-conflict-table-maps-towers-page">Tower-count conflict table (maps ↔ towers page)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Source</th>
+<th>Conflict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bakurani 7 (+4 abandoned)</td>
+<td>allthings towers table Sep 12</td>
+<td>vs Bakurani guide 5/5/3 by play area Sep 13</td>
+</tr>
+<tr>
+<td>Ozeti 4 flat</td>
+<td>allthings towers table</td>
+<td>vs Ozeti guide 4/3/2 by play area</td>
+</tr>
+<tr>
+<td>“3–5 towers” generic</td>
+<td>games.gg beginner / tpose</td>
+<td>Matches play-area variance better than flat 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Full digit/keypad/drill flow → <a href="../wardogs-towers-hot-zone/">Towers</a>. <strong>Do not</strong> paste contested tower counts as eternal facts.</p>
+<hr/>
+<h2 id="control-zone-rules-what-matters-in-a-fight">Control Zone rules (what matters in a fight)</h2>
+<p>The <strong>Control Zone</strong> is the <strong>match’s scoring theater</strong>, not merely “the middle of the map.”</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Guidance</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Store vs indie size</td>
+<td>Store ~2×2 km vs ~85 m scoring core</td>
+<td>Resolve with screenshot scale</td>
+</tr>
+<tr>
+<td>Three-team pressure</td>
+<td>Flank ≠ empty; third team may collapse your hold</td>
+<td>Store 3-team framing</td>
+</tr>
+<tr>
+<td>Verticality</td>
+<td>Towers dominate sightlines (GameRant-class guides)</td>
+<td>Live</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Control Zone presence checklist</h3>
+<ul>
+<li>[ ] Locate zone edge markers on HUD/map</li>
+<li>[ ] Identify active <strong>play area</strong> name if shown  </li>
+<li>[ ] Identify nearest friendly FOB / spawn logic</li>
+<li>[ ] Identify one tower, one settlement cluster, one industrial hardpoint  </li>
+<li>[ ] Agree with squad: hold vs roam vs <strong>Hot Zone</strong> contest  </li>
+<li>[ ] Watch score — leave ego fights that don’t buy ticks  </li>
+</ul>
+<h3>Objective flow diagram</h3>
+<pre><code class="language-text">Match loads map (Bakurani / Ozeti / …)
+  → Play area selected (weighted / equal odds)
+    → Control Zone scoring core active
+      → Hot Zone roams inside
+        → Live towers in that area feed code digits
+          → Keypad / FOB drill can pull Hot Zone
+            → First faction to 100 match points wins
+</code></pre>
+<hr/>
+<h2 id="poi-types-towers-settlements-industry">POI types: towers, settlements, industry</h2>
+<p>Editorial categories for callouts — <strong>not</strong> an interactive pin dump.</p>
+<h3>1) Towers</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Public lead</th>
+<th>This site’s home</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Hardpoint + digit toward drill code; pull <strong>Hot Zone</strong></td>
+<td><a href="../wardogs-towers-hot-zone/">Towers + Hot Zone</a></td>
+</tr>
+<tr>
+<td>Keypad / drill</td>
+<td>Full digit set → pad → <strong>Hot Zone</strong> pull</td>
+<td>Towers flowchart</td>
+</tr>
+<tr>
+<td>Roof loot</td>
+<td>Random helpful equipment (allthings)</td>
+<td>Exposure risk</td>
+</tr>
+<tr>
+<td>Why fight</td>
+<td>Sightlines, AA, fortress with FOB</td>
+<td>Live</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>2) Settlements</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Editorial note</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bakurani examples</td>
+<td>Apartments, residential quarter, hill town</td>
+<td>allthings</td>
+</tr>
+<tr>
+<td>Ozeti examples</td>
+<td>Residential pockets, shops, apartments/garages, stadium frontage</td>
+<td>allthings</td>
+</tr>
+<tr>
+<td>Why contest</td>
+<td>Ambush lanes, spawn pressure, staging for towers</td>
+<td>Live</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>3) Industry</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Editorial note</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Examples</td>
+<td>Factory + shipping containers; lumberyard stands; stadium complex</td>
+<td>allthings</td>
+</tr>
+<tr>
+<td>Why contest</td>
+<td>Vehicle routes, long sightlines, build space</td>
+<td>Live</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Open yards punish poor armor choices</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Vehicle spend on Economy page</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>4) FOBs / player-built space</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Editorial note</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vs tower drill</td>
+<td>Public guides: FOB drills need fuel &amp; can be destroyed; tower drills differ</td>
+<td>Towers page</td>
+</tr>
+<tr>
+<td>Spend</td>
+<td>Building kits cost cash; FOB vendor price conflict $2.5k vs $7.5k</td>
+<td>Economy conflict table</td>
+</tr>
+<tr>
+<td>Site tip</td>
+<td>Build into existing structures (church/stadium/tower) before activating pull</td>
+<td>allthings oil</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Official Steam store screenshot — settlement/industrial combat framing (public store media, not live client) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-infantry.webp"/><figcaption>Official Steam store screenshot — settlement/industrial combat framing (public store media, not live client) — 2026-09-13</figcaption></figure>
+<figure class="shot"><img alt="Official Steam store screenshot — armor/vehicles (public store media, not live client) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-armor.webp"/><figcaption>Official Steam store screenshot — armor/vehicles (public store media, not live client) — 2026-09-13</figcaption></figure>
+<figure class="shot"><img alt="Official Steam store screenshot — overview battlefield (public store media, not live client) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-overview.webp"/><figcaption>Official Steam store screenshot — overview battlefield (public store media, not live client) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="hot-zone-vs-control-zone-vs-towers-one-screen-summary">Hot Zone vs Control Zone vs towers (one-screen summary)</h2>
+<p>Full flowchart lives on the Towers page; keep this editorial and short.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Purpose</th>
+<th>Cash / score impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Play area</td>
+<td>Which slice of the map hosts the zone this match</td>
+<td>Changes which towers are live</td>
+</tr>
+<tr>
+<td>Tower capture / hack</td>
+<td>Digit toward code</td>
+<td>Enables drill / <strong>Hot Zone</strong> pull per guides</td>
+</tr>
+<tr>
+<td>Keypad + tower drill</td>
+<td>Spend code to pull <strong>Hot Zone</strong></td>
+<td>Contest magnet</td>
+</tr>
+<tr>
+<td>FOB drill</td>
+<td>Alternate pull with logistics</td>
+<td>Fuel / destroyable leads</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre><code>Control Zone (score to 100)
+  └─ POIs: towers | settlements | industry | FOBs
+        └─ Towers → digits → keypad → Hot Zone pull
+              └─ Hot Zone → double cash (store) + fights
+</code></pre>
+<hr/>
+<h2 id="first-match-map-orientation-10-minutes">First-match map orientation (10 minutes)</h2>
+<p>Use with <a href="../how-to-play-wardogs/">How to Play</a>:</p>
+<ol>
+<li>Read the map name on load — screenshot it.  </li>
+<li>Identify play area if listed (Default / Farmland / Church / River / …).  </li>
+<li>Open in-match map; find <strong>Control Zone</strong> outline.</li>
+<li>Ping one tower and one soft POI (settlement/industry).  </li>
+<li>Buy ultra-budget kit — don’t empty bankroll (Economy).  </li>
+<li>Arrive with ammo; die once learning lanes is cheaper than a vehicle YOLO.  </li>
+<li>Only contest <strong>Hot Zone</strong> if squad + reserve allow.  </li>
+<li>After match, note which POI actually moved the score.</li>
+</ol>
+<hr/>
+<h2 id="what-this-page-is-not">What this page is not</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Not doing</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interactive map clone</td>
+<td>MetaForge / wardogstools / artillery calculators own that SERP shape</td>
+</tr>
+<tr>
+<td>Weapon meta per map</td>
+<td>Out of Batch-1 forever-best guns</td>
+</tr>
+<tr>
+<td>Console map differences</td>
+<td>Store focus PC EA</td>
+</tr>
+<tr>
+<td>Copied POI pin coordinates</td>
+<td>Editorial categories only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="callout-sheet-template">Callout sheet template</h2><p>Per-map callout sheets stay unpublished until we confirm live load-screen labels. MetaForge hub capture <strong>2026-09-13</strong> lists <strong>Bakurani, Ozeti, and Zestafona</strong> as <strong>Playable now</strong>. Store match framing: ~100 players / 3 teams, Control Zone ~2×2 km, first to 100 points.</p><h2 id="squad-map-callouts-editorial">Squad map callouts (editorial)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Callout</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“Default Bakurani — five towers live”</td>
+<td>Play area + tower density lead</td>
+</tr>
+<tr>
+<td>“Church Ozeti — hold the climb”</td>
+<td>Elevation objective</td>
+</tr>
+<tr>
+<td>“River — only two towers, contest both”</td>
+<td>Scarce code sources</td>
+</tr>
+<tr>
+<td>“Farmland Ozeti is transit only”</td>
+<td>Don’t stage the objective there</td>
+</tr>
+<tr>
+<td>“Hot Zone sliding to factory”</td>
+<td>Rotate bodies / defenses</td>
+</tr>
+<tr>
+<td>“Ignore abandoned Bakurani towers”</td>
+<td>Not code sources per allthings table</td>
+</tr>
+<tr>
+<td>“Logi drop at stadium gate”</td>
+<td>Named industry/settlement staging</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Map research hygiene (editors)</h3>
+<ol>
+<li>Prefer dated play-area tables over undated “complete tower lists.”  </li>
+<li>Keep MetaForge links as <strong>tools</strong>, never pasted pin dumps.  </li>
+<li>When store ~2×2 km and indie ~85 m core both appear, publish <strong>both</strong> — do not silently pick one.</li>
+
+<li>Cross-link Towers for magnet/keypad; keep this page about <strong>where</strong> the fight is.</li>
+</ol>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: How big is the Control Zone and how do you win?</strong><br/>
+A: Steam store About (2026-09-13): about <strong>2×2 km</strong>, <strong>first to 100 points</strong>, ~<strong>100 players / 3 teams</strong>. Indie guides describe ~500–550 m play areas with ~<strong>85 m</strong> scoring cores and ~30s ticks — <strong>size conflict</strong> kept as public lead (allthings/games.gg). Tick UI labels remain public lead until HUD screenshot.</p>
+<p><strong>Q: Are Bakurani, Ozeti, and Zestafona all in EA?</strong><br/>
+A: Bakurani and Ozeti are treated as playable in MetaForge/allthings (Sep 2026). Zestafona is <strong>not yet in rotation</strong> per MetaForge — verify load screens before asserting.</p>
+<p><strong>Q: What POI types matter?</strong><br/>
+A: Towers (digits / <strong>Hot Zone</strong> pull), settlements, industry hardpoints, and player FOBs. Deep tower mechanics → <a href="../wardogs-towers-hot-zone/">Towers</a>.</p>
+<p><strong>Q: How many towers on Bakurani / Ozeti?</strong><br/>
+A: Depends on <strong>play area</strong>. Dated leads: Bakurani 5/5/3; Ozeti 4/3/2. Flat “7” or “4” tables conflict — screenshot your match.</p>
+<p><strong>Q: Is this an interactive map?</strong><br/>
+A: No. Editorial objectives + POI types only. Use MetaForge etc. for clickable layers.</p>
+<p><strong>Q: Does Hot Zone change the map?</strong><br/>
+A: It changes <strong>where the fight and cash multiplier concentrate</strong>. Pull/hold rules → Towers page; cash → <a href="../wardogs-economy-starter-loadout/">Economy</a>.</p>
+<p><strong>Q: Where should a new player go first?</strong><br/>
+A: Soft POI or team-tagged objective edge — not solo tower keypad. See <a href="../how-to-play-wardogs/">How to Play</a>.</p>
+<p><strong>Q: Do maps affect starter loadout?</strong><br/>
+A: Indirectly (range vs CQB; transport budget on large travel). Keep first kits budget-safe until you know the lane — Economy page.</p>
+<p><strong>Q: PC only?</strong><br/>
+A: This hub targets Steam PC EA per store. Console wishlist chatter is out of scope here.</p>
+<hr/>
+<h2 id="also-read">Also read</h2>
+<ul>
+<li><a href="../wardogs-towers-hot-zone/">WARDOGS Towers + Hot Zone</a> — digits, keypad, drills, double cash  </li>
+<li><a href="../how-to-play-wardogs/">How to Play WARDOGS (First Match)</a> — first 30 minutes  </li>
+<li><a href="../wardogs-economy-starter-loadout/">WARDOGS Economy + Starter Loadout</a> — $10k journey, reserve rule, FOB price conflict  </li>
+<li><a href="../wardogs-best-settings/">Best WARDOGS Settings</a> — clarity for long sightlines  </li>
+<li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a> — map key / Interact  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam store WARDOGS — <strong>Control Zone</strong> / 100 players / 3 teams / <strong>Hot Zone</strong> cash / PC EA Sep 10 2026 — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>allthings.how — Bakurani play areas (Sep 13, 2026) — https://allthings.how/wardogs-bakurani-every-play-area-and-how-to-hold-the-control-zone/  </li>
+<li>allthings.how — Ozeti play areas (Sep 13, 2026) — https://allthings.how/wardogs-ozeti-map-play-areas-drill-towers-and-the-control-zone/  </li>
+<li>allthings.how — Towers / <strong>Hot Zone</strong> (Sep 12, 2026) — https://allthings.how/wardogs-towers-how-to-capture-them-and-move-the-hot-zone/  </li>
+<li>allthings.how — Zestafona guide — https://allthings.how/wardogs-zestafona-map-guide-to-every-play-area-and-the-control-zone/  </li>
+<li>MetaForge — Interactive maps hub — https://metaforge.app/wardogs/map  </li>
+<li>GameRant — Towers / hack / drill (Sep 12, 2026) — https://gamerant.com/wardogs-how-capture-hack-towers-work/  </li>
+<li>GameWatcher — Towers overview (bot-walled 2026-09-13) — https://www.gamewatcher.com/wardogs/towers-what-they-are-and-how-to-capture-them  </li>
+<li>PC Gamer — launch population / server context — https://www.pcgamer.com/games/fps/wardogs-servers-go-down-as-over-300-000-people-rush-to-play-on-launch-day/  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+      <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; starter loadout</a></li>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

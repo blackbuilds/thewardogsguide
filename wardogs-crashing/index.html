@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</title>
+  <meta name="description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-crashing/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)" />
+  <meta property="og:description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-crashing/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)" />
+  <meta name="twitter:description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)", "item": "https://thewardogsguide.com/wardogs-crashing/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 13 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#anti-cheat-reality-check-store-vs-disk">Anti-cheat reality check (store vs disk)</a></li>
+      <li><a href="#symptom-matrix-where-does-it-fail">Symptom matrix (where does it fail?)</a></li>
+      <li><a href="#error-1147405308-auth-spillover-not-a-gpu-guide">Error 1147405308 — auth spillover, not a GPU guide</a></li>
+      <li><a href="#wd-lo14-wd-l014-unable-to-launch-community">WD-LO14 / WD-L014 — Unable to launch (community)</a></li>
+      <li><a href="#exceptionaccessviolation-and-similar">EXCEPTION_ACCESS_VIOLATION and similar</a></li>
+      <li><a href="#fix-ladder">Fix ladder</a></li>
+      <li><a href="#elytra-repair-fork">Elytra repair fork</a></li>
+      <li><a href="#if-wardogs-never-reaches-the-main-menu">If WARDOGS never reaches the main menu</a></li>
+      <li><a href="#crash-or-server-outage">Crash or server outage?</a></li>
+      <li><a href="#decision-tree">Decision tree</a></li>
+      <li><a href="#support-paste-block">Support paste block</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related">Related</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> As of <strong>2026-09-13</strong>, the Steam store feature tag reads <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Build crash triage around <strong>Elytra</strong>, not legacy “EAC fix” posts. Separate <strong>never starts / before menu / black screen / mid-match</strong> from <strong>auth/queue</strong> codes like public lead <code>1147405308</code> (spillover → <a href="../wardogs-servers-down/">Servers</a>). Community WD-LO14 / WD-L014 reports block past the launcher — repair paths below are <strong>community-cited</strong> and stay for exact UI. JOIN TIMEDOUT → <a href="../wardogs-error-1628505091/">1628505091</a>. Settings after you can launch → <a href="../wardogs-best-settings/">Best Settings</a>. Code index → <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<figure class="shot"><img alt="Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not live client crash UI) — captured 2026-09-13" loading="lazy" src="../assets/shots/steam-store-elytra-tag.webp"/><figcaption>Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not live client crash UI) — captured 2026-09-13</figcaption></figure><figure class="shot"><img alt="Steam Launch Stability Hotfix #1 thread header (public community page, not a live crash dialog) — 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Launch Stability Hotfix #1 thread header (public community page, not a live crash dialog) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="anti-cheat-reality-check-store-vs-disk">Anti-cheat reality check (store vs disk)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Says (dated)</th>
+<th>Use here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam store feature tags (WebFetch 2026-09-13)</td>
+<td><strong>Uses Kernel Level Anti-Cheat Elytra</strong></td>
+<td>Treat Elytra as <strong>current store fact</strong></td>
+</tr>
+<tr>
+<td>Older guides / closed-test posts</td>
+<td>Easy Anti-Cheat (EAC) wording</td>
+<td><strong>Outdated for store tag</strong> — do not recommend EAC repair as current default</td>
+</tr>
+<tr>
+<td>Install folder / setup EXE names</td>
+<td>public lead — ccstartup + AxeeTech + LagoFast agree: <code>Elytra</code> folder + <code>Elytra.exe</code> / <code>Elytra-Setup.exe</code> (confirm on your disk)</td>
+<td>Identify before repair clicks</td>
+</tr>
+<tr>
+<td>Log file (community)</td>
+<td>public lead — AxeeTech / XboxPlay: <code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code></td>
+<td>Read before blaming “internet”</td>
+</tr>
+<tr>
+<td>In-client repair UI labels</td>
+<td>Exact button strings → still need your screenshot; community cites <strong>Repair</strong></td>
+<td>Quote only what you see</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Identify Elytra on disk</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Look for</th>
+<th>Your result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Store tags today</td>
+<td>Elytra kernel AC</td>
+<td>Confirmed on editorial pass 2026-09-13</td>
+</tr>
+<tr>
+<td>Game install folder</td>
+<td><code>…\WARDOGS\Elytra\</code></td>
+<td>public lead — ccstartup/AxeeTech/LagoFast (confirm folder name on disk)</td>
+</tr>
+<tr>
+<td>Helper EXE</td>
+<td><code>Elytra.exe</code> and/or <code>Elytra-Setup.exe</code></td>
+<td>public lead — same sources (confirm EXE names)</td>
+</tr>
+<tr>
+<td>Crash / log string</td>
+<td>Product name in fault text / ElytraLauncher.log</td>
+<td>public lead — AxeeTech log path</td>
+</tr>
+<tr>
+<td>Repair / install helper</td>
+<td>Repair option in helper UI</td>
+<td>public lead — community <strong>Repair</strong>; do <strong>not</strong> paste old EAC folder-delete steps</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>STOP:</strong> Do not publish “delete EasyAntiCheat folder” as the WARDOGS EA fix path while the store tags <strong>Elytra</strong>.</p>
+<hr/>
+<h2 id="symptom-matrix-where-does-it-fail">Symptom matrix (where does it fail?)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Bucket</th>
+<th>First section</th>
+<th>Spillover?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam shows Running → stops; no window</td>
+<td>Launch failure</td>
+<td>Fix ladder + Elytra identify</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Exit / crash before main menu</td>
+<td>Pre-menu crash</td>
+<td>Fix ladder</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Black screen / long stall / shader-like message</td>
+<td>Black-screen path</td>
+<td>Black screen section; then Settings</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Crash mid-match / restart mid-round</td>
+<td>Mid-match stability</td>
+<td>Ladder + overlay/GPU; check Servers if everyone drops</td>
+<td>Maybe</td>
+</tr>
+<tr>
+<td>Exact exception / access violation text</td>
+<td>Error-specific</td>
+<td>Access-violation section</td>
+<td>—</td>
+</tr>
+<tr>
+<td>WD-LO14 / WD-L014 / Unable to launch</td>
+<td>Launcher / AC init class (community)</td>
+<td>WD-LO14 section</td>
+<td>Maybe auth</td>
+</tr>
+<tr>
+<td>Auth / queue / Access Denied <strong>without</strong> crash dump</td>
+<td>Service / auth</td>
+<td><strong>Leave this page</strong></td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td><code>1147405308</code> (public: Failed to authenticate / queue)</td>
+<td>Auth spillover</td>
+<td>Triage below</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td><code>1628505091</code> JOIN TIMEDOUT</td>
+<td>Join timeout</td>
+<td>Not a local crash</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="error-1147405308-auth-spillover-not-a-gpu-guide">Error 1147405308 — auth spillover, not a GPU guide</h2>
+<p>Public third-party framing (Bisect, Sep 10 2026) maps <code>1147405308</code> to <strong>Failed to Authenticate With Online Services</strong>. Launch-day writeups treated it as often <strong>service-wide</strong>. That is a <strong>service-path</strong> lead, not proof of a bad GPU driver.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact EA dialog text</td>
+<td>public lead — Bisect + Steam Hotfix #1 replies: “Failed to Authenticate With Online Services” / “failed to authenticate online services” (confirm your screenshot)</td>
+</tr>
+<tr>
+<td>Default triage</td>
+<td>Status healthy? → <a href="../wardogs-servers-down/">Servers hub</a>. Only then local ladder</td>
+</tr>
+<tr>
+<td>Verified local “fix” list</td>
+<td><strong>None published as confirmed here</strong> — do not copy booster VPNs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rule:</strong> If many players show the same auth code right now, <strong>do not</strong> start overlay/GPU surgery. Open the Servers hub first.</p>
+<hr/>
+<h2 id="wd-lo14-wd-l014-unable-to-launch-community">WD-LO14 / WD-L014 — Unable to launch (community)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Public evidence</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam Hotfix #1 reply</td>
+<td><code>Unable to launch WARDOGS / Error code: WD-LO14-c70b81e405df</code></td>
+<td>Community string — <strong>not</strong> an official enum</td>
+</tr>
+<tr>
+<td>Third-party spelling</td>
+<td>WD-L014 (hyphen variants)</td>
+<td>Same cluster until proven otherwise</td>
+</tr>
+<tr>
+<td>Symptom (ccstartup, Sep 11)</td>
+<td>Blocks getting past the launcher</td>
+<td>Community</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>WD-LO14 steps (community)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Community step</th>
+<th>Why listed</th>
+<th>Rollback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Full close Steam + WARDOGS; confirm no leftover processes</td>
+<td>Stale helper / service</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Steam → Properties → Installed Files → <strong>Verify integrity of game files</strong></td>
+<td>Incomplete Hotfix / mismatch</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Browse local files → open <strong>Elytra</strong> folder → run <code>Elytra.exe</code> → <strong>Repair</strong> (ccstartup; AxeeTech/LagoFast concur on Repair)</td>
+<td>Rebuild AC components</td>
+<td>public lead — confirm labels on your helper UI</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Alternate helper: <code>Elytra-Setup.exe</code> Repair (AxeeTech / LagoFast community)</td>
+<td>Same goal</td>
+<td>Prefer Repair before deleting AC files</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Uninstall leftover <strong>WARDOGS Playtest</strong> if still in library; verify EA install again</td>
+<td>Stale playtest collision (community)</td>
+<td>Skip if you never installed Playtest</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Full Windows restart</td>
+<td>Author anecdote: restart alone cleared WD-L014</td>
+<td>Not a magic forever fix</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>If still failing: capture ElytraLauncher.log + screenshot → Discord/support</td>
+<td>Evidence &gt; reinstall loops</td>
+<td>Ticket queues can be long (community claim)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Not required on this page:</strong> permanently disabling Windows security features. Community posts sometimes mention Memory Integrity toggles — if you experiment, <strong>re-enable</strong> afterward and treat as unverified. Never present that as a Bulkhead mandate.</p>
+<hr/>
+<h2 id="exceptionaccessviolation-and-similar">EXCEPTION_ACCESS_VIOLATION and similar</h2>
+<p>Closed-test community writeups (Aug 2026) document launch crashes with:</p>
+<p><code>Unhandled Exception: EXCEPTION_ACCESS_VIOLATION</code></p>
+<p>involving modules such as <code>user32</code>, <code>ntdll</code>, <code>win32u</code>, and <code>WardogsClient_Win64_Shipping</code> — game never reaches main menu. Those guides often still say “Easy Anti-Cheat”; for <strong>EA store tag</strong>, swap AC repair to <strong>Elytra</strong> identify/repair instead.</p>
+<p>We omit a fake exception-string catalog. Quote the exact line from your crash dialog — never invent a <code>.dll</code> name. Closed-test writeups mention <code>EXCEPTION_ACCESS_VIOLATION</code> involving <code>user32</code> / <code>ntdll</code> / <code>win32u</code> / <code>WardogsClient_Win64_Shipping</code>; those guides often still say Easy Anti-Cheat. For the 2026-09-13 store tag, use <strong>Elytra</strong> identify / repair instead.</p><p>Community tip: include the LoginId from the crash report and screenshot the full dialog before you start repair clicks.</p>
+<p>Verified path: run the <strong>safe ladder</strong> top→bottom; apply Elytra repair only after identification. Overlay conflicts are the highest-yield <strong>generic</strong> local branch.</p>
+<hr/>
+<h2 id="fix-ladder">Fix ladder</h2>
+<p>Stop when you reach a stable menu. Record GPU + driver + result per step.</p><p>Numbered gaps in the ladder are <strong>intentional</strong>: we omit unconfirmed “this step always helps” rows (admin-launch, clean-boot) rather than invent a fix. Full Windows restart and Elytra Repair are covered in the WD-LO14 community steps and the Elytra repair fork below — not as a forever-FIXED stamp.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>How</th>
+<th>Result</th>
+<th>Stop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Verify game files</td>
+<td>Steam → WARDOGS → Properties → Installed Files → Verify integrity of game files</td>
+<td>Pass/fail count</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Disable overlays (one at a time)</td>
+<td>Discord, Steam, GeForce/AMD, Xbox Game Bar, MSI Afterburner/RivaTuner, RGB injectors</td>
+<td>Note which change helped</td>
+<td>Re-enable to isolate</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Update GPU drivers</td>
+<td>Clean install from NVIDIA/AMD/Intel vendor site</td>
+<td>Note old/new</td>
+<td>Avoid random “FPS booster” packs</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Read ElytraLauncher.log</td>
+<td><code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code> (community)</td>
+<td>Match signature</td>
+<td>Don’t chase network if log shows install-stage failure</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Launch options</td>
+<td>e.g. DX switches — <strong>only if confirmed on this EA build</strong></td>
+<td>Blank until confirmed</td>
+<td>Remove if unstable</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Overlay / GPU sub-ladder</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Conflict</th>
+<th>Test</th>
+<th>Claim</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Discord overlay</td><td>Discord → Settings → Overlay → off → relaunch</td><td>Community-cited for access-violation class — record your result</td></tr><tr>
+<td>Steam overlay</td>
+<td>Steam → WARDOGS → Properties → General → disable</td>
+<td>same</td>
+</tr>
+<tr>
+<td>GeForce Experience / AMD overlay</td>
+<td>Disable in vendor app</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Xbox Game Bar</td>
+<td>Windows settings off for test</td>
+<td>same</td>
+</tr>
+<tr>
+<td>MSI Afterburner / RivaTuner</td>
+<td>Fully exit</td>
+<td>same</td>
+</tr>
+<tr>
+<td>RGB / Nahimic / Sonic Studio / “optimization” injectors</td>
+<td>Exit utilities</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Specific GPU/driver Day-1 fails</td>
+<td>List only from dated retests</td>
+<td>“None confirmed yet” unless filled</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If the game <strong>launches</strong> but stutter/FPS tanks, continue on <a href="../wardogs-best-settings/">Best Settings</a> — that is not the same as crash-on-launch. <strong>Do not invent FPS% numbers.</strong></p>
+<hr/>
+<h2 id="elytra-repair-fork">Elytra repair fork</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td>Confirm store/tag + folder name say Elytra</td>
+<td>Store tag confirmed 2026-09-13; folder = public lead (ccstartup/AxeeTech)</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>Run in-folder / official Elytra repair or reinstall helper</td>
+<td>public lead — <code>Elytra.exe</code> / <code>Elytra-Setup.exe</code> → Repair; confirm UI on disk</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>Capture exact Elytra error string + ElytraLauncher.log for support</td>
+<td>Paste block below</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>Retry ladder steps 1–3 after repair</td>
+<td>Record outcome</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Elytra log branches (community — AxeeTech)</h3>
+<p>Misleading launcher text can say the anti-cheat module “could not be downloaded” even when the log shows download + verification succeeded and <strong>InstallModule</strong> failed.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Log shows</th>
+<th>Branch</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Download connection fails</td>
+<td>Network / VPN / proxy / firewall</td>
+<td>Skip to BIOS tweaks</td>
+</tr>
+<tr>
+<td>Download + verification OK, then <code>InstallModule failed</code> + <code>Access is denied (os error 5)</code></td>
+<td>Local permissions / TEMP access (community)</td>
+<td>Endless reinstall loops</td>
+</tr>
+<tr>
+<td><code>Failed to open input file</code> after successful download</td>
+<td>Local file access</td>
+<td>Blame “slow internet” alone</td>
+</tr>
+<tr>
+<td>Other signatures (BSOD / unrelated DLL)</td>
+<td>Different guide / support paste</td>
+<td>Force this os-error-5 path</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Community repair preference: use the installer <strong>Repair</strong> option before manually deleting anti-cheat services or drivers. Reinstalling the entire game may <strong>not</strong> fix TEMP/ACL problems.</p>
+<h3>Deprecated fork — Easy Anti-Cheat (do not lead with this)</h3>
+<p>Prior research and closed-test posts lagged toward EAC while the store now tags Elytra. <strong>As of 2026-09-13 store tag, do not treat EAC repair as the current primary path.</strong> If a residual EasyAntiCheat folder still exists on disk, document it as anomaly — do not assume deleting it is safe or required.</p>
+<hr/>
+<h2 id="if-wardogs-never-reaches-the-main-menu">If WARDOGS never reaches the main menu</h2>
+<ol>
+<li>Confirm Steam actually finishes launch (Running → Stopped timing).</li>
+<li>File verify + overlays off + Windows restart.</li>
+<li>Elytra identify → repair fork → read ElytraLauncher.log.</li>
+<li>Remove stale Playtest install if present (community).</li>
+<li>Only then any EA-confirmed launch option.</li>
+<li>If the failure is auth text without crash → <a href="../wardogs-servers-down/">Servers</a>.</li>
+</ol>
+<p><strong>Escalate to Steam / Discord support when:</strong> ladder complete, services look healthy, same crash reproduces with screenshot + paste block. Community notes ticket queues can be large during launch week — still bring evidence.</p>
+<hr/>
+<h2 id="crash-or-server-outage">Crash or server outage?</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Local crash (stay)</th>
+<th>Service (leave)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crash dialog / exception / faulting module</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Widespread auth/queue, no dump</td>
+<td>—</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td><code>1147405308</code> / Access Denied / auth failed</td>
+<td>Only after services healthy</td>
+<td>Default → Servers</td>
+</tr>
+<tr>
+<td><code>1628505091</code></td>
+<td>—</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+<tr>
+<td>WD-LO14 with no servers context</td>
+<td>Stay (Elytra ladder)</td>
+<td>If coinciding with Hotfix auth storm, check Servers once</td>
+</tr>
+<tr>
+<td>Everyone drops mid-match at once</td>
+<td>Maybe both</td>
+<td>Check status, then ladder</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="decision-tree">Decision tree</h2>
+<pre><code class="language-text">Failure mode?
+│
+├─ Auth / queue / Access Denied / 1147405308 / no crash dump
+│  └─ ../wardogs-servers-down/
+│
+├─ JOIN TIMEDOUT / 1628505091
+│  └─ ../wardogs-error-1628505091/
+│
+├─ WD-LO14 / WD-L014 / Unable to launch
+│  ├─ Verify files → Elytra Repair (community path) → log read
+│  ├─ Remove stale Playtest if present
+│  └─ Still failing → support paste
+│
+├─ Crash / won’t launch / black screen / access violation
+│  ├─ Identify Elytra on disk (NOT EAC-default)
+│  ├─ Fix ladder 1→5
+│  ├─ Elytra repair E1→E5 + log branch
+│  └─ Still failing → support paste + Settings if unstable-but-running
+│
+└─ Unknown code
+   └─ ../wardogs-error-codes/
+</code></pre>
+<h3>Boundary cases</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay off fixes launch; overlay on crashes</td>
+<td>Keep the conflicting overlay disabled for WARDOGS; document which one</td>
+</tr>
+<tr>
+<td>Verify finds 0 files</td>
+<td>Still continue overlays + Elytra — zero mismatches ≠ healthy AC service</td>
+</tr>
+<tr>
+<td>Reinstall did nothing; log shows os error 5</td>
+<td>Stop reinstalling; permissions/TEMP branch</td>
+</tr>
+<tr>
+<td>Hotfix #1 just landed; “crash” is Access Denied</td>
+<td>Servers hub</td>
+</tr>
+<tr>
+<td>Guide says “repair EAC”</td>
+<td>Ignore as current default — store is Elytra</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="support-paste-block">Support paste block</h2>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Build / stamp: (Steam build or news title + date if you lack a client string)
+Exact error / dialog:
+Timing: never starts / before menu / black screen / mid-match / WD-LO14
+GPU + driver:
+OS:
+Overlays tested off: Discord / Steam / GeForce / AMD / Game Bar / Afterburner / other
+Anti-cheat identified: Elytra (store) + on-disk name
+ElytraLauncher.log last lines:
+Steps tried (ladder #s):
+File verify result:
+Playtest leftover uninstalled?: Y/N/NA</code></pre>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stamp build + driver on every retest</td>
+<td>Claim “100% fixed for everyone”</td>
+</tr>
+<tr>
+<td>Identify Elytra before repair clicks</td>
+<td>Lead with Easy Anti-Cheat folder deletes from old articles</td>
+</tr>
+<tr>
+<td>Send auth-only codes to Servers hub</td>
+<td>Treat <code>1147405308</code> as a graphics bug by default</td>
+</tr>
+<tr>
+<td>Disable overlays one-at-a-time</td>
+<td>Disable Windows security permanently “for FPS”</td>
+</tr>
+<tr>
+<td>Read ElytraLauncher.log before router panic</td>
+<td>Invent faulting module names</td>
+</tr>
+<tr>
+<td>Pair unstable-but-running clients with Settings page</td>
+<td>Invent launch options from beta memory</td>
+</tr>
+<tr>
+<td>Quote exact exception lines</td>
+<td>Publish fake FIXED / FPS%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Post-Hotfix #1 crash-adjacent notes</h3>
+<p>Hotfix #1 targeted join/kick/queue stability (studio). Community replies also mentioned launch/auth failures (<code>WD-LO14-c70b81e405df</code>, Access Denied). If your “crash” is actually an auth dialog with no dump, you are on the wrong page — bounce to <a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-error-codes/">Error hub</a>.</p>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Does WARDOGS use Easy Anti-Cheat or Elytra?</strong><br/> A: Steam store feature tag as of <strong>2026-09-13</strong> lists <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Confirm folder/UI on your install before repair. Do not follow old EAC-only guides as current default — even some access-violation posts still say EAC from closed-test era.</p>
+<p><strong>Q: What does error 1147405308 mean?</strong><br/> A: Public lead (Bisect): Failed to Authenticate With Online Services. Triage as <strong>auth spillover</strong> → <a href="../wardogs-servers-down/">Servers</a> before local GPU steps. Confirm the dialog on your screenshot.</p>
+<p><strong>Q: What is WD-LO14 / WD-L014?</strong><br/> A: Appears in launch-failure reports (Steam Hotfix example <code>WD-LO14-c70b81e405df</code>; third-party WD-L014 articles). Community ties it to launcher/Elytra init. Official meaning — try verify + Elytra Repair path, not join-timeout fixes.</p>
+<p><strong>Q: Will disabling overlays fix crashes?</strong><br/> A: Closed-test community guides list Discord / Steam / NVIDIA / AMD / Game Bar / Afterburner as frequent hooks for access-violation launch crashes. Test one overlay at a time and record results on your setup. Not a universal fix.</p>
+<p><strong>Q: The launcher says the anti-cheat module “could not be downloaded” — is my internet broken?</strong><br/>
+A: Not always. AxeeTech community report: ElytraLauncher.log can show successful download + verification, then <code>InstallModule failed</code> / <code>Access is denied (os error 5)</code>. Read the log before changing DNS/VPN.</p>
+<p><strong>Q: How do I repair Elytra?</strong><br/> A: Community path: Steam → Manage → Browse local files → Elytra folder → run <code>Elytra.exe</code> or <code>Elytra-Setup.exe</code> → Repair → restart Steam. Confirm EXE / button labels on your disk. Prefer Repair over deleting driver files.</p>
+<p><strong>Q: Are any GPU/driver combos “known bad” on EA Day-1?</strong><br/>
+A: None confirmed on this page yet. List only from dated retests; otherwise “none confirmed.”</p>
+<p><strong>Q: Mid-match crash — is that always my PC?</strong><br/>
+A: Not always. If the whole server dumps players, check <a href="../wardogs-servers-down/">Servers</a>. If only you crash with a local dialog, stay on this ladder.</p>
+<p><strong>Q: Can I use launch options like <code>-dx11</code>?</strong><br/> A: Only publish options confirmed on the live EA build. Until then we omit launch-option recipes.</p>
+<p><strong>Q: Where do settings/FPS go after launch works?</strong><br/>
+A: <a href="../wardogs-best-settings/">Best WARDOGS Settings</a>. No invented FPS% on this crash page.</p>
+<p><strong>Q: Where is the full error code table?</strong><br/>
+A: <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<hr/>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="../wardogs-best-settings/">Best Settings / Performance</a></li>
+<li><a href="../wardogs-error-codes/">Error Codes Hub</a></li>
+<li><a href="../wardogs-servers-down/">Servers Down / Queue / Access Denied</a></li>
+<li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+<li><a href="../how-to-play-wardogs/">How to Play — First Match</a></li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam Store — WARDOGS (Elytra kernel AC tag): https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Steam — Launch Stability Hotfix #1 (incl. WD-LO14 community reply): https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>Creative Collaboration — WD-L014 / Elytra.exe Repair path: https://ccstartup.com/blog/2026/09/11/how-to-fix-the-wardogs-wd-l014-error-code/  </li>
+<li>AxeeTech — Elytra InstallModule / os error 5 / ElytraLauncher.log: https://axeetech.com/wardogs-elytra-installmodule-os-error-5/  </li>
+<li>gamingwithdaopa — EXCEPTION_ACCESS_VIOLATION overlay ladder (closed-test; EAC wording outdated): https://gamingwithdaopa.ellatha.com/wardogs/crash-on-launch-exception_access_violation/  </li>
+<li>BisectHosting — 1147405308 authenticate: https://www.bisecthosting.com/blog/wardogs-error-code-1147405308-failed-to-authenticate-with-online-services-what-it-means-how-to-fix  </li>
+<li>GearUP — error code dialogs: https://www.gearupbooster.com/blog/wardogs-error-codes.html  </li>
+<li>PC Gamer — launch server stress context: https://www.pcgamer.com/games/fps/wardogs-servers-go-down-as-over-300-000-people-rush-to-play-on-launch-day/  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-servers-down/">WARDOGS servers down</a></li>
+      <li><a href="../wardogs-error-1628505091/">Error 1628505091 / JOIN TIMEDOUT</a></li>
+      <li><a href="../wardogs-error-codes/">WARDOGS error codes hub</a></li>
+      <li><a href="../wardogs-patch-notes/">Patch 0.11 notes — Community vs Official browser</a></li>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

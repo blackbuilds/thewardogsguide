@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)</title>
+  <meta name="description" content="WARDOGS controls on Steam EA: KBM defaults, partial controller, HOTAS axis gap, binds-won’t-save. Last checked 2026-09-13." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-controls-hotas/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)" />
+  <meta property="og:description" content="WARDOGS controls on Steam EA: KBM defaults, partial controller, HOTAS axis gap, binds-won’t-save. Last checked 2026-09-13." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-controls-hotas/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)" />
+  <meta name="twitter:description" content="WARDOGS controls on Steam EA: KBM defaults, partial controller, HOTAS axis gap, binds-won’t-save. Last checked 2026-09-13." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Play", "item": "https://thewardogsguide.com/wardogs/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)", "item": "https://thewardogsguide.com/wardogs-controls-hotas/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/" aria-current="page" class="is-active">Guides</a>
+        <a href="../wardogs-fixes/">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip">Fix</a>
+      <a href="../wardogs/" class="cluster-chip is-active">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs/">Play</a></li>
+        <li aria-current="page">WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 13 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Controls — Keyboard, Partial Controller Support, HOTAS (Steam EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#input-support-matrix">Input support matrix</a></li>
+      <li><a href="#decision-tree-which-input-path-first">Decision tree: which input path first?</a></li>
+      <li><a href="#default-keyboard-and-mouse-essentials-third-party-bisect-lead">Default keyboard and mouse essentials (third-party Bisect lead)</a></li>
+      <li><a href="#partial-controller-support-on-pc-limited-remapping">Partial controller support on PC (limited remapping)</a></li>
+      <li><a href="#hotas-for-helicopters-axis-path-not-full-support-marketing">HOTAS for helicopters: axis path (not “full support” marketing)</a></li>
+      <li><a href="#how-to-rebind-infantry-versus-vehicleair">How to rebind infantry versus vehicle/air</a></li>
+      <li><a href="#binds-will-not-save-day-1-troubleshooting">Binds will not save: Day-1 troubleshooting</a></li>
+      <li><a href="#starter-binds-for-building-and-ads-after-live-test-only">Starter binds for building and ADS (after live test only)</a></li>
+      <li><a href="#sensitivity-fov-cross-links">Sensitivity / FOV cross-links</a></li>
+      <li><a href="#community-conflict-table-controls">Community conflict table (controls)</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read">Also read</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> On <strong>PC Steam Early Access</strong>, keyboard+mouse is the default path, <strong>partial controller support</strong> comes with <strong>limited remapping</strong> / Steam Input workarounds, and <strong>HOTAS is a helicopter axis path</strong> — real analog axes with rough edges (bindings may not persist), <strong>not</strong> polished “full HOTAS certified” marketing. We omit a full infantry key encyclopedia and unconfirmed default binds until we screenshot live Controls menus. Vehicle / air rows below are labeled <strong>third-party (Bisect Sep 5, 2026)</strong>. Remapping crashes the client → <a href="../wardogs-crashing/">Crashing</a>. FOV / sensitivity-adjacent graphics → <a href="../wardogs-best-settings/">Settings</a>. First-match flow → <a href="../how-to-play-wardogs/">How to Play</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p><figure class="shot"><img alt="Official Steam store screenshot — helicopter / air framing (public store media, not a live Controls or HOTAS menu) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-heli.webp"/><figcaption>Official Steam store screenshot — helicopter / air framing (public store media, not a live Controls or HOTAS menu) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="input-support-matrix">Input support matrix</h2><div class="table-wrap">
+<table>
+<thead><tr><th>Input</th><th>Public-source status</th><th>Caveats</th></tr></thead>
+<tbody>
+<tr><td>Keyboard + mouse</td><td>Expected primary on PC Windows (store focus)</td><td>We omit a full default-bind encyclopedia until a live Controls screenshot</td></tr>
+<tr><td>Controller</td><td><strong>Partial / limited remapping</strong> — Bisect publishes layouts; allthings notes heli remap limits</td><td>Do <strong>not</strong> read this as “full official controller support”</td></tr>
+<tr><td>HOTAS</td><td>Dedicated Gamepad → HOTAS sub-tab; Enable HOTAS (allthings / Games Fuze)</td><td>Bindings may reset each session; not “full HOTAS support” marketing</td></tr>
+<tr><td>Steam Deck / Linux</td><td>Out of Batch-1 deep dive</td><td>PC Windows store focus</td></tr>
+</tbody>
+</table>
+</div>
+<h3>How to read this matrix</h3>
+<ul>
+<li><strong>Partial controller</strong> means: gamepad may move/shoot, but remapping depth, infantry vs vehicle layers, and aim feel may lag KBM.  </li>
+<li><strong>HOTAS path</strong> means: players map pitch/roll/yaw/collective for helicopters via a dedicated toggle; that is <strong>not</strong> the same as first-party “full HOTAS certified” marketing.  </li>
+<li>Empty cells stay empty — do not upgrade language after reading a Trends query.</li>
+</ul>
+<hr/>
+<h2 id="decision-tree-which-input-path-first">Decision tree: which input path first?</h2>
+<pre><code>Starting WARDOGS on PC Steam EA
+  ├─ Learning infantry + first match → Keyboard + mouse essentials (below)
+  ├─ Want couch gamepad → Partial controller path + Steam Input test
+  ├─ Bought HOTAS for helis → HOTAS axis checklist (Firing Range first)
+  └─ Client crashes when opening Controls → ../wardogs-crashing/
+</code></pre>
+<hr/>
+<h2 id="default-keyboard-and-mouse-essentials-third-party-bisect-lead">Default keyboard and mouse essentials (third-party Bisect lead)</h2>
+<p>BisectHosting published a full PC list (Sep 5, 2026). Prefer infantry vs vehicle/air columns. <strong>Do not treat as eternal</strong> — screenshot live menus.</p><p>We omit the infantry default-bind table until we confirm live menu labels. High-frequency third-party leads already cited in the FAQ (Bisect Sep 5, 2026 — <strong>not</strong> a live screenshot): WASD move, fire / ADS, Reload, Interact <strong>F</strong>, Map <strong>M</strong>, Inventory Tab. Confirm those on your build before you memorize them. Ground and rotary rows below are labeled third-party because those Bisect columns did not depend on unconfirmed menu-label cells.</p>
+<h3>Ground vehicle (Bisect lead)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Default (Bisect)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throttle / Brake</td>
+<td>W / S</td>
+</tr>
+<tr>
+<td>Steer</td>
+<td>A / D</td>
+</tr>
+<tr>
+<td>Handbrake</td>
+<td>Space</td>
+</tr>
+<tr>
+<td>Next / Previous seat</td>
+<td>0 / 9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Rotary / helicopter KBM (Bisect lead)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Default (Bisect)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collective Raise / Lower</td>
+<td>Left Shift / Ctrl</td>
+<td>allthings MH-6 guide also discusses mouse cyclic</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>WASD (Increase/Decrease Cyclic X/Y)</td>
+<td>Layout conflicts with infantry — context-specific</td>
+</tr>
+<tr>
+<td>Yaw L/R</td>
+<td>Q / E</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Free Look</td>
+<td>Alt</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Countermeasure</td>
+<td>V</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>games.gg / allthings ammo note:</strong> refill magazines from cover — cited <strong>C</strong> on beginner guides — may conflict with Crouch bind; confirm live.</p>
+<hr/>
+<h2 id="partial-controller-support-on-pc-limited-remapping">Partial controller support on PC (limited remapping)</h2>
+<p>Live research narrative: controller play is <strong>basic / partial</strong>, with <strong>limited key rebinding</strong> and Steam Input / community workarounds — <strong>not</strong> console-style full support. allthings MH-6: controllers weakest for heli — yaw on buttons; Steam Input maps right stick to mouse as common workaround.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>EA fact / third-party lead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infantry vs vehicle on pad</td>
+<td>Bisect: separate sections</td>
+</tr>
+<tr>
+<td>Dead zones / sensitivity paths</td>
+<td>PixelNitro: look sens ~6–7; ADS ~0.4–0.5×; deadzone ~3–7% — third-party</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Xbox controller highlights (Bisect)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Notable binds (Bisect)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infantry</td>
+<td>LT/RT secondary/primary; X Interact/Reload; A Jump; B Crouch/Prone; sticks move/look</td>
+</tr>
+<tr>
+<td>Ground</td>
+<td>LT Brake; RT Throttle; A Handbrake; Left stick steer</td>
+</tr>
+<tr>
+<td>Air</td>
+<td>LT Collective Lower; RT Collective Raise / Fire; Left stick Cyclic; Right stick Pedals / Free Look; D-Pad Up Countermeasure</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Controller Day-1 checklist</h3>
+<ol>
+<li>Plug one pad only; quit RGB/virtual joystick tools.  </li>
+<li>Launch WARDOGS; note whether prompts show glyphs.</li>
+<li>Open Controls — document which actions are remappable.  </li>
+<li>If native remap is shallow, enable Steam Input and retest <strong>one</strong> template (PixelNitro: gyro-on-ADS optional).  </li>
+<li>Test infantry ADS + vehicle enter + heli collective separately.  </li>
+<li>If the game soft-locks on device switch, note build and file under Crash if needed.</li>
+</ol>
+<p><strong>Title/body rule:</strong> say <strong>partial controller support</strong> and <strong>limited remapping</strong>. Do <strong>not</strong> write “full controller support” or imply console parity.</p>
+<hr/>
+<h2 id="hotas-for-helicopters-axis-path-not-full-support-marketing">HOTAS for helicopters: axis path (not “full support” marketing)</h2>
+<p>allthings HOTAS (Sep 10, 2026) + Games Fuze: WARDOGS treats sticks as analog devices. Path: <strong>Settings → Gamepad → HOTAS sub-tab → Enable HOTAS = Enabled</strong>, then bind roll, pitch, yaw, collective. Game swaps to stick in heli seat and back to KBM on foot (reported).</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Public lead</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis model</td>
+<td>Deflection = continuous rotation rate until centered (not attitude hold)</td>
+<td>Feel test</td>
+</tr>
+<tr>
+<td>Deadzones (third-party working values)</td>
+<td>Roll <strong>0.02</strong>, Pitch <strong>0.03</strong> (allthings)</td>
+<td>Hardware-dependent</td>
+</tr>
+<tr>
+<td>Pitch/Roll sensitivity</td>
+<td>Leave near <strong>1.0</strong>; lowering caps max rotation rate</td>
+<td>Don’t gut emergency authority</td>
+</tr>
+<tr>
+<td>Collective</td>
+<td>Match full throttle travel to full collective gauge</td>
+<td>Tune by feel</td>
+</tr>
+<tr>
+<td>Extra buttons</td>
+<td>Bind from <strong>pilot seat</strong> in normal Controls (not main menu)</td>
+<td>Interact, flares, PTT, vendor</td>
+</tr>
+<tr>
+<td>Other bugs</td>
+<td>Axis sticks after remap; slow freelook; Lakota assists may not apply on stick</td>
+<td>allthings known-problems table</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>HOTAS exclusivity / session warning</h3>
+<p>Community heli guides report that rebinding an air axis/key can <strong>remove the same key from on-foot</strong> (exclusive binds), and HOTAS maps may <strong>reset between sessions</strong>. Treat that as a session tax — test Interact / Build after any heli remap; budget 2–3 minutes to rebind at session start.</p>
+<p>Never claim <strong>full HOTAS support</strong> from query interest alone.</p>
+<h3>HOTAS setup flowchart</h3>
+<pre><code class="language-text">Firing Range → spawn MH-6
+  → Settings → Gamepad → HOTAS → Enable HOTAS
+    → Bind Roll / Pitch / Yaw / Collective (move one axis at a time)
+      → Sit in pilot seat → test proportional response
+        → Bind flares / Interact / PTT from seat Controls menu
+          → Next session: expect possible full rebind
+</code></pre>
+<hr/>
+<h2 id="how-to-rebind-infantry-versus-vehicleair">How to rebind infantry versus vehicle/air</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Profile / context</th>
+<th>Where to rebind</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Air / rotary</td>
+<td>Rotary Vehicle Keybinds + HOTAS sub-tab</td>
+<td>HOTAS targets here</td>
+</tr>
+<tr>
+<td>Conflict / exclusivity between contexts</td>
+<td>Community lead</td>
+<td>Beta/patch until EA repro</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="binds-will-not-save-day-1-troubleshooting">Binds will not save: Day-1 troubleshooting</h2>
+<p>Use a known bug <strong>only after reproducing it on EA</strong>. Beta Steam Support mouse-button titles and “delete GameUserSettings.ini” tips are <strong>leads</strong>, not Day-1 facts. HOTAS non-persistence is the strongest dated community report (allthings).</p>
+<h3>Safe triage order (no reckless file deletes)</h3>
+<ol>
+<li>Confirm latest Steam client update for WARDOGS (Hotfix era restarts matter).  </li>
+<li>Re-apply <strong>one</strong> bind; fully exit to desktop; relaunch; check persistence.  </li>
+<li>Disable overlays (see Settings / Crash).  </li>
+<li>Test another user Windows account only if you suspect profile corruption.</li>
+<li>Config-file surgery (<code>%LOCALAPPDATA%\…</code> paths from third-party guides) stays — backup first if you ever try it; this page will not instruct destructive deletes as verified.</li>
+</ol>
+<hr/>
+<h2 id="starter-binds-for-building-and-ads-after-live-test-only">Starter binds for building and ADS (after live test only)</h2><p>We omit a “best starter remap” table until we confirm live binds. <strong>Process only:</strong> keep Interact reachable for towers and vendors (tower flow lives on <a href="../wardogs-towers-hot-zone/">Towers / Hot Zone</a>); do not publish a full third-party key encyclopedia as eternal truth. If a remap crashes the client, stop and use the <a href="../wardogs-crashing/">Elytra crash page</a>.</p>
+<p>Do not publish a full third-party key encyclopedia unless you independently verified every row on EA. Bisect remains a <strong>source URL</strong>, not a mirror.</p>
+<hr/>
+<h2 id="sensitivity-fov-cross-links">Sensitivity / FOV cross-links</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Control</th><th>Lives under</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Mouse sensitivity</td><td>Controls</td><td>Tune on Firing Range; no invented eDPI</td></tr>
+<tr><td>FOV</td><td>Settings or Controls (exact tab omitted until confirmed)</td><td>Clarity path lives on <a href="../wardogs-best-settings/">Best Settings</a></td></tr>
+<tr><td>HOTAS curves</td><td>Device software + in-game deadzone / sensitivity</td><td>Shape center in stick software; keep game sens near 1.0 (allthings)</td></tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="community-conflict-table-controls">Community conflict table (controls)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Source A</th>
+<th>Source B</th>
+<th>Stance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller quality for heli</td>
+<td>Bisect publishes full air pad layout</td>
+<td>allthings: controllers weakest; Steam Input / vJoy workarounds</td>
+<td>Partial support; heli prefer HOTAS or KBM+mouse cyclic</td>
+</tr>
+<tr>
+<td>HOTAS “support” language</td>
+<td>Games Fuze: “fully supports HOTAS”</td>
+<td>allthings: real but rough; binds may not persist</td>
+<td>Prefer precise: <strong>Enable HOTAS exists; expect remap friction</strong></td>
+</tr>
+<tr>
+<td>Collective on KBM</td>
+<td>Bisect: Shift/Ctrl</td>
+<td>allthings MH-6: W/S suggested in one table</td>
+<td>Context conflict — screenshot Rotary section</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Does WARDOGS have partial controller support on PC Steam EA?</strong><br/> A: Research narrative is <strong>partial / limited remapping / Steam Input</strong>. Bisect publishes layouts; allthings notes heli remap limits. Official in-client support wording is omitted until we screenshot the store / Controls chrome. Forbid “full official controller support” until live menus prove deep remapping.</p>
+<p><strong>Q: Does it support HOTAS, and what does “support” mean?</strong><br/>
+A: Dated guides document <strong>Settings → Gamepad → HOTAS → Enable HOTAS</strong> and axis binding for helicopters. Expect possible <strong>session remaps</strong>. That is <strong>not</strong> polished “full HOTAS support” marketing.</p>
+<p><strong>Q: How are infantry and vehicle/air controls rebound?</strong><br/> A: Separate keybind groups (Bisect). HOTAS axes under Gamepad → HOTAS. Watch for exclusive binds that steal on-foot keys.</p>
+<p><strong>Q: Are there known EA Day-1 keybind bugs, including binds that do not save?</strong><br/>
+A: HOTAS non-persistence is a strong community lead (allthings). Other beta/Support leads exist; publish bug rows only after EA reproduction.</p>
+<p><strong>Q: What are the best starter binds for building and ADS?</strong><br/> A: Keep Interact reachable for towers (<strong>F</strong> lead). Building rotate/snap leads from Bisect. ADS default RMB until you screenshot.</p>
+<p><strong>Q: Which default KBM controls are essential for a first match?</strong><br/>
+A: WASD, fire/ADS, Reload, <strong>Interact F</strong>, Map M, Inventory Tab — then verify on your build. Not a scraped full Bisect mirror.</p>
+<p><strong>Q: Can Steam Input improve controller play?</strong><br/> A: Yes when native remap is shallow — PixelNitro/allthings leads. Properties → Controller path and any working template before recommending one.</p>
+<p><strong>Q: My binds crashed the game / WARDOGS won’t launch after remapping</strong><br/>
+A: Stop changing binds; follow <a href="../wardogs-crashing/">Crashing</a> (<strong>Elytra</strong>-aware). Then return here.</p>
+<p><strong>Q: Where do I learn tower Interact binds?</strong><br/> A: Interact defaults here + tower flow on <a href="../wardogs-towers-hot-zone/">Towers</a> + first match on <a href="../how-to-play-wardogs/">How to Play</a>.</p>
+<p><strong>Q: Deadzone values for HOTAS?</strong><br/>
+A: allthings working leads Roll 0.02 / Pitch 0.03 — hardware-dependent. Tune until true zero at rest.</p>
+<hr/>
+<h2 id="also-read">Also read</h2>
+<ul>
+<li><a href="../wardogs-best-settings/">Best WARDOGS Settings for FPS and Clarity</a> — FOV / overlay conflicts  </li>
+<li><a href="../wardogs-crashing/">WARDOGS Crashing or Won’t Launch</a> — launch/crash when input setup fails hard  </li>
+<li><a href="../how-to-play-wardogs/">How to Play WARDOGS (First Match)</a> — once binds work  </li>
+<li><a href="../wardogs-economy-starter-loadout/">WARDOGS Economy + Starter Loadout</a> — kit use after controls are set  </li>
+<li><a href="../wardogs-towers-hot-zone/">Towers + Hot Zone</a> — hold Interact on computers  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam store WARDOGS (PC Windows EA) — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Steam Launch Stability Hotfix #1 — https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>BisectHosting — Controls guide PC &amp; controller (Sep 5, 2026) — https://www.bisecthosting.com/blog/wardogs-controls-guide-all-pc-controller-key-bindings  </li>
+<li>allthings.how — HOTAS setup (Sep 10, 2026) — https://allthings.how/wardogs-hotas-setup-guide-bindings-deadzones-and-sensitivity/  </li>
+<li>allthings.how — MH-6 helicopter controls — https://allthings.how/wardogs-helicopter-controls-how-to-fly-the-mh-6/  </li>
+<li>Games Fuze — How to setup HOTAS — https://gamesfuze.com/guides/how-to-setup-hotas-in-wardogs/  </li>
+<li>PixelNitro — Controller / Steam Input — https://pixelnitro.com/how-to-play-wardogs-with-a-controller-ultimate-setup-guide-aim-assist-settings-and-steam-input-fixes/</li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+      <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; starter loadout</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

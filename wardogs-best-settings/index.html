@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Settings: FPS vs Clarity on Steam Early Access</title>
+  <meta name="description" content="Choose WARDOGS settings for fight pacing or spotting. Overlay fights belong on the crash page. Last checked 2026-09-13." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-best-settings/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Settings: FPS vs Clarity on Steam Early Access" />
+  <meta property="og:description" content="Choose WARDOGS settings for fight pacing or spotting. Overlay fights belong on the crash page. Last checked 2026-09-13." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-best-settings/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Settings: FPS vs Clarity on Steam Early Access" />
+  <meta name="twitter:description" content="Choose WARDOGS settings for fight pacing or spotting. Overlay fights belong on the crash page. Last checked 2026-09-13." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Play", "item": "https://thewardogsguide.com/wardogs/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Settings: FPS vs Clarity on Steam Early Access", "item": "https://thewardogsguide.com/wardogs-best-settings/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/" aria-current="page" class="is-active">Guides</a>
+        <a href="../wardogs-fixes/">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip">Fix</a>
+      <a href="../wardogs/" class="cluster-chip is-active">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs/">Play</a></li>
+        <li aria-current="page">WARDOGS Settings: FPS vs Clarity on Steam Early Access</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 13 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Settings: FPS vs Clarity on Steam Early Access</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-this-page-covers-and-what-it-refuses-to-invent">What this page covers (and what it refuses to invent)</a></li>
+      <li><a href="#decision-tree-pick-fps-clarity-or-balanced">Decision tree: pick FPS, clarity, or balanced</a></li>
+      <li><a href="#third-party-named-options">Third-party named options</a></li>
+      <li><a href="#recommended-baseline-settings">Recommended baseline settings</a></li>
+      <li><a href="#visibility-clarity-checklist-spotting-not-pretty">Visibility / clarity checklist (spotting, not “pretty”)</a></li>
+      <li><a href="#low--mid--and-high-end-skeletons-not-measured-presets">Low-, mid-, and high-end skeletons (not measured presets)</a></li>
+      <li><a href="#first-launch-stutter-and-shader-compilation">First-launch stutter and shader compilation</a></li>
+      <li><a href="#overlays-and-background-apps-crash-spoke">Overlays and background apps → Crash spoke</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read">Also read</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> WARDOGS Early Access (Steam, PC Windows, since Sep 10 2026) needs a <strong>goal-first</strong> settings path: max FPS for fight pacing, or max clarity for spotting across <strong>Control Zones</strong> and towers — not a copied “+X% FPS” preset. This is a public-source Early Access guide: decision trees, <strong>third-party named-option leads</strong> (Hone / 2UpSkill / PixelNitro / dtgre), and low/mid/high <strong>skeletons</strong>. We omit unconfirmed in-client menu labels and any invented FPS percentages until we confirm them on a live build. Store anti-cheat is <strong>Elytra</strong> (kernel-level); overlays that fight Elytra belong on the Crash page. <strong>Do not</strong> trust blogs that mislabel the AC as Easy Anti-Cheat. Store match framing: ~100 players / 3 teams, Control Zone ~2×2 km, first to 100 points.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p><figure class="shot"><img alt="Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not a live Video menu) — captured 2026-09-13" loading="lazy" src="../assets/shots/steam-store-elytra-tag.webp"/><figcaption>Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not a live Video menu) — captured 2026-09-13</figcaption></figure><figure class="shot"><img alt="Official Steam store screenshot — Control Zone / combat overview (public store media, not a live settings HUD) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-overview.webp"/><figcaption>Official Steam store screenshot — Control Zone / combat overview (public store media, not a live settings HUD) — 2026-09-13</figcaption></figure>
+<p>If the client never reaches Settings, stop and use <a href="../wardogs-crashing/">WARDOGS Crashing / Won’t Launch</a>. First-match loop: <a href="../how-to-play-wardogs/">How to Play WARDOGS</a> and <a href="../wardogs-controls-hotas/">Controls</a>.</p>
+<hr/>
+<h2 id="what-this-page-covers-and-what-it-refuses-to-invent">What this page covers (and what it refuses to invent)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Covered</th>
+<th>Not invented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Goal: FPS vs clarity tradeoffs</td>
+<td>Any “+X% FPS” or fabricated 1% lows</td>
+</tr>
+<tr>
+<td>Low / mid / high starting skeletons</td>
+<td>Fake FIXED claims after a patch</td>
+</tr>
+<tr>
+<td>Third-party named settings as <strong>leads</strong></td>
+<td>Claiming those labels are official without screenshot</td>
+</tr>
+<tr>
+<td>Overlay conflict → Crash spoke</td>
+<td>Exact EA menu names before screenshot capture</td>
+</tr>
+<tr>
+<td>Retest checklist after Hotfix / patch</td>
+<td>Hardware FPS leaderboards</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Platform fact (store, dated):</strong> PC Windows Steam Early Access. <strong>Elytra</strong> anti-cheat tag on store as of 2026-09-13 WebFetch.</p><div class="table-wrap">
+<table>
+<thead><tr><th>Field</th><th>Public source (2026-09-13)</th></tr></thead>
+<tbody>
+<tr><td>Platform</td><td>PC Windows Steam Early Access</td></tr>
+<tr><td>Anti-cheat</td><td><strong>Elytra</strong> (kernel-level store feature tag — not Easy Anti-Cheat)</td></tr>
+<tr><td>Match framing</td><td>~100 players / 3 teams; Control Zone ~2×2 km; first to 100 points (Steam store)</td></tr>
+<tr><td>Why settings matter here</td><td>100-player Control Zone fights plus <strong>Hot Zone</strong> (store: double cash) stress effects / post more than pretty lighting</td></tr>
+<tr><td>Measured FPS / 1% lows</td><td>Omitted — we do not invent percentages</td></tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="decision-tree-pick-fps-clarity-or-balanced">Decision tree: pick FPS, clarity, or balanced</h2>
+<pre><code>Start → Can you open Settings without crash/black screen?
+  NO  → ../wardogs-crashing/ (Elytra / launch / overlay)
+  YES → What hurts more in fights?
+         ├─ Frame drops / hitching → Maximum FPS path
+         ├─ Can’t spot players / vehicles past mid-range → Clarity path
+         └─ First day, unknown PC → Balanced baseline (below)
+</code></pre>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Goal</th><th>Prefer (direction only)</th><th>Trade away</th><th>Evidence rule</th></tr></thead>
+<tbody>
+<tr><td>Maximum FPS</td><td>Lower expensive families first (shadows / effects / post / GI) one at a time</td><td>Pretty reflections and heavy lighting</td><td>Change one family; note feel — no %</td></tr>
+<tr><td>Competitive clarity</td><td>Kill blur / grain / DoF if present; keep view / mesh readable for towers</td><td>Cinematic bloom / film look</td><td>Spot test at towers / <strong>Hot Zone</strong> edge</td></tr>
+<tr><td>Balanced Day-1</td><td>Mid-tier skeleton</td><td>Extreme Ultra or Ultra-low</td><td>Revisit after 2–3 matches</td></tr>
+</tbody>
+</table>
+</div>
+<p>Do <strong>not</strong> call one preset “best for every PC.”</p>
+<hr/>
+<h2 id="third-party-named-options">Third-party named options</h2>
+<p>Public Sep 2026 guides name many sliders. Treat as <strong>third-party until live screenshot</strong>. Conflicts stay visible.</p>
+<h3>Display / latency family</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Setting (third-party)</th>
+<th>Hone (Sep 11)</th>
+<th>2UpSkill / PixelNitro / dtgre</th>
+<th>Conflict / note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolution</td>
+<td>Native</td>
+<td>Native</td>
+<td>Consensus lead</td>
+</tr>
+<tr>
+<td>V-Sync</td>
+<td>Disabled for first latency test</td>
+<td>Off</td>
+<td>Consensus lead</td>
+</tr>
+<tr>
+<td>Frame Generation / DLSS FG</td>
+<td>Off for baseline</td>
+<td>Off</td>
+<td>Consensus for latency-first</td>
+</tr>
+<tr>
+<td>Frame Limit / Cap</td>
+<td>Stable cap or uncapped for comparison</td>
+<td>Cap near refresh (e.g. ~3–4 under Hz with VRR — Hone)</td>
+<td>Cap vs Unlimited conflict</td>
+</tr>
+<tr>
+<td>Main Menu FPS Limit</td>
+<td>60 (Hone)</td>
+<td>—</td>
+<td>Menu-only; verify exists</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Graphics quality family</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Setting (third-party)</th>
+<th>Competitive lead</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overall Quality</td>
+<td>Custom</td>
+<td>Avoid auto presets silently rewriting</td>
+</tr>
+<tr>
+<td>Mesh Detail / Mesh Quality</td>
+<td>Medium (Hone); Medium/High (2UpSkill)</td>
+<td>Keep readable for towers</td>
+</tr>
+<tr>
+<td>View Distance</td>
+<td>High</td>
+<td>Cut late — spotting matters</td>
+</tr>
+<tr>
+<td>Shading</td>
+<td>Low (Hone); Low/Medium (others)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Global Illumination</td>
+<td>Disabled / Off</td>
+<td>Repeated “big cost” claim — unmeasured here</td>
+</tr>
+<tr>
+<td>Shadows</td>
+<td>Low</td>
+<td>Do not invent “competitive advantage %”</td>
+</tr>
+<tr>
+<td>Reflections</td>
+<td>Low / Off</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Effects</td>
+<td>Medium then Low in heavy fights</td>
+<td><strong>Hot Zone</strong> / explosions stress</td>
+</tr>
+<tr>
+<td>Particle Spawn Rate</td>
+<td>Low</td>
+<td>Separate from Effects on some menus (Hone)</td>
+</tr>
+<tr>
+<td>Post-Processing</td>
+<td>Low / Off</td>
+<td>Clarity</td>
+</tr>
+<tr>
+<td>Motion Blur</td>
+<td>Disabled</td>
+<td>Clarity</td>
+</tr>
+<tr>
+<td>Depth of Field</td>
+<td>Disabled</td>
+<td>Some older guides left DoF on — <strong>conflict</strong></td>
+</tr>
+<tr>
+<td>Lens Flare / Bloom</td>
+<td>Disabled</td>
+<td>Clarity</td>
+</tr>
+<tr>
+<td>World / Character Textures</td>
+<td>High if VRAM allows</td>
+<td>No invented GB cutoffs</td>
+</tr>
+<tr>
+<td>Effects Textures</td>
+<td>Medium (Hone)</td>
+<td>Distinct row if present</td>
+</tr>
+<tr>
+<td>Texture Streaming / Filtering</td>
+<td>High/default; Filtering Medium</td>
+<td>Traversal hitch lead</td>
+</tr>
+<tr>
+<td>Anti-Aliasing Method</td>
+<td>DLSS path on RTX; vendor option on AMD</td>
+<td>Exact AMD label varies</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Largest observed FPS change:</strong> omitted. Never invent a percentage. Forbid copied “+X% FPS.”</p>
+<h3>Community conflict table (settings)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Source A</th>
+<th>Source B</th>
+<th>Stance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exclusive vs borderless</td>
+<td>PixelNitro: Exclusive Fullscreen</td>
+<td>Hone: Windowed Fullscreen; unsettled</td>
+<td>Test both; no forever winner</td>
+</tr>
+<tr>
+<td>Reflex Boost</td>
+<td>Hone: don’t default Boost</td>
+<td>PixelNitro: Enabled + Boost</td>
+<td>A/B on your GPU clocks</td>
+</tr>
+<tr>
+<td>GI Off vs Low</td>
+<td>Most: Off/Disabled</td>
+<td>PixelNitro snippet: Low</td>
+<td>Prefer Off for FPS path until measured</td>
+</tr>
+<tr>
+<td>DoF</td>
+<td>Most: Off</td>
+<td>Older Sportskeeda-class left On</td>
+<td>Clarity path → Off if present</td>
+</tr>
+<tr>
+<td>Frame cap</td>
+<td>Cap to Hz / slightly under VRR</td>
+<td>Unlimited for comparison</td>
+<td>Document hitching either way</td>
+</tr>
+<tr>
+<td>Anti-cheat name</td>
+<td>Steam store: <strong>Elytra</strong></td>
+<td>Hone blog mentions Easy Anti-Cheat in one note</td>
+<td><strong>Trust store Elytra</strong>; treat blog AC mislabel as error</td>
+</tr>
+<tr>
+<td>Official PC targets</td>
+<td>Hone cites min 1080p Low 60 with upscaling; rec 1440p Medium 70+ / 4K Medium 60+ upscaled</td>
+<td>Store/system requirements pages</td>
+<td>Developer targets ≠ your 100-player lows</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="recommended-baseline-settings">Recommended baseline settings</h2>
+<p>Third-party EA blogs disagree on Shadows, Depth of Field, and frame cap. Treat common directions as <strong>leads</strong>, not truth.</p><p>We omit a publishable in-client baseline table until we screenshot live Video / Graphics labels. Use the <strong>third-party named-options</strong> tables above as leads, not truth.</p><p><strong>How to read a settings menu (process):</strong> start from Custom so an auto preset cannot silently rewrite rows; change <em>one</em> family; re-run the same Control Zone sightline (~2×2 km, ~100 players). Keep the change only if the goal (FPS feel or spotting) improved. Do not copy a “+X% FPS” blog preset.</p>
+<hr/>
+<h2 id="visibility-clarity-checklist-spotting-not-pretty">Visibility / clarity checklist (spotting, not “pretty”)</h2>
+<p><strong>Control Zone</strong> fights (store: ~2×2 km, first to 100 points, 100 players / 3 teams) punish muddy post-process more than missing ray-traced gloss.</p><p>We omit an option-by-option presence table until we confirm which post-process toggles exist on the live EA menu. Clarity path if a blur / grain / DoF / bloom control is present: turn it off, then re-spot infantry and a vehicle silhouette at tower range. Maps in rotation on the MetaForge hub capture (2026-09-13): <strong>Bakurani, Ozeti, Zestafona</strong> — all listed Playable now.</p>
+<p><strong>Clarity smoke test (no FPS%):</strong></p>
+<ol>
+<li>Join a quiet edge of the <strong>Control Zone</strong> spawn flow.</li>
+<li>Spot infantry at mid-range and a vehicle silhouette.  </li>
+<li>Toggle one post-process option; keep the change only if spotting improves.  </li>
+<li>Repeat near a tower sightline (see <a href="../wardogs-towers-hot-zone/">Towers / Hot Zone</a>).</li>
+</ol>
+<hr/>
+<h2 id="low--mid--and-high-end-skeletons-not-measured-presets">Low-, mid-, and high-end skeletons (not measured presets)</h2>
+<p>Publish as <strong>skeletons</strong> until hardware + screenshots exist. Do not fill invented FPS columns.</p>
+<h3>Symptom → first lever (Hone-style, no %)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>First lever (one at a time)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lower render res clearly raises FPS</td>
+<td>Quality upscaling → then GI → Reflections</td>
+</tr>
+<tr>
+<td>Busy fights hurt; res change barely helps</td>
+<td>Effects / Particle Spawn Rate → then View Distance / Mesh</td>
+</tr>
+<tr>
+<td>Hitches grow after long traversal; memory fills</td>
+<td>World/Character textures one step → Texture Streaming</td>
+</tr>
+<tr>
+<td>Spikes on first run after update</td>
+<td>Warm once; separate first-run data; check driver/build</td>
+</tr>
+<tr>
+<td>Stable local FPS but rubber-banding</td>
+<td>Network / server — not graphics</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Per-tier checklist (print / copy)</h3>
+<p><strong>Low-end</strong></p>
+<ul>
+<li>[ ] Native or one step down resolution only if UI stays readable</li>
+<li>[ ] Fullscreen vs borderless: pick the stable one for your GPU driver</li>
+<li>[ ] Shadows / GI / effects / post → lowest that doesn’t break readability  </li>
+<li>[ ] Cap to display Hz if Unlimited hitching</li>
+<li>[ ] Disable Discord/NVIDIA/Steam overlay for a control match → Crash page if still unstable  </li>
+</ul>
+<p><strong>Mid</strong></p>
+<ul>
+<li>[ ] Start from Balanced baseline table  </li>
+<li>[ ] Clarity: blur/DoF/grain off if present  </li>
+<li>[ ] Raise textures before shadows  </li>
+<li>[ ] Re-test after one <strong>Hot Zone</strong> fight (store: <strong>Hot Zone</strong> can double cash — denser action)</li>
+</ul>
+<p><strong>High-end</strong></p>
+<ul>
+<li>[ ] Clarity path first  </li>
+<li>[ ] Cap optional for thermals / consistency</li>
+<li>[ ] Log any setting that uniquely tanks 1% lows on <em>your</em> GPU  </li>
+</ul>
+<hr/>
+<h2 id="first-launch-stutter-and-shader-compilation">First-launch stutter and shader compilation</h2>
+<p>Community leads say first boot can hitch while shaders compile. We do <strong>not</strong> publish a timed “shader fix” or an FPS% claim. If the process exits or never reaches the menu, treat it as a crash and use <a href="../wardogs-crashing/">WARDOGS Crashing / Elytra</a>. If it only hitch-stutters then settles, warm once after a patch or driver update and separate that first-run data from later matches.</p><div class="table-wrap">
+<table><thead><tr><th>Observation</th><th>What to do</th></tr></thead><tbody><tr><td>Hitch then reaches menu</td><td>Wait on a quiet screen; log that it was first-run</td></tr><tr><td>Recurs after patch / driver</td><td>Warm once more; do not invent a duration</td></tr><tr><td>Exits / never reaches menu</td><td>Treat as crash → <a href="../wardogs-crashing/">Crashing</a></td></tr></tbody></table>
+</div>
+<hr/>
+<h2 id="overlays-and-background-apps-crash-spoke">Overlays and background apps → Crash spoke</h2>
+<p>Graphics tweaks will not fix <strong>Elytra</strong> launch failures, Access Denied after Hotfix, or join timeouts. If FPS “fixes” coincide with crashes, isolate overlays first.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Item</th><th>Why isolate</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>Discord overlay</td><td>Often cited in UE-style launch / access-violation writeups</td><td>Disable → retest; deep path on <a href="../wardogs-crashing/">Crash</a></td></tr>
+<tr><td>Steam overlay</td><td>Inject / focus steal</td><td>Disable for a control match</td></tr>
+<tr><td>GeForce Experience / AMD overlay</td><td>Vendor overlay ≠ the driver</td><td>Disable overlay; keep the driver</td></tr>
+<tr><td>Browser + downloads</td><td>Bandwidth + CPU steal</td><td>Pause while testing</td></tr>
+<tr><td>External FPS injectors / RTSS</td><td>Third-party warn AC / overlay conflicts</td><td>Prefer an in-game limiter first</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rule:</strong> Overlay conflicts that prevent launch or hard-crash mid-match go on <a href="../wardogs-crashing/">WARDOGS Crashing</a> (<strong>Elytra</strong>-aware). This Settings page only covers <em>after</em> you can stay in a match.</p>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Which live-build settings produce the largest observed FPS change?</strong><br/> A. Measure on a dated build. Never publish a copied “+X% FPS” claim from Sportskeeda/Overgear/2UpSkill/Hone-class posts.</p>
+<p><strong>Q: What FPS cap should I use?</strong><br/> A. Cap advice conflicts (refresh-rate vs Unlimited). Pick from your display Hz, tearing, and 1% low feel — or leave Unlimited and document hitching.</p>
+<p><strong>Q: Which settings improve visibility rather than image quality?</strong><br/> A: Kill motion blur, film grain, heavy DoF/bloom if present; keep mesh/view distance readable for tower sightlines. We omit unconfirmed menu labels until a live screenshot.</p>
+<p><strong>Q: Is first-launch stutter or shader compilation normal?</strong><br/> A: Community leads say first boot can hitch. Time it on your install — we do not publish a fake duration. If the process exits, use the Crash hub, not more graphics cuts.</p>
+<p><strong>Q: Are there useful low-end and high-end presets?</strong><br/> A: Skeletons above only. Publish numbered presets only with hardware notes and screenshots. Otherwise keep a single baseline labeled as a public-source skeleton.</p>
+<p><strong>Q: Exact menu names and values?</strong><br/> A: We omit unconfirmed menu labels until a live Video / Graphics screenshot. Third-party names in the lead tables are not proof.</p>
+<p><strong>Q: DLSS / FSR / Frame Generation?</strong><br/> A: Third-party consensus: Quality upscaling when GPU-limited; Frame Generation Off for latency baseline. Confirm options exist on your GPU.</p>
+<p><strong>Q: Do overlays hurt FPS or stability?</strong><br/>
+A: Isolate Discord / Steam / GeForce one at a time. Stability failures → <a href="../wardogs-crashing/">Crashing</a>. FPS feel changes stay here.</p>
+<p><strong>Q: Will lowering settings fix Error 1628505091 or Access Denied?</strong><br/>
+A: No. Join timeout / auth / queue codes are Fix-hub problems — see <a href="../wardogs-error-codes/">Error Codes Hub</a> and <a href="../wardogs-servers-down/">Servers</a>. Graphics settings do not create server capacity.</p>
+<p><strong>Q: Does Elytra change which settings I should pick?</strong><br/>
+A: Store tags <strong>Elytra</strong> (not EAC as current). <strong>Elytra</strong> affects launch/AC health, not your Shadow slider. Repair/identify paths stay on Crash.</p>
+<hr/>
+<h2 id="also-read">Also read</h2>
+<ul>
+<li><a href="../wardogs-crashing/">WARDOGS Crashing or Won’t Launch (Elytra)</a> — overlays, launch failures, AC  </li>
+<li><a href="../wardogs-controls-hotas/">WARDOGS Controls — Keyboard, Partial Controller, HOTAS</a> — binds, FOV-adjacent input  </li>
+<li><a href="../how-to-play-wardogs/">How to Play WARDOGS (First Match)</a> — after settings are stable  </li>
+<li><a href="../wardogs-error-codes/">WARDOGS Error Codes Hub</a> — if “performance” is actually a join/auth dialog  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam store WARDOGS (AppID 1867240) — <strong>Elytra</strong> tag; PC Windows; EA Sep 10 2026; <strong>Control Zone</strong> / <strong>Hot Zone</strong> marketing — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Steam Launch Stability Hotfix #1 — https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>Hone — Best PC Settings for FPS (Sep 11, 2026) — third-party named options — https://hone.gg/blog/wardogs-best-pc-settings/  </li>
+<li>2UpSkill — Best FPS Settings 2026 — https://2upskill.com/wardogs-best-fps-settings-2026-competitive-optimization-guide/  </li>
+<li>PixelNitro — Lag / stuttering fix — https://pixelnitro.com/wardogs-lag-and-stuttering-fix-guide-how-to-boost-fps-and-fix-1-lows-in-2026/  </li>
+<li>dtgre — Best settings low/mid/high — https://www.dtgre.com/2026/09/wardogs-best-settings-fps-visibility-low-mid-high-end-pc.html  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

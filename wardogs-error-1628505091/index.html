@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)</title>
+  <meta name="description" content="Fix WARDOGS error 1628505091 (JOIN TIMEDOUT). Widespread vs local tree, Hotfix #1 restart path, server browser. Last checked 2026-09-14." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-error-1628505091/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)" />
+  <meta property="og:description" content="Fix WARDOGS error 1628505091 (JOIN TIMEDOUT). Widespread vs local tree, Hotfix #1 restart path, server browser. Last checked 2026-09-14." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-error-1628505091/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)" />
+  <meta name="twitter:description" content="Fix WARDOGS error 1628505091 (JOIN TIMEDOUT). Widespread vs local tree, Hotfix #1 restart path, server browser. Last checked 2026-09-14." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)", "item": "https://thewardogsguide.com/wardogs-error-1628505091/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Error 1628505091: Failed to Connect / Join Timed Out (EA Fix Path)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-join-timedout-1628505091-actually-means">What JOIN TIMEDOUT / 1628505091 actually means</a></li>
+      <li><a href="#decision-tree-widespread-vs-local-print-this">Decision tree: widespread vs local (print this)</a></li>
+      <li><a href="#what-changed-after-launch-stability-hotfix-1-2026-09-10">What changed after Launch Stability Hotfix #1 (2026-09-10)</a></li>
+      <li><a href="#server-browser-region-and-stale-slot-counts">Server Browser, region, and stale slot counts</a></li>
+      <li><a href="#vpn-hotspot-test-not-cure">VPN / hotspot: test, not cure</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#safe-fix-ladder-local-branch-only">Safe fix ladder (local branch only)</a></li>
+      <li><a href="#differentiate-vs-nerdschalk-gearup-lagofast">Differentiate vs Nerdschalk / GearUP / LagoFast</a></li>
+      <li><a href="#related-error-spillover">Related error spillover</a></li>
+      <li><a href="#support-paste-block">Support paste block</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> Error <code>1628505091</code> is <strong>JOIN TIMEDOUT</strong> — <em>“Failed to connect to the server in a reasonable time.”</em> That’s a <strong>failed join handshake</strong>, not a ban and not a broken install. Decide <strong>widespread vs local</strong>, install <strong>Launch Stability Hotfix #1</strong> (close → Steam download → relaunch → wave queue), then try one other server/region. Stale counts (~70/100 shown) can still reject you. VPN/hotspot are <strong>diagnostic tests</strong>, not cures. Deep status → <a href="../wardogs-servers-down/">Servers Down / Queue / Access Denied</a>. Local crash → <a href="../wardogs-crashing/">Crashing / Won’t Launch</a>. Code table → <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<figure class="shot"><img alt="Steam Hotfix #1 thread covering join failures / controlled batches (public Steam page; dialog text quoted from GearUP/Nerdschalk — not a live client screenshot) — 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Hotfix #1 thread covering join failures / controlled batches (public Steam page; dialog text quoted from GearUP/Nerdschalk — not a live client screenshot) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="what-join-timedout-1628505091-actually-means">What JOIN TIMEDOUT / 1628505091 actually means</h2>
+<p>Public guides (Nerdschalk, GearUP Booster, LagoFast) and launch-day Steam reports frame <code>1628505091</code> as a <strong>server-join timeout</strong>: your client started a join to a listed server and did <strong>not</strong> finish inside the allowed window. Nerdschalk (updated Sep 12, 2026) says there is <strong>no public official Bulkhead glossary definition</strong>. Read the full dialog — don’t invent a root cause on your PC.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Public wording (dated)</th>
+<th>Not this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td><code>1628505091</code></td>
+<td>Not an official “ban ID”</td>
+</tr>
+<tr>
+<td>Banner</td>
+<td><code>JOIN TIMEDOUT</code> (GearUP framing)</td>
+<td>Not a graphics/FPS failure</td>
+</tr>
+<tr>
+<td>Body</td>
+<td><em>Failed to connect to the server in a reasonable time</em></td>
+<td>Not proof of corrupted game files by itself</td>
+</tr>
+<tr>
+<td>Timing (community)</td>
+<td>Often after leaving login queue, after a kick, or when joining a server that still shows slots (LagoFast)</td>
+<td>Not the same as “won’t launch” / Elytra</td>
+</tr>
+<tr>
+<td>Official definition</td>
+<td><strong>No public Bulkhead glossary entry found</strong> as of 2026-09-13</td>
+<td>Do not invent a studio definition — public lead meanings only (GearUP/Nerdschalk)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Working rule:</strong> read the <strong>full dialog</strong>. Timeout + this code → tree below. If you also see <em>Reason: Cheating</em>, <em>Permanent</em>, or <em>Your account has been banned</em>, stop — different path (often cited as <code>1147405307</code>) on the <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<h3>Handshake vs other failures</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You did</th>
+<th>Dialog</th>
+<th>Class</th>
+<th>Go to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Still in / bounced from login queue with auth text</td>
+<td>Failed to authenticate / Access Denied (no ban reason)</td>
+<td>Auth / wave</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Left queue; Server Browser loaded; join fails with timeout</td>
+<td>JOIN TIMEDOUT + <code>1628505091</code></td>
+<td>Join handshake</td>
+<td><strong>This page</strong></td>
+</tr>
+<tr>
+<td>Join rejected with “Server queue is full”</td>
+<td><code>1147405316</code></td>
+<td>Capacity</td>
+<td><a href="../wardogs-servers-down/">Servers</a> / Error hub</td>
+</tr>
+<tr>
+<td>Game never opens / crash dump / Elytra</td>
+<td>Exception / WD-LO14 / black screen</td>
+<td>Local client</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Explicit Cheating + Permanent + banned</td>
+<td><code>1147405307</code>-style</td>
+<td>Account action</td>
+<td>Error hub — appeal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="decision-tree-widespread-vs-local-print-this">Decision tree: widespread vs local (print this)</h2>
+<p>Use the <strong>first true branch</strong>. Do not skip to reinstall.</p>
+<pre><code class="language-text">SEE 1628505091 / JOIN TIMEDOUT?
+│
+├─ Many friends / Steam / Discord reporting same join fail RIGHT NOW?
+│  ├─ YES → WIDE: install Hotfix #1 path → WAIT → do not reinstall
+│  └─ NO  → continue
+│
+├─ Server Browser blank / stale / every server times out?
+│  ├─ YES → WIDE or region-wide: status check → [Servers hub](../wardogs-servers-down/)
+│  └─ NO  → continue
+│
+├─ One server times out; another in same region joins?
+│  ├─ YES → LOCAL-TO-SERVER: refresh once → pick non-full server
+│  │         (stale slot counts are common — see table below)
+│  └─ NO  → continue
+│
+├─ Only “almost full” (1–2 free / ~70–90 shown) servers fail; emptier ones work?
+│  ├─ YES → SLOT-RACE / STALE COUNT: avoid racing the last seats
+│  └─ NO  → continue
+│
+├─ Wi-Fi fails; Ethernet or phone hotspot succeeds once?
+│  ├─ YES → LOCAL-ROUTE: fix home Wi-Fi / ISP route (test, not permanent VPN)
+│  └─ NO  → continue
+│
+├─ Failures only at evening peak / one region / cross-region?
+│  ├─ YES → ROUTE-CONGESTION pattern (GearUP): off-peak or nearer region test
+│  └─ NO  → continue
+│
+└─ Still only you, after Hotfix + one clean Steam restart + file verify?
+   → Collect screenshot + region + time → support / Discord paste
+</code></pre>
+<h3>Boundary cases</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge case</th>
+<th>Do this</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timeout right after Hotfix #1 download</td>
+<td>Confirm Downloads = 100%; one Steam Exit; then retest</td>
+<td>Assume “Hotfix broke joining forever”</td>
+</tr>
+<tr>
+<td>Timeout + Access Denied on next attempt</td>
+<td>Split: timeout = this page; Access Denied = <a href="../wardogs-servers-down/">Servers</a></td>
+<td>Mash Join on the same server</td>
+</tr>
+<tr>
+<td>Friends join; you timeout on every server</td>
+<td>Hotspot comparison → verify files → firewall allow Steam/WARDOGS</td>
+<td>Reinstall first</td>
+</tr>
+<tr>
+<td>You join one server, timeout on another</td>
+<td>Treat as session/capacity, not “game install dead”</td>
+<td>Change graphics presets</td>
+</tr>
+<tr>
+<td>Pre-EA screenshots from Sep 7–9</td>
+<td>Calendar gap — ignore as current evidence</td>
+<td>Recycle as “servers still down”</td>
+</tr>
+<tr>
+<td>Exact ban language present</td>
+<td>Leave this page → Error hub</td>
+<td>Infer ban from <code>1628505091</code> alone</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>60-second checklist</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Check</th>
+<th>Pass?</th>
+<th>Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Full dialog = JOIN TIMEDOUT + <code>1628505091</code> (no ban reason)</td>
+<td>Y/N</td>
+<td>If ban text → Error hub, not this ladder</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Steam Downloads shows WARDOGS update pending / installed</td>
+<td>Y/N</td>
+<td>Close game → finish update → relaunch</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Identical reports in last 15–30 min (Steam Discussions / friends)</td>
+<td>Y/N</td>
+<td>If yes → wait; skip local surgery</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Server Browser loads; ≥1 other server in region accepts join</td>
+<td>Y/N</td>
+<td>If yes → capacity/session, not “game broken”</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Avoided 1–2-slot / stale ~70/100 “ghost capacity” servers</td>
+<td>Y/N</td>
+<td>Pick clearer free capacity once</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>One hotspot or Ethernet test changes outcome</td>
+<td>Y/N</td>
+<td>If yes → route/ISP; do not reinstall</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>File verify already run <strong>after</strong> services look healthy</td>
+<td>Y/N</td>
+<td>Only then verify; still no factory-reset router</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="what-changed-after-launch-stability-hotfix-1-2026-09-10">What changed after Launch Stability Hotfix #1 (2026-09-10)</h2>
+<p>Developer <strong>G_Medlin</strong> (Steam discussion <em>Launch Stability Hotfix #1</em>, Sep 10 @ ~1:28pm) published a forced client restart path. Press (mp1st) described the package as a <strong>200+ MB</strong> client download. Studio targets:</p>
+<ul>
+<li>Players <strong>unable to join</strong> servers</li>
+<li>Players <strong>unexpectedly kicked</strong> during play</li>
+<li><strong>Extended login queue</strong> times</li>
+</ul>
+<h3>Hotfix #1 restart path (do this first)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Studio sequence</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Close WARDOGS completely</td>
+<td>Tray + Task Manager if it sticks</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Download the latest client update via Steam</td>
+<td>Open <strong>Steam → Downloads</strong>; wait for 100%</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Relaunch</td>
+<td>Expect return to <strong>login queue</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Controlled batches</td>
+<td>Studio admits players gradually — do not spam cancel/requeue</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Monitor</td>
+<td>Studio said they would monitor post-hotfix overnight</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Extra restart (press)</td>
+<td>mp1st: studio may perform <strong>another</strong> server restart → momentary logout is expected</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Steam news / discussions context for client updates (public Steam page, not Downloads pane) — 2026-09-13" loading="lazy" src="../assets/shots/steam-news-patch-011.webp"/><figcaption>Steam news / discussions context for client updates (public Steam page, not Downloads pane) — 2026-09-13</figcaption></figure>
+<h3>After Hotfix #1 — community spillover (not official)</h3>
+<p>Players in the same locked Hotfix #1 thread (~680 posts) reported <strong>new</strong> symptoms immediately after the update. Cite as <strong>community reports</strong>, not Bulkhead definitions:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Community report</th>
+<th>Treat as</th>
+<th>Go to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“got kicked… now it Says access denied after the HotFix”</td>
+<td>Auth / entitlement / wave gate</td>
+<td><a href="../wardogs-servers-down/">Servers hub</a></td>
+</tr>
+<tr>
+<td>“after the update I am now getting failed to authenticate online services”</td>
+<td>Auth spillover</td>
+<td>Servers hub; code <code>1147405308</code> lead</td>
+</tr>
+<tr>
+<td>“server auth failed” / “authentification doesn’t work anymore”</td>
+<td>Auth spillover</td>
+<td>Servers hub</td>
+</tr>
+<tr>
+<td>“Unable to launch WARDOGS / Error code: WD-LO14-c70b81e405df”</td>
+<td>Launch/auth edge</td>
+<td>Crash + Error hub — <strong>do not invent meaning</strong></td>
+</tr>
+<tr>
+<td>Still JOIN TIMEDOUT / <code>1628505091</code></td>
+<td>This page</td>
+<td>Continue tree after confirming update installed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Do not claim Hotfix #1 “fixed 1628505091 forever.”</strong> Nerdschalk notes a Sep 11 studio follow-up still <strong>monitoring</strong> — that is not a per-region green light. Stamp: verified path exists; outcomes vary by region/wave as of 2026-09-13. As of 2026-09-13 Steam News, the next titled studio update is <strong>SCHEDULED MAINTENANCE &amp; PATCH 0.11</strong> (Mon Sep 14 ~1h, server-browser focus) — <strong>no</strong> public Steam News titled Hotfix #2 found; Hotfix #1 remains the launch-day stability process post.</p>
+<hr/>
+<h2 id="server-browser-region-and-stale-slot-counts">Server Browser, region, and stale slot counts</h2>
+<p>Closed-beta and booster writeups note region-scoped browser behavior. LagoFast adds a launch-day pattern: displayed counts can lag while players join, leave, or get removed — servers showing roughly <strong>70/100</strong> still returned Full, Failed, or <code>1628505091</code>.</p>
+<h3>Browser branch: symptom → step</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>Read</th>
+<th>Next</th>
+<th>Stop if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser blank / never loads</td>
+<td>Service or region filter</td>
+<td>Status habit on <a href="../wardogs-servers-down/">Servers</a></td>
+<td>Spamming Refresh</td>
+</tr>
+<tr>
+<td>List loads; every join → 1628505091</td>
+<td>Widespread handshake / gate</td>
+<td>Hotfix confirm → wait</td>
+<td>Local GPU changes</td>
+</tr>
+<tr>
+<td>One named server times out; neighbor joins</td>
+<td>Bad session / that instance</td>
+<td>Refresh <strong>once</strong>; pick other non-full</td>
+<td>Chasing the same name</td>
+</tr>
+<tr>
+<td>Server shows 1–2 free slots → timeout/full</td>
+<td>Slot race</td>
+<td>Choose clearer free capacity</td>
+<td>Join spam</td>
+</tr>
+<tr>
+<td>Server shows ~70/100 → still timeout</td>
+<td>Stale count (community)</td>
+<td>Try lower displayed count once</td>
+<td>Conclude “my internet is too slow” alone</td>
+</tr>
+<tr>
+<td>Only cross-region joins fail</td>
+<td>Long route / congestion</td>
+<td>Prefer nearer region for test</td>
+<td>Permanent distant-region “fix”</td>
+</tr>
+<tr>
+<td>Wi-Fi fails; Ethernet/hotspot OK once</td>
+<td>Home route variable</td>
+<td>Fix Wi-Fi/router; VPN only as A/B test</td>
+<td>Always-on booster as “required”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Why</th>
+<th>Stop if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirm <strong>Region</strong> matches where you intend to play</td>
+<td>Wrong region → long routes / empty lists</td>
+<td>public lead — GearUP Closed Beta region selector note; confirm EA label</td>
+</tr>
+<tr>
+<td>Refresh <strong>once</strong>, wait for list to settle</td>
+<td>Spam refresh can worsen perceived timeouts</td>
+<td>List stays blank → status path</td>
+</tr>
+<tr>
+<td>Avoid servers with 1–2 free slots at peak</td>
+<td>Slot races; your join may expire mid-handshake</td>
+<td>You keep timing out on “almost full” only</td>
+</tr>
+<tr>
+<td>Try a second non-full server in the <strong>same</strong> region</td>
+<td>Isolates one bad session vs all connectivity</td>
+<td>Every server times out → widespread</td>
+</tr>
+<tr>
+<td>Do <strong>not</strong> jump to a distant region as a “fix”</td>
+<td>May join faster but ruin ping</td>
+<td>Only as deliberate cross-region experiment</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Steam Patch 0.11 news context — server browser improvements announced (public Steam news, not live Server Browser UI) — 2026-09-13" loading="lazy" src="../assets/shots/steam-news-patch-011.webp"/><figcaption>Steam Patch 0.11 news context — server browser improvements announced (public Steam news, not live Server Browser UI) — 2026-09-13</figcaption></figure>
+<p>Cross-link: capacity-full code <code>1147405316</code> (<em>Server queue is full</em>) is a <strong>different</strong> dialog — see <a href="../wardogs-error-codes/">Error Codes Hub</a> and <a href="../wardogs-servers-down/">Servers</a>.</p>
+<hr/>
+<h2 id="vpn-hotspot-test-not-cure">VPN / hotspot: test, not cure</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use as</th>
+<th>Don’t claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phone hotspot (one session)</td>
+<td>Prove home Wi-Fi/router path is the variable</td>
+<td>“Hotspot fixes WARDOGS”</td>
+</tr>
+<tr>
+<td>Temporary VPN off/on</td>
+<td>See if a VPN was breaking the join path</td>
+<td>“Buy VPN to fix 1628505091”</td>
+</tr>
+<tr>
+<td>Route-optimizer ads (GearUP/LagoFast etc.)</td>
+<td>Optional third-party; label as untested / marketing here</td>
+<td>Verified studio fix</td>
+</tr>
+<tr>
+<td>Permanent always-on VPN</td>
+<td>Only if you already needed it for other reasons</td>
+<td>Required step on this page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Order:</strong> Hotfix → status → one other server → Ethernet/hotspot <strong>test</strong> → Steam full exit → file verify. Never lead with VPN marketing. LagoFast itself notes route tools <strong>cannot</strong> fix an overloaded server, remove a queue, or repair a failed server-side restart.</p>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install current client via Hotfix #1 path</td>
+<td>Leave the game open overnight and assume you have the hotfix</td>
+</tr>
+<tr>
+<td>Decide widespread vs local in ≤2 minutes</td>
+<td>Reinstall because one popular server timed out</td>
+</tr>
+<tr>
+<td>Screenshot the <strong>full</strong> dialog (code + text)</td>
+<td>Report only “doesn’t connect” to support</td>
+</tr>
+<tr>
+<td>Wait in wave queue after relaunch</td>
+<td>Spam cancel → requeue every 10 seconds</td>
+</tr>
+<tr>
+<td>Treat stale ~70/100 counts as unreliable</td>
+<td>Assume fiber speed guarantees a join</td>
+</tr>
+<tr>
+<td>Cross-check <a href="../wardogs-servers-down/">Servers</a> for Access Denied / auth</td>
+<td>Assume timeout = ban</td>
+</tr>
+<tr>
+<td>Link crash symptoms to <a href="../wardogs-crashing/">Crashing</a></td>
+<td>Change graphics settings to “fix” join timeouts</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="safe-fix-ladder-local-branch-only">Safe fix ladder (local branch only)</h2>
+<p>Run <strong>only after</strong> Hotfix is installed and status does <strong>not</strong> look like a global outage.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>Signal</th>
+<th>Stop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Confirm update installed; one clean relaunch</td>
+<td>Queue or browser appears</td>
+<td>If Access Denied → Servers hub</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>One different non-full server, same region</td>
+<td>Join completes or new distinct error</td>
+<td>New code → Error hub</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Steam → Exit (not tray); relaunch Steam + game</td>
+<td>Fresh auth ticket</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Pause downloads / cloud sync / large uploads</td>
+<td>Fewer mid-handshake stalls</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Ethernet or hotspot <strong>comparison test</strong></td>
+<td>Outcome changes → home route</td>
+<td>Revert experiments that break other apps</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Allow Steam + WARDOGS through Windows Firewall if blocked</td>
+<td>Isolates local block</td>
+<td>Do not disable security permanently without noting it</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Verify integrity of game files</td>
+<td>Steam repairs mismatched files</td>
+<td>Useful if update incomplete; still no capacity fix</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Overlay / firewall only if join fails <strong>and</strong> other online games work</td>
+<td>Isolates local block</td>
+<td>If client crashes instead → Crash page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If the client <strong>crashes</strong>, black-screens, or never reaches menu: leave this page → <a href="../wardogs-crashing/">Crashing / Elytra</a>.</p>
+<hr/>
+<h2 id="differentiate-vs-nerdschalk-gearup-lagofast">Differentiate vs Nerdschalk / GearUP / LagoFast</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>SERP gap</th>
+<th>This page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear “6 steps” lists</td>
+<td><strong>Widespread vs local decision tree</strong> + boundary cases + printable checklist</td>
+</tr>
+<tr>
+<td>Hotfix mentioned once</td>
+<td>Dedicated <strong>what changed after Hotfix #1</strong> + community spillover table with paraphrased Steam quotes</td>
+</tr>
+<tr>
+<td>VPN framed as Method 1</td>
+<td>VPN/hotspot as <strong>test not cure</strong>; booster ads labeled optional</td>
+</tr>
+<tr>
+<td>No stale-count warning</td>
+<td>Explicit ~70/100 ghost-capacity pattern (LagoFast)</td>
+</tr>
+<tr>
+<td>Single error silo</td>
+<td>Sibling links: Servers, Crash, Error hub</td>
+</tr>
+<tr>
+<td>Ban confusion</td>
+<td>Explicit: <code>1628505091</code> alone ≠ ban; contrast <code>1147405307</code></td>
+</tr>
+<tr>
+<td>No version stamp</td>
+<td><strong>2026-09-13 EA</strong> stamp; </td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="related-error-spillover">Related error spillover</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Code / symptom</th>
+<th>Lean</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1628505091</code> JOIN TIMEDOUT</td>
+<td>Join handshake timeout</td>
+<td>This page</td>
+</tr>
+<tr>
+<td><code>1147405316</code> Server queue is full</td>
+<td>Capacity</td>
+<td><a href="../wardogs-servers-down/">Servers</a> / Error hub</td>
+</tr>
+<tr>
+<td><code>1147405307</code> Cheating / Permanent ban text</td>
+<td>Account action</td>
+<td>Error hub — appeal path</td>
+</tr>
+<tr>
+<td><code>1147405308</code> Failed to authenticate (public lead)</td>
+<td>Auth / queue</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Access Denied / auth failed post-Hotfix #1</td>
+<td>Wave / auth</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Crash / Elytra / never launches</td>
+<td>Local client</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td><code>WD-LO14-…</code> (community, e.g. <code>WD-LO14-c70b81e405df</code>)</td>
+<td>public lead — Steam Hotfix #1 reply; official meaning none</td>
+<td>Error hub + Crash</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="support-paste-block">Support paste block</h2>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Build / client update: [Hotfix #1 installed? Y/N — date]
+Exact dialog: JOIN TIMEDOUT / ERROR CODE 1628505091 / Failed to connect…
+Time (with timezone): 
+Region + server name (if shown): 
+Displayed player count at click: 
+Widespread?: yes / no / unknown (link if any)
+Friends in region can join?: 
+Already tried: Hotfix restart / other server / Steam Exit / hotspot test / verify
+Screenshot: attached
+</code></pre>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Does error 1628505091 mean I am banned?</strong><br/>
+A: No — not from this code alone. Nerdschalk: the timeout message is not proof of a ban. Ban-style dialogs under <code>1147405307</code> use explicit cheating/permanent language. Timeout text is a join failure.</p>
+<p><strong>Q: Is JOIN TIMEDOUT the same as “servers down”?</strong><br/>
+A: Sometimes overlapping, not identical. Global outage → many codes and blank browsers (<a href="../wardogs-servers-down/">Servers hub</a>). A single-server timeout with a healthy list is often capacity, route, or a stale session.</p>
+<p><strong>Q: “I waited in queue for ages, then timed out on a server that still showed open slots.” Is that normal?</strong><br/>
+A: Community reports (LagoFast) say yes during launch stress: the list can lag; ~70/100 displays still returned Full / Failed / <code>1628505091</code>. Refresh once, pick clearer capacity, or wait if <em>every</em> server behaves the same.</p>
+<p><strong>Q: Must I install Hotfix #1 again if I already played yesterday?</strong><br/>
+A: Confirm Steam shows no pending WARDOGS download. If you left the client open across the Sep 10 force-close window, fully exit and update once. As of 2026-09-13, Steam News lists <strong>Patch 0.11</strong> maintenance (Sep 14) rather than a Hotfix #2 title — keep client current after that window.</p>
+<p><strong>Q: Will verifying files or reinstalling clear 1628505091?</strong><br/>
+A: Only useful on the <strong>local</strong> branch after services look healthy (incomplete update, isolated-to-you failures). Reinstalling does not create server capacity and will not fix a widespread incident — GearUP’s avoid list aligns.</p>
+<p><strong>Q: Can a VPN fix this?</strong><br/>
+A: Use VPN/hotspot only as a <strong>comparison test</strong> (Nerdschalk Step 5: disable VPN temporarily; try hotspot). Do not treat any booster/VPN as a verified Bulkhead fix on this page.</p>
+<p><strong>Q: “Even players with fast fiber report this timeout” — so is my ISP irrelevant?</strong><br/>
+A: Not always. Fiber does not rule out a <em>route</em> problem to the selected region (LagoFast / GearUP). If only you fail while friends join, still run the Ethernet/hotspot A/B test before declaring “service only.”</p>
+<p><strong>Q: I get Access Denied right after the hotfix update — same guide?</strong><br/>
+A: No. Steam Hotfix #1 replies (paraphrased): players reported Access Denied and “failed to authenticate online services” within minutes of the update. Follow <a href="../wardogs-servers-down/">Servers Down / Queue / Access Denied</a> and the Error hub.</p>
+<p><strong>Q: Where do crash-to-desktop and Elytra failures go?</strong><br/>
+A: <a href="../wardogs-crashing/">WARDOGS Crashing or Won’t Launch — Elytra</a>. Store tag as of 2026-09-13: <strong>Uses Kernel Level Anti-Cheat Elytra</strong>.</p>
+<p><strong>Q: When should I contact support?</strong><br/>
+A: Nerdschalk: after latest client installed, regional friends can join, and you already tried a different server, clean Steam restart, and file verify — include full wording, code, time, region/server, screenshot.</p>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Nerdschalk — Error 1628505091 / Failed to Connect (updated Sep 12, 2026): https://nerdschalk.com/fix-wardogs-error-1628505091-failed-to-connect/  </li>
+<li>GearUP Booster — WARDOGS Error Codes: https://www.gearupbooster.com/blog/wardogs-error-codes.html  </li>
+<li>LagoFast — Error 1628505091 Join Timed Out (updated Sep 11, 2026): https://www.lagofast.com/en/blog/wardogs-error-code-1628505091/  </li>
+<li>Steam — Launch Stability Hotfix #1 (G_Medlin, Sep 10, 2026): https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>mp1st — Hotfix launch-day / 200+ MB note: https://mp1st.com/news/war-dogs-receives-hotfix-launch-day-players-encounter-server-instability-downtime  </li>
+<li>Steam Store — WARDOGS AppID 1867240 (Elytra tag, EA facts): https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Sibling: <a href="../wardogs-servers-down/">Servers Down / Queue / Access Denied</a> · <a href="../wardogs-crashing/">Crashing / Elytra</a> · <a href="../wardogs-error-codes/">Error Codes Hub</a></li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-servers-down/">WARDOGS servers down / queue / Access Denied</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-error-codes/">WARDOGS error codes hub</a></li>
+      <li><a href="../wardogs-patch-notes/">Patch 0.11 notes — Community vs Official browser</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

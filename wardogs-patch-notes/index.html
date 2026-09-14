@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance</title>
+  <meta name="description" content="WARDOGS Patch 0.11: Sep 14 maintenance (~1h), Community vs Official browser split, Asia capacity, cash-exploit fixes. Last checked 2026-09-14." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-patch-notes/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance" />
+  <meta property="og:description" content="WARDOGS Patch 0.11: Sep 14 maintenance (~1h), Community vs Official browser split, Asia capacity, cash-exploit fixes. Last checked 2026-09-14." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-patch-notes/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance" />
+  <meta name="twitter:description" content="WARDOGS Patch 0.11: Sep 14 maintenance (~1h), Community vs Official browser split, Asia capacity, cash-exploit fixes. Last checked 2026-09-14." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Info", "item": "https://thewardogsguide.com/wardogs-info/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance", "item": "https://thewardogsguide.com/wardogs-patch-notes/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip is-active">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-info/">Info</a></li>
+        <li aria-current="page">WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Patch 0.11 Notes — Server Browser Split and Sep 14 Maintenance</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#maintenance-window-as-announced">Maintenance window (as announced)</a></li>
+      <li><a href="#what-011-changes-steam-notes-paraphrased">What 0.11 changes (Steam notes, paraphrased)</a></li>
+      <li><a href="#not-in-011-steam-still-in-the-pipeline">Not in 0.11 (Steam: still in the pipeline)</a></li>
+      <li><a href="#economy-abuse-steam-stance-this-post">Economy abuse (Steam stance, this post)</a></li>
+      <li><a href="#if-something-breaks-after-the-window">If something breaks after the window</a></li>
+      <li><a href="#earlier-official-notes-not-011">Earlier official notes (not 0.11)</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> BULKHEAD scheduled about <strong>one hour</strong> of downtime on <strong>Monday 14 Sep 2026</strong> (01:00 PDT / 08:00 UTC) to ship <strong>Patch 0.11</strong>. The patch splits the server browser into <strong>Community</strong> and <strong>Official</strong>, adds Community text search and persistent server IDs, and notes extra Asia capacity plus cash-exploit and GPU-crash fixes. A <strong>5% end-of-match cash bonus</strong> on Community servers runs for one week after the patch. Source: <a href="https://store.steampowered.com/news/app/1867240/view/701027323413005176">Steam news — Scheduled Maintenance &amp; Patch 0.11</a>.</p>
+<p>This page is a dated digest, not a full copy of the Steam post. When a later patch lands, we will add a new dated section rather than overwrite this one.</p>
+<h2 id="maintenance-window-as-announced">Maintenance window (as announced)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Local time 14 Sep 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US Pacific (PDT)</td>
+<td>01:00</td>
+</tr>
+<tr>
+<td>US Eastern (EDT)</td>
+<td>04:00</td>
+</tr>
+<tr>
+<td>UTC</td>
+<td>08:00</td>
+</tr>
+<tr>
+<td>UK</td>
+<td>09:00</td>
+</tr>
+<tr>
+<td>Central Europe (CEST)</td>
+<td>10:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Steam said the take-down is <strong>about one hour</strong>. If join or queue errors spike around that window, start on <a href="../wardogs-servers-down/">Servers down</a> rather than reinstalling.</p>
+<h2 id="what-011-changes-steam-notes-paraphrased">What 0.11 changes (Steam notes, paraphrased)</h2>
+<p><strong>Server browser</strong>
+- Front end splits into two browsers: Community and Official.
+- Official browser drops extra filters (Steam: no official modified modes yet).
+- Community browser: more reliable filters, <strong>text search</strong>, <strong>Show Empty/Full</strong> on the quick bar.
+- Community server IDs persist across map changes and restarts; IDs are longer.
+- Host button points to the correct place.
+- Server names: alphabetical ignoring special characters/numbers; no more than one space in a row.</p>
+<p><strong>Other fixes named in the same post</strong>
+- Various cash exploits fixed.
+- More GPU crashes addressed.
+- Increased server capacity in <strong>Asia</strong>.</p>
+<p><strong>One-week Community bonus</strong>
+- Community servers offer a <strong>5% end-of-match cash bonus</strong> for the next week (Steam wording). Economy process still lives on <a href="../wardogs-economy-starter-loadout/">Economy</a>.</p>
+<h2 id="not-in-011-steam-still-in-the-pipeline">Not in 0.11 (Steam: still in the pipeline)</h2>
+<p>Steam listed these as <strong>not ready</strong> with this maintenance: community server favouriting, tiered priority queues, MOTD prompt, improved warmup, AFK kicking during seeding disable, team-switching controls.</p>
+<h2 id="economy-abuse-steam-stance-this-post">Economy abuse (Steam stance, this post)</h2>
+<p>The same announcement describes penalties for cash-exploit abuse (timed ban + cash/XP reset), for content that tutorials exploits (permanent ban), and for XP-farming servers (permanent ban). This page does not add extra rules. Official text: the Steam news post linked above.</p>
+<h2 id="if-something-breaks-after-the-window">If something breaks after the window</h2>
+<ul>
+<li>Can’t join / queue / Access Denied → <a href="../wardogs-servers-down/">Servers</a></li>
+<li>Crash or won’t launch → <a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+<li>Error dialog you can’t identify → <a href="../wardogs-error-codes/">Error codes hub</a></li>
+</ul>
+<h2 id="earlier-official-notes-not-011">Earlier official notes (not 0.11)</h2>
+<ul>
+<li><a href="https://store.steampowered.com/news/app/1867240/view/701027323413004709">Launch Stability Hotfix #1</a></li>
+<li><a href="https://store.steampowered.com/news/app/1867240/view/701027323413004455">Pre-Load Live &amp; Season 1 Changelog</a></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam news: Scheduled Maintenance &amp; Patch 0.11 — https://store.steampowered.com/news/app/1867240/view/701027323413005176</li>
+<li>Steam RSS for app 1867240, fetched 2026-09-14</li>
+</ul>
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-servers-down/">Servers down / queue</a></li>
+      <li><a href="../wardogs-economy-starter-loadout/">Economy / $10k reserve</a></li>
+      <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+      <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

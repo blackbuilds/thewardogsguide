@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)</title>
+  <meta name="description" content="Capture WARDOGS towers, keypad codes, and Hot Zone cash. Control Zone vs tower vs FOB drill flowchart. Last checked 2026-09-13." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-towers-hot-zone/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)" />
+  <meta property="og:description" content="Capture WARDOGS towers, keypad codes, and Hot Zone cash. Control Zone vs tower vs FOB drill flowchart. Last checked 2026-09-13." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-towers-hot-zone/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)" />
+  <meta name="twitter:description" content="Capture WARDOGS towers, keypad codes, and Hot Zone cash. Control Zone vs tower vs FOB drill flowchart. Last checked 2026-09-13." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Play", "item": "https://thewardogsguide.com/wardogs/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)", "item": "https://thewardogsguide.com/wardogs-towers-hot-zone/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/" aria-current="page" class="is-active">Guides</a>
+        <a href="../wardogs-fixes/">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip">Fix</a>
+      <a href="../wardogs/" class="cluster-chip is-active">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs/">Play</a></li>
+        <li aria-current="page">WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 13 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Towers and Hot Zone Guide — Capture, Codes, and Cash (EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#one-matrix-control-zone-hot-zone-tower-code-keypad-fob">One matrix: Control Zone, Hot Zone, tower, code, keypad, FOB</a></li>
+      <li><a href="#how-to-capture-hack-a-tower">How to capture / hack a tower</a></li>
+      <li><a href="#community-conflict-table-source-a-vs-b">Community conflict table (Source A vs B)</a></li>
+      <li><a href="#bakurani-ozeti-zestafona-tower-counts">Bakurani / Ozeti / Zestafona tower counts</a></li>
+      <li><a href="#double-cash-presence-math-hot-zone">Double cash, presence math, Hot Zone</a></li>
+      <li><a href="#when-not-to-contest-towers">When NOT to contest towers</a></li>
+      <li><a href="#tower-drill-vs-fob-drill">Tower drill vs FOB drill</a></li>
+      <li><a href="#capture-checklist">Capture checklist</a></li>
+      <li><a href="#squad-callouts">Squad callouts</a></li>
+      <li><a href="#related-play-pages">Related play pages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> Towers (often called <strong>Drill Towers</strong>) are <strong>Control Zone</strong> hardpoints that yield <strong>code digits</strong> when captured/hacked. Collect digits → enter them on the tower <strong>keypad</strong> → start the tower <strong>drill / Hot Zone Magnet</strong> to pull the <strong>Hot Zone</strong> toward that tower. Steam store About (2026-09-13): Hot Zone earns <strong>double the cash</strong>. Presence “counts as two” is a <strong>public lead</strong> — MetaForge map hub + allthings + games.gg agree (2026-09-13); not Steam store copy. <strong>FOB Drill Rigs / Oil Rigs</strong> are an alternate pull that need <strong>fuel</strong> and can be destroyed. This is an editorial flowchart + decision guide — <strong>not</strong> an interactive map clone. Onboarding → <a href="../how-to-play-wardogs/">How to Play</a>. Map POIs → <a href="../wardogs-maps/">Maps</a>. Bankroll → <a href="../wardogs-economy-starter-loadout/">Economy / Starter Loadout</a>.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<figure class="shot"><img alt="Official Steam store screenshot — tower/combat framing (public store media, not live keypad UI) — 2026-09-13" loading="lazy" src="../assets/shots/steam-official-ss-heli.webp"/><figcaption>Official Steam store screenshot — tower/combat framing (public store media, not live keypad UI) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="one-matrix-control-zone-hot-zone-tower-code-keypad-fob">One matrix: Control Zone, Hot Zone, tower, code, keypad, FOB</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>What it is</th>
+<th>Your job</th>
+<th>Win / cash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control Zone</strong></td>
+<td>Store: ~<strong>2×2 km</strong> primary objective area; <strong>100-player / 3 teams</strong>; first to <strong>100 points</strong>. Indie map guides also describe a smaller scoring core (~<strong>85 m</strong>) inside a play-area circle — <strong>size conflict</strong> below</td>
+<td>Contest space, towers, presence</td>
+<td>Match win condition</td>
+</tr>
+<tr>
+<td><strong>Hot Zone</strong></td>
+<td>High-value sub-area that moves / can be pulled; store copy: <strong>double cash</strong></td>
+<td>Be present / fight inside it</td>
+<td>Economy spike — see Economy page</td>
+</tr>
+<tr>
+<td><strong>Tower / Drill Tower</strong></td>
+<td>Tall hardpoint; only towers <strong>inside the active Control Zone / play area</strong> matter</td>
+<td>Hold sightlines; <strong>hack/capture</strong> for a digit</td>
+<td>Digit toward full code</td>
+</tr>
+<tr>
+<td><strong>Code digit</strong></td>
+<td>Number revealed after a successful capture; some guides say position in sequence is shown</td>
+<td>Write down + share with team</td>
+<td>Progress toward drill unlock</td>
+</tr>
+<tr>
+<td><strong>Keypad</strong></td>
+<td>Pad beside main computer (public guides)</td>
+<td>Enter full code; limited wrong tries</td>
+<td>Starts <strong>tower drill / Hot Zone Magnet</strong></td>
+</tr>
+<tr>
+<td><strong>Tower drill</strong></td>
+<td>Immobile puller once code accepted</td>
+<td>Defend the tower</td>
+<td>Pulls Hot Zone toward tower for a period</td>
+</tr>
+<tr>
+<td><strong>FOB drill / Oil Rig / Drill Rig</strong></td>
+<td>Player-built alternate Hot Zone puller</td>
+<td>Supply <strong>fuel</strong>; protect from arty/drones</td>
+<td>Pull without full tower code — logistics cost</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre><code class="language-text">FLOW (editorial — public guide synthesis)
+Control Zone fight → Wait opening tower cooldown (GameRant: ~10 min) → Clear tower; second-floor / ops-room computer → Hold Interact until capture completes → Digit N revealed (+ position in sequence per some guides) → Collect all digits for live towers in zone → Keypad entry (limited fails → lockout) → Tower drill / Hot Zone Magnet ON → Hot Zone slides toward that tower (dashed lines on map per allthings.how) → Double-cash window (store) + possible presence pressure ALTERNATE:
+Build FOB → Large Hammer → Oil Rig / Drill Rig → fuel → activate → Hot Zone pull without full code → Vulnerable to destroy / anti-logistics / fuel starvation</code></pre>
+<figure class="shot"><img alt="MetaForge maps hub explaining Hot Zone count-double + extra cash (public page, not live client keypad) — 2026-09-13" loading="lazy" src="../assets/shots/metaforge-maps-list.webp"/><figcaption>MetaForge maps hub explaining Hot Zone count-double + extra cash (public page, not live client keypad) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="how-to-capture-hack-a-tower">How to capture / hack a tower</h2>
+<p>Public guides (GameRant Sep 12, 2026; allthings.how Sep 12, 2026; games.gg Sep 10, 2026) converge on a similar loop. Mark conflicts — do not invent timers beyond what guides state.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Action (public)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Clear enemies; panel may not respond while contested</td>
+<td>allthings.how; GameRant less explicit</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Interact with <strong>main computer / console</strong>; hold Interact until hack/capture finishes</td>
+<td>Bind name may vary — often <strong>F</strong> on KBM (Bisect / allthings leads) — Controls page</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Read <strong>digit</strong> on screen (and position if shown); tell squad; write it down</td>
+<td>Digits are per-tower; full set needed for keypad</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Defend tower / exploit sightlines; rotate squad into inbound Hot Zone</td>
+<td>AA / sniper value — tactical, not required for code</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Capture vs code vs magnet</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Pays / reveals</th>
+<th>Moves Hot Zone?</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capture / hack tower</td>
+<td>Cash (guides) + <strong>one digit</strong></td>
+<td><strong>No</strong></td>
+<td>GameRant, allthings, games.gg</td>
+</tr>
+<tr>
+<td>Enter full code on keypad</td>
+<td>Activates tower drill / magnet</td>
+<td><strong>Yes</strong> — pull toward that tower</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Fuel + activate FOB Oil Rig</td>
+<td>Logistics spend</td>
+<td><strong>Yes</strong> — pull toward FOB</td>
+<td>allthings oil-rig guide; GameRant contrast</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="community-conflict-table-source-a-vs-b">Community conflict table (Source A vs B)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Source A</th>
+<th>Source B</th>
+<th>Our stance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot Zone double cash</td>
+<td><strong>Steam store About</strong> (2026-09-13): “earn double the cash”</td>
+<td>Indie guides echo double cash</td>
+<td><strong>Store-explicit</strong>; HUD reproduction = public lead</td>
+</tr>
+<tr>
+<td>Hot Zone “counts twice” toward points</td>
+<td>MetaForge hub + allthings + games.gg: player in Hot Zone counts as <strong>two</strong> for faction presence; ~30s scoring ticks</td>
+<td>Steam store emphasizes <strong>double cash</strong>, not presence math</td>
+<td><strong>public lead — MetaForge/allthings/games.gg agree</strong> (not store copy)</td>
+</tr>
+<tr>
+<td>FOB vs tower priority (pubs)</td>
+<td>GameRant: FOB drill often easier in pubs; towers stronger if coordinated</td>
+<td>games.gg: towers overlooked; teams that pull Hot Zone to owned ground win more</td>
+<td>Decision tree below — <strong>not</strong> a forever meta</td>
+</tr>
+<tr>
+<td>Code persistence</td>
+<td>tpose / allthings: code <strong>fresh each match</strong>; resets after successful activate</td>
+<td>—</td>
+<td>Do not carry codes across matches</td>
+</tr>
+<tr>
+<td>GameWatcher towers page</td>
+<td>URL exists in SERP</td>
+<td>Fetch bot-walled (Cloudflare) on 2026-09-13</td>
+<td>Cite URL; do not invent content</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="bakurani-ozeti-zestafona-tower-counts">Bakurani / Ozeti / Zestafona tower counts</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Map / area</th>
+<th>Tower count (dated)</th>
+<th>Source</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bakurani — Default play area</td>
+<td><strong>5</strong> drill towers (2× pick weight)</td>
+<td>allthings Bakurani (2026-09-13)</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Bakurani — Farmland</td>
+<td><strong>5</strong></td>
+<td>same</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Bakurani — Lumberyard</td>
+<td><strong>3</strong></td>
+<td>same</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Ozeti — Default</td>
+<td><strong>4</strong></td>
+<td>allthings Ozeti (2026-09-13)</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Ozeti — Church</td>
+<td><strong>3</strong></td>
+<td>same</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Ozeti — River</td>
+<td><strong>2</strong></td>
+<td>same</td>
+<td>public lead — allthings</td>
+</tr>
+<tr>
+<td>Ozeti — Farmland</td>
+<td>Out of objective rotation (transit only)</td>
+<td>same</td>
+<td>Status lead</td>
+</tr>
+<tr>
+<td>Zestafona</td>
+<td>Towers discussed; MetaForge hub 2026-09-13: <strong>Playable now</strong></td>
+<td>MetaForge map hub; allthings Zestafona guide</td>
+<td>public lead — MetaForge playability; tower counts still public lead</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rule:</strong> Prefer a dated screenshot of the in-match map with towers marked over copying undated third-party totals. MetaForge-style interactive maps own the clickable layer — we own the <strong>decision logic</strong>. Only towers inside the <strong>active</strong> Control Zone / play area function as code objectives.</p>
+<hr/>
+<h2 id="double-cash-presence-math-hot-zone">Double cash, presence math, Hot Zone</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Basis</th>
+<th>Publish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot Zone grants <strong>double cash</strong></td>
+<td>Steam store About 2026-09-13</td>
+<td><strong>Store-explicit</strong>; HUD proof = public lead</td>
+</tr>
+<tr>
+<td>Cash <strong>persists</strong> match to match</td>
+<td>Steam store</td>
+<td>Cross-link <a href="../wardogs-economy-starter-loadout/">Economy</a></td>
+</tr>
+<tr>
+<td>Journey starts with <strong>$10,000</strong></td>
+<td>Steam store</td>
+<td>Economy page for spend discipline</td>
+</tr>
+<tr>
+<td>Presence “counts twice” toward points</td>
+<td>MetaForge hub + allthings + games.gg (dated 2026-09-13)</td>
+<td><strong>public lead — three public sources agree</strong> — not store copy</td>
+</tr>
+<tr>
+<td>First to <strong>100 points</strong> wins</td>
+<td>Store / press framing</td>
+<td>How-to-Play win condition</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Economy tease:</strong> Pulling Hot Zone onto a tower (or FOB) you already own turns a sightline fight into a <strong>bankroll</strong> fight. Do not dump your entire wallet the first time you see yellow on the map — see Economy starter rules.</p>
+<p><strong>games.gg presence example (editorial paraphrase,):</strong> if rivals have more bodies in the Control Zone but your squad stacks Hot Zone, effective presence can flip a tick — <em>only if</em> double-count is real on your build.</p>
+<hr/>
+<h2 id="when-not-to-contest-towers">When NOT to contest towers</h2>
+<p>Use this before you burn a squad wipe for one digit.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Better play</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Your team already fuels a safe <strong>FOB drill</strong> and Hot Zone is coming to you</td>
+<td>Guard logistics; harass enemy towers lightly</td>
+<td>Tower assault cost &gt; benefit</td>
+</tr>
+<tr>
+<td>You have <strong>0</strong> digits and enemies hold <strong>all</strong> live towers with FOBs up</td>
+<td>Cut fuel lines / destroy FOB drill</td>
+<td>Full clear may be impossible mid-match</td>
+</tr>
+<tr>
+<td>Match point total almost decided without Hot Zone</td>
+<td>Play objective ticks / spawns</td>
+<td>Late code may not flip 100 pts</td>
+</tr>
+<tr>
+<td>Squad is broke / no ammo after wipe</td>
+<td>Rearm via Economy discipline</td>
+<td>Dead squads don’t hack computers</td>
+</tr>
+<tr>
+<td>Keypad already lockout-locked</td>
+<td>Wait timer; defend elsewhere</td>
+<td>Feeding lockout wastes lives</td>
+</tr>
+<tr>
+<td>You are learning controls in first 30 minutes</td>
+<td>Follow <a href="../how-to-play-wardogs/">How to Play</a> checklist first</td>
+<td>Tower meta after spawn/buy loop clicks</td>
+</tr>
+<tr>
+<td>Pub team not sharing digits in chat</td>
+<td>Grab one safe digit OR FOB path</td>
+<td>Solo full-code clears fail in pubs (GameRant)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Contest vs ignore decision tree</h3>
+<pre><code class="language-text">Need Hot Zone cash/pressure?
+│
+├─ Team has full code ready?
+│  ├─ YES → Enter keypad on a *fortified* tower (FOB/supplies ready) → defend
+│  └─ NO → Can you safely hack 1–2 undefended towers?
+│           ├─ YES → Grab digits; broadcast (“XX6” style callouts)
+│           └─ NO → FOB drill path or ignore for now
+│
+├─ Enemy tower drill already pulling Hot Zone onto their fortress?
+│  └─ Disrupt with coordinated push OR counter with your FOB drill
+│
+└─ Pub team not responding on voice/text?
+   └─ Default: FOB drill / local objectives — don’t solo-hero all towers
+</code></pre>
+<hr/>
+<h2 id="tower-drill-vs-fob-drill">Tower drill vs FOB drill</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Tower drill / Hot Zone Magnet</th>
+<th>FOB Oil Rig / Drill Rig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel</td>
+<td>Public: <strong>not</strong> required like FOB</td>
+<td>Constant fuel; max fills cited <strong>6000</strong> or <strong>6000–8000</strong> depending on guide</td>
+</tr>
+<tr>
+<td>Durability</td>
+<td>Public: cannot be destroyed like FOB drill (GameRant)</td>
+<td>Vulnerable to artillery / Stingray drones (GameRant)</td>
+</tr>
+<tr>
+<td>Coordination</td>
+<td>High (multi-tower)</td>
+<td>Medium (logistics)</td>
+</tr>
+<tr>
+<td>Pub reality</td>
+<td>Often under-used</td>
+<td>Often “good enough”</td>
+</tr>
+<tr>
+<td>Counterplay</td>
+<td>Hold tower / deny keypad</td>
+<td>Anti-logistics / destroy drill / steal fuel pool</td>
+</tr>
+<tr>
+<td>Cooldown</td>
+<td>Towers may share post-pull cooldown (allthings oil: all towers cooldown together after tower pull)</td>
+<td>~10–20 min after construction/pull; blocked while rival mid-pull (allthings)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>FOB Oil Rig build flowchart (third-party)</h3>
+<pre><code class="language-text">Place FOB (vendor cost CONFLICT: $2,500 vs Season-1 $7,500 — see Economy)
+  → Bring Large Hammer (Support unlock level CONFLICT: 7 vs 8)
+    → Deliver Build Supplies (~2,000 cited for rig)
+      → Hammer Oil Rig to 100% inside FOB square
+        → Deliver Fuel Supplies (not Ammo Supplies)
+          → Activate when cooldown ready + squad on site
+            → Confirm Hot Zone slides on map
+</code></pre>
+<p>Do <strong>not</strong> treat any dollar figure above as final — see <a href="../wardogs-economy-starter-loadout/">Economy</a> conflict table.</p>
+<hr/>
+<h2 id="capture-checklist">Capture checklist</h2>
+<ul>
+<li>[ ] Match clock past tower cooldown (~10 min public)</li>
+<li>[ ] Identify <strong>which play area</strong> is live (tower count changes) — <a href="../wardogs-maps/">Maps</a></li>
+<li>[ ] Squad has a plan for <strong>which</strong> tower first (anchor with cover/FOB)</li>
+<li>[ ] Interact key known (see <a href="../wardogs-controls-hotas/">Controls</a> if rebound)</li>
+<li>[ ] Second-floor / ops-room computer located; area cleared</li>
+<li>[ ] Digit (+ position if shown) written + shared in team chat</li>
+<li>[ ] Running tally toward full code</li>
+<li>[ ] Keypad attempts remaining known — stop random guessing</li>
+<li>[ ] Defense plan after drill starts; squad rotates in <em>before</em> Hot Zone arrives</li>
+<li>[ ] Hot Zone movement confirmed on map (dashed lines if present)</li>
+<li>[ ] Cash plan: don’t bankrupt kit for one pull — <a href="../wardogs-economy-starter-loadout/">Economy</a></li>
+</ul>
+<hr/>
+<h2 id="squad-callouts">Squad callouts</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Callout</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“Digit 4 on North tower” / “XX6”</td>
+<td>Share number + which tower / position</td>
+</tr>
+<tr>
+<td>“Two digits left”</td>
+<td>Progress toward keypad</td>
+</tr>
+<tr>
+<td>“Keypad attempts: 1 left”</td>
+<td>Stop random guessing</td>
+</tr>
+<tr>
+<td>“Drill up — Hot Zone inbound”</td>
+<td>Rotate for cash/points</td>
+</tr>
+<tr>
+<td>“FOB fuel dry in 30s”</td>
+<td>Logistics emergency</td>
+</tr>
+<tr>
+<td>“Ignore towers — play ticks”</td>
+<td>When-not-to-contest decision</td>
+</tr>
+<tr>
+<td>“Anchor on Church tower”</td>
+<td>Named fortified entry point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Common mistakes on towers</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solo hacking while team fights elsewhere with no digit share</td>
+<td>Ping + text digit immediately</td>
+</tr>
+<tr>
+<td>Guessing keypad without full code</td>
+<td>Wait; lockouts punish ego</td>
+</tr>
+<tr>
+<td>Contesting every tower every match</td>
+<td>Use when-NOT tree</td>
+</tr>
+<tr>
+<td>Ignoring Hot Zone after drill starts</td>
+<td>The pull is the payoff — be there</td>
+</tr>
+<tr>
+<td>Spending entire bankroll the moment double cash appears</td>
+<td>Economy reserve rule</td>
+</tr>
+<tr>
+<td>Entering code on an unfortified tower</td>
+<td>allthings: pick prepared ground</td>
+</tr>
+<tr>
+<td>Treating abandoned Bakurani towers as code sources</td>
+<td>Abandoned do not count (allthings table)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="related-play-pages">Related play pages</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First 30 minutes + 100-point win condition</td>
+<td><a href="../how-to-play-wardogs/">How to Play</a></td>
+</tr>
+<tr>
+<td>Map names / play-area rotation / POI editorial</td>
+<td><a href="../wardogs-maps/">Maps</a></td>
+</tr>
+<tr>
+<td>$10k start, persist cash, FOB price conflicts</td>
+<td><a href="../wardogs-economy-starter-loadout/">Economy / Starter Loadout</a></td>
+</tr>
+<tr>
+<td>Interact / HOTAS / controller</td>
+<td><a href="../wardogs-controls-hotas/">Controls</a></td>
+</tr>
+<tr>
+<td>Can’t launch to reach towers</td>
+<td><a href="../wardogs-crashing/">Crashing / Elytra</a></td>
+</tr>
+<tr>
+<td>Stuck in queue</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: What do towers do in WARDOGS?</strong><br/>
+A: Hardpoints for fights and a code-digit system. Full code → keypad → tower drill / Hot Zone Magnet → Hot Zone pull toward that tower (public guide consensus, dated Sep 2026).</p>
+<p><strong>Q: How do I hack / capture a tower?</strong><br/> A: After the opening cooldown, clear the building, second-floor/ops computer, hold Interact until complete, read the digit. Exact bind/UI.</p>
+<p><strong>Q: Is Hot Zone the same as Control Zone?</strong><br/>
+A: No. Control Zone is the scored area (store ~2×2 km; indie guides also describe smaller cores — conflict). Hot Zone is the movable high-value sub-area inside it.</p>
+<p><strong>Q: Can I skip towers and still win?</strong><br/>
+A: Often yes via points and/or FOB drills — especially in uncoordinated pubs (GameRant). Towers matter more when a team actually finishes codes.</p>
+<p><strong>Q: How many wrong keypad tries before lockout?</strong><br/>
+A: public lead — GameRant cites <strong>two</strong> attempts then a short lockout; allthings says repeated wrongs trigger temporary cooldown. Exact N still needs your screenshot.</p>
+<p><strong>Q: Does Hot Zone really double cash?</strong><br/>
+A: Steam store About (2026-09-13) says chase Hot Zone to earn <strong>double the cash</strong> — store-explicit. In-HUD payout screenshot still welcome as public lead.</p>
+<p><strong>Q: Do Hot Zone players count as two for scoring?</strong><br/>
+A: MetaForge map hub + games.gg + allthings (2026-09-13) say players in Hot Zone count double toward faction presence. Steam store emphasizes double cash, not presence. Label <strong>public lead</strong> (not store fact).</p>
+<p><strong>Q: Bakurani vs Ozeti — how many towers?</strong><br/>
+A: Depends on <strong>active play area</strong>. Dated leads: Bakurani 5/5/3; Ozeti 4/3/2. Overall tables disagree — screenshot your match; see <a href="../wardogs-maps/">Maps</a>.</p>
+<p><strong>Q: Tower drill or FOB drill first?</strong><br/>
+A: Pubs often succeed with fueled FOB drills (GameRant). Coordinated stacks should finish tower codes and enter from a fortified tower. Combine both when logistics allow (games.gg / allthings).</p>
+<p><strong>Q: Is this an interactive map?</strong><br/>
+A: No. For clickable layers use community map tools (MetaForge, etc.); this page is capture logic + when not to contest.</p>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>GameRant — How to Capture Towers (Sep 12, 2026): https://gamerant.com/wardogs-how-capture-hack-towers-work/  </li>
+<li>allthings.how — Towers / Hot Zone Magnet (Sep 12, 2026): https://allthings.how/wardogs-towers-how-to-capture-them-and-move-the-hot-zone/  </li>
+<li>allthings.how — Oil Rig / FOB drill (Sep 11, 2026): https://allthings.how/how-to-build-and-activate-the-wardogs-oil-rig-at-your-fob/  </li>
+<li>allthings.how — Bakurani play areas (Sep 13, 2026): https://allthings.how/wardogs-bakurani-every-play-area-and-how-to-hold-the-control-zone/  </li>
+<li>allthings.how — Ozeti play areas (Sep 13, 2026): https://allthings.how/wardogs-ozeti-map-play-areas-drill-towers-and-the-control-zone/  </li>
+<li>games.gg — Towers guide (Sep 10, 2026): https://games.gg/wardogs/guides/wardogs-towers-guide/  </li>
+<li>games.gg — Beginner guide (Hot Zone presence math) (Sep 10, 2026): https://games.gg/wardogs/guides/wardogs-beginner-guide/  </li>
+<li>GameWatcher — Towers guide (bot-walled fetch 2026-09-13): https://www.gamewatcher.com/wardogs/towers-what-they-are-and-how-to-capture-them  </li>
+<li>MetaForge — Interactive maps hub: https://metaforge.app/wardogs/map  </li>
+<li>Steam Store — Control Zone / Hot Zone / cash copy: https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Sibling: <a href="../how-to-play-wardogs/">How to Play</a> · <a href="../wardogs-maps/">Maps</a> · <a href="../wardogs-economy-starter-loadout/">Economy</a></li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+      <li><a href="../wardogs-maps/">WARDOGS maps &amp; objectives</a></li>
+      <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; starter loadout</a></li>
+      <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)</title>
+  <meta name="description" content="Identify a WARDOGS error from the on-screen dialog, then follow the join, servers, or crash path. Last checked 2026-09-14." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-error-codes/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)" />
+  <meta property="og:description" content="Identify a WARDOGS error from the on-screen dialog, then follow the join, servers, or crash path. Last checked 2026-09-14." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-error-codes/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)" />
+  <meta name="twitter:description" content="Identify a WARDOGS error from the on-screen dialog, then follow the join, servers, or crash path. Last checked 2026-09-14." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)", "item": "https://thewardogsguide.com/wardogs-error-codes/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Error Codes: How to Read the Dialog and Pick a Fix Path (Steam EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#how-to-read-a-wardogs-error-dialog">How to read a WARDOGS error dialog</a></li>
+      <li><a href="#master-code-table-public-leads-first-check-spoke">Master code table (public leads → first check → spoke)</a></li>
+      <li><a href="#widespread-vs-local-hub-decision-tree">Widespread vs local (hub decision tree)</a></li>
+      <li><a href="#launch-stability-hotfix-1-context-not-a-forever-fix">Launch Stability Hotfix #1 (context, not a forever fix)</a></li>
+      <li><a href="#status-channels-hub-quick-list">Status channels (hub quick list)</a></li>
+      <li><a href="#per-code-first-aid-cards">Per-code first-aid cards</a></li>
+      <li><a href="#elytra-note-store-anti-cheat">Elytra note (store anti-cheat)</a></li>
+      <li><a href="#what-never-fixes-which-errors">What never fixes which errors</a></li>
+      <li><a href="#printable-90-second-triage-worksheet">Printable 90-second triage worksheet</a></li>
+      <li><a href="#status-check-habit-before-deep-local-repair">Status-check habit (before deep local repair)</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read-all-fix-spokes">Also read (all Fix spokes)</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> Fix hub homepage for WARDOGS Steam Early Access error dialogs. Read the <strong>full on-screen text</strong>, not only the number. Public write-ups (GearUP, Nerdschalk, Bisect, LagoFast, Steam Hotfix #1 thread) disagree on nuance — every meaning below that is not a verbatim dialog quote is marked / <strong>unverified meaning</strong>. Store anti-cheat is <strong>Elytra</strong> (not EAC as current). <strong>No unofficial “fixed” stamps</strong> stamp: if many players fail at once, wait on service + client update before nuking Windows.</p>
+<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Deep link</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../wardogs-error-1628505091/">Error 1628505091 / Join Timed Out</a></td>
+<td><strong>JOIN TIMEDOUT</strong> / failed to connect in reasonable time</td>
+</tr>
+<tr>
+<td><a href="../wardogs-servers-down/">Servers / Queue / Access Denied</a></td>
+<td>Outage, wave queue, auth after Hotfix, Access Denied clusters</td>
+</tr>
+<tr>
+<td><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a></td>
+<td>Never starts, mid-match crash, AC/<strong>Elytra</strong>, WD-LO14-class launch</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="Steam Hotfix #1 thread — official join/queue process context (public Steam page; GearUP quotes dialog anatomy — not live client) — 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Hotfix #1 thread — official join/queue process context (public Steam page; GearUP quotes dialog anatomy — not live client) — 2026-09-13</figcaption></figure>
+<hr/>
+<h2 id="how-to-read-a-wardogs-error-dialog">How to read a WARDOGS error dialog</h2>
+<p>Treat the dialog like a form, not a meme code.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>UI region</th>
+<th>What to capture</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title line</td>
+<td>e.g. <code>JOIN TIMEDOUT</code>, <code>FAILED TO JOIN</code>, <code>ACCESS DENIED</code></td>
+<td>Same number can sit under different titles in community reports — quote yours</td>
+</tr>
+<tr>
+<td><code>ERROR CODE:</code></td>
+<td>Exact digits / WD- string</td>
+<td>Hub table key</td>
+</tr>
+<tr>
+<td>Body paragraph</td>
+<td>Full sentence(s)</td>
+<td>Distinguishes queue-full vs timeout vs ban-style</td>
+</tr>
+<tr>
+<td>Extra fields</td>
+<td><code>Reason:</code>, <code>Time Left:</code></td>
+<td>Ban-style vs soft auth</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>Local time + region selected</td>
+<td>Support / Hotfix correlation</td>
+</tr>
+<tr>
+<td>Screenshot</td>
+<td>Full client window if possible</td>
+<td>Cropping hides context</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Dialog anatomy checklist</h3>
+<ol>
+<li>Do <strong>not</strong> close until you screenshot.  </li>
+<li>Note Server Browser region + server name if join-related.  </li>
+<li>Note whether friends in-region can play (widespread vs local).  </li>
+<li>Confirm Steam finished any WARDOGS download (Hotfix #1 forced restarts Sep 10 2026).  </li>
+<li>Only then follow the matching spoke below.</li>
+</ol>
+<figure class="shot"><img alt="Steam store Elytra anti-cheat tag (public store page; not an error dialog) — 2026-09-13" loading="lazy" src="../assets/shots/steam-store-elytra-tag.webp"/><figcaption>Steam store Elytra anti-cheat tag (public store page; not an error dialog) — 2026-09-13</figcaption></figure>
+<h3>Differentiation matrix (same “can’t play” feeling, different codes)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>If the dialog mainly says…</th>
+<th>Public code lead</th>
+<th>First spoke</th>
+<th>Classic mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failed to connect in a reasonable time / <strong>JOIN TIMEDOUT</strong></td>
+<td><code>1628505091</code></td>
+<td><a href="../wardogs-error-1628505091/">Timeout spoke</a></td>
+<td>Calling it a ban</td>
+</tr>
+<tr>
+<td>Server queue is full / FAILED TO JOIN</td>
+<td><code>1147405316</code></td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+<td>Reinstalling for capacity</td>
+</tr>
+<tr>
+<td>Failed to Authenticate With Online Services</td>
+<td><code>1147405308</code></td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+<td>GPU driver wipe first</td>
+</tr>
+<tr>
+<td>ACCESS DENIED + Cheating + Permanent + banned</td>
+<td><code>1147405307</code></td>
+<td>This hub → appeal</td>
+<td>“Unban tools”</td>
+</tr>
+<tr>
+<td>ACCESS DENIED without ban fields (esp. post-Hotfix)</td>
+<td>Auth/wave cluster</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+<td>Assuming permanent ban</td>
+</tr>
+<tr>
+<td>Unable to launch / WD-LO14-…</td>
+<td>Launch/AC class</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+<td>Applying join-timeout VPN steps</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="master-code-table-public-leads-first-check-spoke">Master code table (public leads → first check → spoke)</h2>
+<p>Meanings cite public articles; <strong>unverified</strong> cells stay. Do not invent codes.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Code / message</th>
+<th>Public meaning (cite)</th>
+<th>First check</th>
+<th>Deep link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1628505091</strong> — <code>JOIN TIMEDOUT</code> / “Failed to connect to the server in a reasonable time.”</td>
+<td>Join attempt did not complete in time (GearUP / Nerdschalk / LagoFast). Not proof of ban.</td>
+<td>Widespread vs local tree; install latest client; try another server/region; hotspot as <em>test</em></td>
+<td><a href="../wardogs-error-1628505091/">../wardogs-error-1628505091/</a></td>
+</tr>
+<tr>
+<td><strong>1147405316</strong> — Failed to join / “Server queue is full” (if public dialog matches)</td>
+<td>Target server cannot accept another queue entry (GearUP). Not “all servers offline.”</td>
+<td>Region selector; refresh; pick server with capacity; don’t spam join</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+<tr>
+<td><strong>1147405307</strong> — <code>ACCESS DENIED</code> with <code>Reason: Cheating</code> / <code>Time Left: Permanent</code> / banned text (if public)</td>
+<td>GearUP: treat as account-ban notice <strong>only if</strong> those strings appear explicitly</td>
+<td>Screenshot; official support/appeal — no “unban tools”</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a> (+ support)</td>
+</tr>
+<tr>
+<td><strong>1147405308</strong> — Failed to authenticate / online services (public Bisect + launch reports)</td>
+<td>Auth/online services failure; launch-day reports often service-wide</td>
+<td>Status / Hotfix path; Steam restart; don’t assume ban</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a> · spillover notes on Crash</td>
+</tr>
+<tr>
+<td><strong>Access Denied</strong> (generic, no cheating reason)</td>
+<td>May be auth/queue spillover after Hotfix #1 (Steam thread player reports) — <strong>not</strong> automatically 1147405307 ban-style</td>
+<td>Confirm exact body text; check servers spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+<tr>
+<td><strong>Auth failed</strong> / “failed to authenticate online services” (wording varies)</td>
+<td>public lead — Steam Hotfix #1 replies + Bisect (<code>1147405308</code> / Failed to Authenticate With Online Services)</td>
+<td>Latest client; wait if widespread; clean Steam restart</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+<tr>
+<td><strong>WD-LO14</strong> / <strong>WD-L014</strong> (+ hex suffix) — Unable to launch (Steam thread / third-party)</td>
+<td>public lead — Steam example <code>WD-LO14-c70b81e405df</code>; launcher/<strong>Elytra</strong> init class in community posts — official meaning none</td>
+<td><strong>Elytra</strong> repair path on Crash spoke (public lead folder/UI); verify files; remove stale playtest if applicable</td>
+<td><a href="../wardogs-crashing/">../wardogs-crashing/</a></td>
+</tr>
+<tr>
+<td>Blank browser / can’t list servers</td>
+<td>Often service or region filter — not always a numbered code</td>
+<td>Servers spoke status habit</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+<tr>
+<td>Mid-match kick then auth error</td>
+<td>Hotfix #1 targeted kicks/join issues — may return as auth dialog</td>
+<td>Update + controlled queue; Servers spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+<tr>
+<td>EXCEPTION_ACCESS_VIOLATION / won’t launch</td>
+<td>Local client / overlay / AC init</td>
+<td>Crash spoke</td>
+<td><a href="../wardogs-crashing/">../wardogs-crashing/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rule:</strong> If the dialog does <strong>not</strong> explicitly say cheating + permanent ban, do not conclude you are banned from a timeout or queue-full code alone (Nerdschalk on 1628505091; GearUP on distinguishing Access Denied).</p>
+<hr/>
+<h2 id="widespread-vs-local-hub-decision-tree">Widespread vs local (hub decision tree)</h2>
+<pre><code>See error dialog → screenshot full text
+  → Are many players failing now (Steam discussions / X @WARDOGS / Discord / friends)?
+        YES → Install latest client → wait / follow Hotfix queue steps
+              → Spoke: ../wardogs-servers-down/ (and 1628505091 if timeout)
+        NO  → Friends in your region play fine?
+               YES → Local path: network test (hotspot), verify files, overlays/Elytra if launch
+                     → Timeout: ../wardogs-error-1628505091/
+                     → Won’t launch: ../wardogs-crashing/
+               NO  → Still treat as possible regional service issue first
+</code></pre>
+<h3>Boundary cases</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Hub reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ban fields present</td>
+<td>Appeal path — do not “wait for servers” forever</td>
+</tr>
+<tr>
+<td>Timeout after healthy queue exit</td>
+<td>Timeout spoke (handshake), not only Servers</td>
+</tr>
+<tr>
+<td>Auth text + crash dump both present</td>
+<td>Status check once, then Crash if dump dominates</td>
+</tr>
+<tr>
+<td>Pre-EA calendar screenshots</td>
+<td>Ignore as current status</td>
+</tr>
+<tr>
+<td>Stale ~70/100 server counts + timeout</td>
+<td>Timeout spoke stale-slot notes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="launch-stability-hotfix-1-context-not-a-forever-fix">Launch Stability Hotfix #1 (context, not a forever fix)</h2>
+<p>BULKHEAD posted <strong>Launch Stability Hotfix #1</strong> on the Steam discussion board (G_Medlin, Sep 10 2026 ~1:28pm): forced close → download client update → relaunch into login queue → players admitted in controlled batches. Intended to address unable to join, unexpected kicks, extended login queues. Press (mp1st) noted a <strong>~200+ MB</strong> download and possible further server restarts. Thread replies immediately reported Access Denied / auth failed / <code>WD-LO14-c70b81e405df</code>.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>After Hotfix you might see</th>
+<th>Hub reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Still <strong>JOIN TIMEDOUT</strong> 1628505091</td>
+<td>Timeout spoke — service or route</td>
+</tr>
+<tr>
+<td>Access Denied / auth failed without ban text</td>
+<td>Servers spoke — auth spillover</td>
+</tr>
+<tr>
+<td>WD-LO14 on Play</td>
+<td>Crash / <strong>Elytra</strong> spoke</td>
+</tr>
+<tr>
+<td>Queue full 1147405316</td>
+<td>Capacity — try another server</td>
+</tr>
+<tr>
+<td>Long queue, no error</td>
+<td>Stay seated; press-quoted CEO tip to stay in queue is context only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Cite the Hotfix thread as <strong>process</strong>, not “FIXED forever.” As of 2026-09-13 Steam News: next titled update is <strong>SCHEDULED MAINTENANCE &amp; PATCH 0.11</strong> (Mon Sep 14 ~1h, server browser) — no public “Hotfix #2” title found.</p>
+<hr/>
+<h2 id="status-channels-hub-quick-list">Status channels (hub quick list)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Pointer</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam News</td>
+<td>App 1867240</td>
+<td>Date-stamp every claim</td>
+</tr>
+<tr>
+<td>Steam Hotfix #1</td>
+<td>https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/</td>
+<td>Locked historical process + spillover</td>
+</tr>
+<tr>
+<td>X</td>
+<td>https://x.com/WARDOGS</td>
+<td>Launch apology quoted by PC Gamer</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>https://discord.gg/TxKKdspkCp</td>
+<td>Invite <strong>live</strong> 2026-09-13 (API: guild WARDOGS, ~365k members)</td>
+</tr>
+<tr>
+<td>Store</td>
+<td>https://store.steampowered.com/app/1867240/WARDOGS/</td>
+<td><strong>Elytra</strong> tag + social row</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Launch concurrency context: PC Gamer <strong>over 300,000</strong> peak; secondary SteamDB cites ~337k–338k — use for “why waves exist,” not as today’s status.</p>
+<hr/>
+<h2 id="per-code-first-aid-cards">Per-code first-aid cards</h2>
+<h3>1628505091 — JOIN TIMEDOUT</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example public text</td>
+<td><code>JOIN TIMEDOUT</code> / ERROR CODE <code>1628505091</code> / Failed to connect to the server in a reasonable time (GearUP / Nerdschalk)</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>public lead — GearUP: connection to target server not completed in time (no official Bulkhead glossary)</td>
+</tr>
+<tr>
+<td>Extra community note</td>
+<td>Can appear after login queue; stale player counts (~70/100) may still reject (LagoFast)</td>
+</tr>
+<tr>
+<td>Not</td>
+<td>Automatic ban; proof files are corrupt by itself</td>
+</tr>
+<tr>
+<td>Do</td>
+<td>Latest client; status check; other server/region; Ethernet vs Wi-Fi vs hotspot <em>test</em>; verify files if isolated</td>
+</tr>
+<tr>
+<td>Don’t</td>
+<td>Reinstall as first step during a global incident; change graphics to “fix” join; spam join</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-error-1628505091/">../wardogs-error-1628505091/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>1147405316 — Server queue is full</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example public text</td>
+<td>FAILED TO JOIN / 1147405316 / Server queue is full (GearUP)</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>public lead — GearUP: server queue is full / capacity path</td>
+</tr>
+<tr>
+<td>Extra</td>
+<td>Closed Beta browser was region-scoped; check Region first (GearUP)</td>
+</tr>
+<tr>
+<td>Do</td>
+<td>Region correct?; refresh; fuller-capacity server; short wait — don’t spam; avoid 1–2-slot races</td>
+</tr>
+<tr>
+<td>Don’t</td>
+<td>Reinstall; distant region just for a slot if ping will be unusable</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>1147405307 — Ban-style Access Denied (only if explicit)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example public text</td>
+<td>ACCESS DENIED / 1147405307 / Reason: Cheating / Time Left: Permanent / account banned (GearUP)</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>public lead — GearUP ban dialog quote; treat as ban <strong>iff</strong> those strings match your screenshot</td>
+</tr>
+<tr>
+<td>Do</td>
+<td>Save screenshot; official support/appeal</td>
+</tr>
+<tr>
+<td>Don’t</td>
+<td>Unban tools, file tampering, account sharing</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>1147405308 — Authenticate / online services</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public lead</td>
+<td>Failed to Authenticate With Online Services (Bisect Sep 10 2026); often service-side at launch</td>
+</tr>
+<tr>
+<td>Extra</td>
+<td>CM LOSSY (via Bisect): thousands in queue; some sent to back — ops context</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>public lead — Bisect: Failed to Authenticate With Online Services; check whether still widespread</td>
+</tr>
+<tr>
+<td>Do</td>
+<td>Hotfix/client current?; Steam full restart; wait if global</td>
+</tr>
+<tr>
+<td>Don’t</td>
+<td>Assume hardware failure; assume ban without ban text</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Access Denied / auth failed (generic)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public lead</td>
+<td>Steam Hotfix #1 thread: players reported Access Denied / server auth failed after update</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>public lead — Steam Hotfix #1 replies (Access Denied / auth failed); read full body</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-servers-down/">../wardogs-servers-down/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>WD-LO14 / WD-L014 — Unable to launch</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public lead</td>
+<td>Steam example <code>WD-LO14-c70b81e405df</code>; third-party WD-L014 <strong>Elytra</strong>/launcher articles</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Launch/AC init class — <strong>unverified official enum</strong>; spelling variants exist</td>
+</tr>
+<tr>
+<td>Do</td>
+<td>Crash spoke: <strong>Elytra</strong> identify/repair (public lead folder/UI), verify integrity, stale playtest cleanup if relevant; read ElytraLauncher.log</td>
+</tr>
+<tr>
+<td>Don’t</td>
+<td>Confuse with join timeout codes; don’t follow random “crack” AC advice; don’t lead with EAC deletes</td>
+</tr>
+<tr>
+<td>Spoke</td>
+<td><a href="../wardogs-crashing/">../wardogs-crashing/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="elytra-note-store-anti-cheat">Elytra note (store anti-cheat)</h2>
+<p>Steam store feature tag (page capture 2026-09-13): <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Prior “use EAC repair” wording is outdated for the store tag. Community repair paths (ccstartup / AxeeTech / LagoFast) cite an <code>Elytra</code> folder helper (<code>Elytra.exe</code> / <code>Elytra-Setup.exe</code> → Repair) and log <code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code> — treat as <strong>public lead</strong> for folder/UI (confirm on disk). Join/auth codes are usually <strong>not</strong> solved by AC repair during a global outage.</p>
+<hr/>
+<h2 id="what-never-fixes-which-errors">What never fixes which errors</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Wrong fix</th>
+<th>Why it fails</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lowering graphics for 1628505091 / queue full</td>
+<td>FPS ≠ queue capacity or TCP join (GearUP “avoid” list aligns) — also: <strong>no invented FPS%</strong></td>
+</tr>
+<tr>
+<td>Factory-reset router as first timeout step</td>
+<td>Prefer restart + hotspot comparison</td>
+</tr>
+<tr>
+<td>Reinstall because one server is full</td>
+<td>No new slots created</td>
+</tr>
+<tr>
+<td>Unban tool for timeout code</td>
+<td>Wrong problem; account risk</td>
+</tr>
+<tr>
+<td>Assuming every Access Denied is a cheating ban</td>
+<td>Only when Reason/Time Left/banned strings match</td>
+</tr>
+<tr>
+<td>Always-on VPN / booster as “required”</td>
+<td>Diagnostic at most; not studio-verified on these pages</td>
+</tr>
+<tr>
+<td>EAC folder deletes as default EA fix</td>
+<td>Store tags <strong>Elytra</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="printable-90-second-triage-worksheet">Printable 90-second triage worksheet</h2>
+<p>Fill this before opening a spoke or filing a ticket.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Your answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact title line</td>
+<td></td>
+</tr>
+<tr>
+<td>Exact ERROR CODE / WD- string</td>
+<td></td>
+</tr>
+<tr>
+<td>Full body text (copy)</td>
+<td></td>
+</tr>
+<tr>
+<td>Reason / Time Left fields?</td>
+<td>none / Cheating+Permanent / other</td>
+</tr>
+<tr>
+<td>Time + timezone</td>
+<td></td>
+</tr>
+<tr>
+<td>Region + server name</td>
+<td></td>
+</tr>
+<tr>
+<td>Friends in-region can play?</td>
+<td>Y / N / unknown</td>
+</tr>
+<tr>
+<td>Steam Downloads pending for WARDOGS?</td>
+<td>Y / N</td>
+</tr>
+<tr>
+<td>Hotfix #1 / latest client installed?</td>
+<td>Y / N / unknown</td>
+</tr>
+<tr>
+<td>Widespread reports in last 30 min?</td>
+<td>Y / N / unknown (link)</td>
+</tr>
+<tr>
+<td>Spoke you will open first</td>
+<td>Timeout / Servers / Crash / Appeal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Routing shortcut:</strong> ban fields → appeal notes on this hub + Servers support path · auth/queue/Access Denied without ban → Servers · <strong>JOIN TIMEDOUT</strong> → Timeout spoke · Unable to launch / exception / <strong>Elytra</strong> → Crash.</p>
+<h3>Peak-load context (historical only)</h3>
+<p>Use this to explain <em>why</em> wave gates exist — never as a live “servers are down” badge:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Public figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Launch-day concurrent</td>
+<td>over 300,000</td>
+<td>PC Gamer (Sep 10, 2026)</td>
+</tr>
+<tr>
+<td>Secondary SteamDB cites</td>
+<td>~337,157 / nearly 338,000</td>
+<td>ValoSettings / GamingBolt press cites</td>
+</tr>
+<tr>
+<td>Hotfix client package</td>
+<td>~200+ MB (press)</td>
+<td>mp1st</td>
+</tr>
+<tr>
+<td>Studio join targets</td>
+<td>unable to join · unexpected kicks · extended queues</td>
+<td>Steam Hotfix #1 (G_Medlin)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="status-check-habit-before-deep-local-repair">Status-check habit (before deep local repair)</h2>
+<ol>
+<li>Steam WARDOGS news / Hotfix thread.  </li>
+<li>X @WARDOGS / Discord announcements.  </li>
+<li>Recent discussion titles for your exact code.  </li>
+<li>Friend or second network test.  </li>
+<li>Confirm Downloads finished.  </li>
+<li>Then local: verify files → overlays → <strong>Elytra</strong> path if launch-blocked.</li>
+</ol>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Where do I start if I only have a number?</strong><br/>
+A: Match the table row, screenshot the full dialog, then open the deep link. Numbers without body text are ambiguous.</p>
+<p><strong>Q: Is 1628505091 a ban?</strong><br/>
+A: Public guides (Nerdschalk) say the timeout message alone is not proof of a ban. See <a href="../wardogs-error-1628505091/">../wardogs-error-1628505091/</a>.</p>
+<p><strong>Q: Queue full vs timed out — which is it?</strong><br/>
+A: 1147405316 public text centers on queue full; 1628505091 on connect timeout. LagoFast also lists Access Denied as a separate check. Quote your dialog.</p>
+<p><strong>Q: Access Denied after Hotfix #1 — am I banned?</strong><br/>
+A: Only if the dialog explicitly shows cheating/permanent ban wording (1147405307-style). Steam Hotfix replies (paraphrased) reported Access Denied / “failed to authenticate online services” without ban fields — use Servers spoke.</p>
+<p><strong>Q: What is 1147405308?</strong><br/> A: Bisect describes Failed to Authenticate With Online Services; launch-day reports were often everyone-at-once. current scope → Servers.</p>
+<p><strong>Q: What did community managers say during the queue?</strong><br/>
+A: Bisect quotes CM LOSSY: thousands in login queue slowly filtering in; some players put to the back; response larger than Beta. Ops context, not a code glossary.</p>
+<p><strong>Q: What is WD-LO14?</strong><br/> A: Appears in launch-failure reports with hex suffixes (Steam example <code>WD-LO14-c70b81e405df</code>); third parties use WD-L014. Official meaning — triage on Crash with <strong>Elytra</strong> repair path.</p>
+<p><strong>Q: Should I use a VPN?</strong><br/>
+A: As a <strong>diagnostic</strong> comparison at most (Nerdschalk-style isolation), not a verified cure. Prefer hotspot test + status check. Do not claim VPN bypasses Valve rate limits (PC Gamer CEO context is press-reported only).</p>
+<p><strong>Q: Does Elytra replace Easy Anti-Cheat?</strong><br/>
+A: Store tag is <strong>Elytra</strong>. Don’t follow outdated EAC-as-current repair posts blindly — Crash page owns AC identify.</p>
+<p><strong>Q: How bad was launch concurrency?</strong><br/>
+A: PC Gamer: over 300,000 peak + top seller. Secondary public SteamDB cites ~337k–338k. Use as historical load context, not a live “down” badge.</p>
+<p><strong>Q: Server shows open slots but I still get 1628505091 — broken install?</strong><br/>
+A: Not necessarily. LagoFast community reports noted stale counts (around 70/100) still returning Full / Failed / timeout during launch stress. Refresh once, try clearer capacity, or wait if every server fails — then Timeout spoke.</p>
+<p><strong>Q: Where do overlays and ElytraLauncher.log fit?</strong><br/>
+A: Only on the Crash spoke after you have ruled out auth/queue. Store anti-cheat is <strong>Elytra</strong>; community log path <code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code> (AxeeTech public lead) can distinguish download vs InstallModule failures.</p>
+<p><strong>Q: Will this page say FIXED?</strong><br/>
+A: No. This page updates when patches land. Hotfix #1 is historical process context.</p>
+<hr/>
+<h2 id="also-read-all-fix-spokes">Also read (all Fix spokes)</h2>
+<ul>
+<li><a href="../wardogs-error-1628505091/">WARDOGS Error 1628505091 — Join Timed Out</a> </li>
+<li><a href="../wardogs-servers-down/">WARDOGS Servers Down / Queue / Access Denied</a> </li>
+<li><a href="../wardogs-crashing/">WARDOGS Crashing / Won’t Launch (Elytra)</a> </li>
+<li><a href="../how-to-play-wardogs/">How to Play WARDOGS</a> — once you can actually join  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<p>Cite for dialog quotes and process only — meanings remain when not official:</p>
+<ul>
+<li>GearUp — WARDOGS error codes (1147405316, 1628505091, 1147405307) — https://www.gearupbooster.com/blog/wardogs-error-codes.html  </li>
+<li>Nerdschalk — Fix error 1628505091 — https://nerdschalk.com/fix-wardogs-error-1628505091-failed-to-connect/  </li>
+<li>LagoFast — 1628505091 / error differentiation — https://www.lagofast.com/en/blog/wardogs-error-code-1628505091/  </li>
+<li>Steam — Launch Stability Hotfix #1 — https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>BisectHosting — 1147405308 authenticate article — https://www.bisecthosting.com/blog/wardogs-error-code-1147405308-failed-to-authenticate-with-online-services-what-it-means-how-to-fix  </li>
+<li>PC Gamer — launch server rush context — https://www.pcgamer.com/games/fps/wardogs-servers-go-down-as-over-300-000-people-rush-to-play-on-launch-day/  </li>
+<li>mp1st — Hotfix size / restart note — https://mp1st.com/news/war-dogs-receives-hotfix-launch-day-players-encounter-server-instability-downtime  </li>
+<li>Creative Collaboration — WD-L014 / <strong>Elytra</strong> repair — https://ccstartup.com/blog/2026/09/11/how-to-fix-the-wardogs-wd-l014-error-code/  </li>
+<li>Steam store — <strong>Elytra</strong> anti-cheat tag — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>X — @WARDOGS — https://x.com/WARDOGS  </li>
+<li>Discord invite (confirm the invite is current) — https://discord.gg/TxKKdspkCp</li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-error-1628505091/">Error 1628505091 / JOIN TIMEDOUT</a></li>
+      <li><a href="../wardogs-servers-down/">WARDOGS servers down</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1628505091/">Error 1628505091</a></li>
+          <li><a href="../wardogs-servers-down/">Servers / queue</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-13 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>
