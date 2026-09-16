@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</title>
+  <meta name="description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-black-screen/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)" />
+  <meta property="og:description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-black-screen/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)" />
+  <meta name="twitter:description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)", "item": "https://thewardogsguide.com/wardogs-black-screen/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-this-page-is-and-is-not">What this page is (and is not)</a></li>
+      <li><a href="#symptom-fork-music-but-black-vs-hard-crash">Symptom fork: music-but-black vs hard crash</a></li>
+      <li><a href="#decision-tree">Decision tree</a></li>
+      <li><a href="#fix-ladder-black-screen-first">Fix ladder (black-screen first)</a></li>
+      <li><a href="#elytra-first-do-not-lead-with-eac">Elytra-first (do not lead with EAC)</a></li>
+      <li><a href="#shader-compile-vs-true-black-screen">Shader compile vs true black screen</a></li>
+      <li><a href="#boundary-cases">Boundary cases</a></li>
+      <li><a href="#crash-or-outage-quick-redirect">Crash or outage? (quick redirect)</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#support-paste-block">Support paste block</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-internal-links">Related internal links</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> This page is for <strong>black screen / blackscreen / stuck at startup</strong> on Steam Early Access — the process starts (or Steam says Running) but you never reach a usable menu. It is <strong>distinct from mid-match crash</strong> and from auth/queue codes like <code>1147405308</code>. Fork first: <strong>music-but-black</strong> (display / window / overlay) vs <strong>hard crash</strong> (dump / instant desktop). Store anti-cheat is <strong>Elytra</strong> (not EAC as current). Safe tests: overlays off one-at-a-time → windowed launch option (<strong></strong> flags on <a href="../wardogs-launch-options/">Launch Options</a>) → file verify → GPU driver sanity → <strong>Elytra</strong> identify/repair if launch dies at AC init. Shader-compile stalls that later recover → patience + stutter notes; process exit → Crash ladder. No invented FIXED stamps.</p>
+<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<figure class="shot"><img alt="TODO: Steam Running + black client window / no menu — stamp build/GPU/driver" loading="lazy" src="../assets/shots/TODO-black-screen-launch.webp"/><figcaption>TODO: Steam Running + black client window / no menu — stamp build/GPU/driver</figcaption></figure>
+<hr/>
+<h2 id="what-this-page-is-and-is-not">What this page is (and is not)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Covered</th>
+<th>Send elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black screen before / at menu</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Stuck at startup / infinite “loading” with black frame</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Music or audio continues but picture stays black</td>
+<td>Windowed / display fork below</td>
+</tr>
+<tr>
+<td>Hard crash to desktop during / after splash</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Mid-match exit while already playing</td>
+<td>Crash — mid-match section</td>
+</tr>
+<tr>
+<td>Auth dialog / <code>1147405308</code> / Access Denied, no black frame</td>
+<td><a href="../wardogs-error-1147405308/">1147405308</a> · <a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Hitching after you can play</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / Low FPS</a> · <a href="../wardogs-best-settings/">Settings</a></td>
+</tr>
+<tr>
+<td><code>WD-LO14</code> / <code>WD-L014</code> Unable to launch</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Public third-party black-screen roundups (2UpSkill Aug 2026 playtest-era; LagoFast; PixelNitro; Sportskeeda) mix <strong>EAC</strong> wording with overlay / windowed / shader tips. For <strong>current Steam store tag</strong>, rebuild the AC branch around <strong>Elytra</strong> — do not lead with “delete EasyAntiCheat folder.”</p>
+<hr/>
+<h2 id="symptom-fork-music-but-black-vs-hard-crash">Symptom fork: music-but-black vs hard crash</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Lean</th>
+<th>First moves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audio / menu music continues; picture black</td>
+<td>Display mode / resolution / overlay hook</td>
+<td>Alt-Tab; force windowed test; disable overlays</td>
+</tr>
+<tr>
+<td>Black briefly → instant desktop; crash reporter</td>
+<td>Hard crash</td>
+<td><a href="../wardogs-crashing/">Crashing</a> ladder</td>
+</tr>
+<tr>
+<td>“Compiling shaders” / long stall, then continues</td>
+<td>First-run shader compile (community lead)</td>
+<td>Wait once; don’t Alt-F4 mid-compile if progress continues (LagoFast lead)</td>
+</tr>
+<tr>
+<td>Shader stall then <strong>every</strong> launch crashes</td>
+<td>Corrupted cache / GPU path (public leads)</td>
+<td>Verify files; shader-cache cleanup leads on Stutter page; Crash if dump</td>
+</tr>
+<tr>
+<td>Steam Running → stops; no window</td>
+<td>Won’t launch class</td>
+<td>Crash + WD-L014 if coded</td>
+</tr>
+<tr>
+<td>Elytra / AC splash loops then black</td>
+<td>AC init</td>
+<td>Elytra identify/repair (community folder/UI)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="TODO: Compiling Shaders message vs pure black frame — two screenshots" loading="lazy" src="../assets/shots/TODO-shader-vs-black.webp"/><figcaption>TODO: Compiling Shaders message vs pure black frame — two screenshots</figcaption></figure>
+<hr/>
+<h2 id="decision-tree">Decision tree</h2>
+<pre><code class="language-text">Black / stuck at startup?
+│
+├─ Exact dialog is auth / 1147405308 / Access Denied (readable text)?
+│ └─./wardogs-error-1147405308/./wardogs-servers-down/
+│
+├─ WD-LO14 / WD-L014 / Unable to launch?
+│ └─./wardogs-wd-l014/ (+ Elytra repair)
+│
+├─ Hard crash dump / EXCEPTION / Crash Reporter?
+│ └─./wardogs-crashing/ (full ladder)
+│
+├─ Music or audio continues; picture black?
+│ ├─ Alt-Tab / Win+Tab — is a window off-screen?
+│ ├─ Disable Discord / Steam / GPU / Afterburner overlays (one at a time)
+│ ├─ Steam launch options: try -windowed │ │ Document on./wardogs-launch-options/ — one flag at a time
+│ ├─ Optional: -dx11 as isolated test [ ON EA — may no-op]
+│ └─ Still black → file verify → GPU driver → Elytra identify
+│
+├─ Long shader / loading stall, process still alive?
+│ ├─ Wait (community: first compile can look frozen 10–20 min — LagoFast)
+│ ├─ If it eventually plays but hitchs./wardogs-stuttering-fps/
+│ └─ If it always dies here → Crash + shader-cache public leads
+│
+└─ Unknown / mixed └─ Capture 30s of behavior → Crash hub symptom matrix</code></pre>
+<hr/>
+<h2 id="fix-ladder-black-screen-first">Fix ladder (black-screen first)</h2>
+<p>Run top → bottom. Re-test after each row.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>Detail</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Confirm failure class</td>
+<td>Music-but-black vs dump vs auth text</td>
+<td>Screenshot / short clip</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Full Windows + Steam restart</td>
+<td>Clears stuck GPU driver / Steam IPC</td>
+<td>Note if ReBar/HAGS untouched yet</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Disable overlays <strong>one at a time</strong></td>
+<td>Discord, Steam overlay, GeForce/AMD, Xbox Game Bar, MSI Afterburner/RivaTuner, RGB injectors</td>
+<td>Which toggle restored picture?</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Isolate second flag only if needed</td>
+<td>e.g. <code>-dx11</code> alone, then combine only if documented</td>
+<td>Never dump 10 flags</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Verify integrity of game files</td>
+<td>Steam → Installed Files → Verify</td>
+<td>Record repaired count</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>GPU driver sanity</td>
+<td>Clean install current Game Ready / Adrenalin; avoid “oldest driver folklore”</td>
+<td>Stamp driver version</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Read <code>ElytraLauncher.log</code></td>
+<td>Community path: <code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code></td>
+<td>Paste last lines into support block</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Shader-cache cleanup leads</td>
+<td>Only if compile crash / repeat hitch after driver change</td>
+<td>Public leads (Worldeka / PixelNitro / 2UpSkill) — no miracle claim</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Still failing</td>
+<td>Support paste + Discord/Steam ticket</td>
+<td>Evidence &gt; reinstall loops</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Overlay sub-ladder (highest-yield local branch)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Overlay</th>
+<th>How to disable for test</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discord</td>
+<td>Settings → Overlay → off → relaunch</td>
+<td>Common black-screen / AV conflict lead</td>
+</tr>
+<tr>
+<td>Steam</td>
+<td>WARDOGS → Properties → General → disable Steam Overlay</td>
+<td>same</td>
+</tr>
+<tr>
+<td>GeForce Experience / AMD</td>
+<td>Vendor overlay / ShadowPlay / Instant Replay off</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Xbox Game Bar</td>
+<td>Win+G settings → off</td>
+<td>same</td>
+</tr>
+<tr>
+<td>MSI Afterburner / RTSS</td>
+<td>Exit fully (tray)</td>
+<td>same</td>
+</tr>
+<tr>
+<td>RGB / board utilities</td>
+<td>Quit injectors</td>
+<td>Document name</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Re-enable</strong> after isolation so you know which hook was guilty.</p>
+<h3>Windowed / display notes</h3>
+<p>Public guides (2UpSkill, LagoFast FAQ) cite <code>-windowed</code> / borderless-style tests when music continues on a black frame. Treat flags as <strong>community lab tools</strong>, not studio-verified miracles:</p>
+<ul>
+<li>Put <strong>one</strong> option in Launch Options, launch once, record result.</li>
+<li>Full catalog + “may no-op” labels → <a href="../wardogs-launch-options/">WARDOGS Steam Launch Options</a>.</li>
+<li>After you recover a visible window, set a stable display mode in-game Settings (labels) before removing the temporary flag.</li>
+</ul>
+<figure class="shot"><img alt="TODO: Steam Launch Options field with single -windowed entry" loading="lazy" src="../assets/shots/TODO-launch-options-windowed.webp"/><figcaption>TODO: Steam Launch Options field with single -windowed entry</figcaption></figure>
+<hr/>
+<h2 id="elytra-first-do-not-lead-with-eac">Elytra-first (do not lead with EAC)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Fact / lead</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam store feature tag: <strong>Uses Kernel Level Anti-Cheat Elytra</strong></td>
+<td>Editorial WebFetch 2026-09-13 — treat as current store fact</td>
+</tr>
+<tr>
+<td>Community repair: Elytra folder helper → Repair</td>
+<td>ccstartup / AxeeTech / LagoFast public leads — confirm UI</td>
+</tr>
+<tr>
+<td>Log file community path</td>
+<td><code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code></td>
+</tr>
+<tr>
+<td>Old “delete EasyAntiCheat” articles</td>
+<td><strong>Deprecated as default</strong> for EA store tag</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If a residual EasyAntiCheat folder still exists on disk, document as anomaly — do not assume deleting it is safe or required.</p>
+<p>Full AC + exception ladder → <a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a>.</p>
+<hr/>
+<h2 id="shader-compile-vs-true-black-screen">Shader compile vs true black screen</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Public lead</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First launch long “Compiling Shaders,” then OK</td>
+<td>LagoFast: can look frozen 10–20 min then continue</td>
+<td>Wait once; subsequent launches faster</td>
+</tr>
+<tr>
+<td>Crash every time during compile</td>
+<td>PixelNitro / Worldeka / 2UpSkill shader-cache leads</td>
+<td>Verify → driver → cache cleanup → HAGS test</td>
+</tr>
+<tr>
+<td>Black frame, <strong>no</strong> shader text, music on</td>
+<td>Display / overlay fork</td>
+<td>Windowed + overlays</td>
+</tr>
+<tr>
+<td>Process exits with access violation</td>
+<td>Crash spoke</td>
+<td>Don’t only clear cache forever</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>After you can enter matches but hitch when entering new areas, continue on <a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — that is <strong>not</strong> the same as stuck-at-startup black screen.</p>
+<hr/>
+<h2 id="boundary-cases">Boundary cases</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay off fixes picture; overlay on → black</td>
+<td>Keep conflicting overlay disabled for WARDOGS; document which</td>
+</tr>
+<tr>
+<td>Verify finds 0 files</td>
+<td>Continue overlays + Elytra — zero mismatches ≠ healthy display/AC path</td>
+</tr>
+<tr>
+<td>Reinstall did nothing; log shows install-stage failure</td>
+<td>Stop reinstall loops; read ElytraLauncher.log</td>
+</tr>
+<tr>
+<td>Hotfix #1 just landed; “black screen” is actually Access Denied text</td>
+<td>Auth spoke / Servers — wrong page</td>
+</tr>
+<tr>
+<td>Guide says “repair EAC”</td>
+<td>Ignore as current default — store is Elytra</td>
+</tr>
+<tr>
+<td>Music-but-black on multi-monitor</td>
+<td>Check window on wrong display; Win+Shift+Left/Right</td>
+</tr>
+<tr>
+<td>Shader compile succeeds once, later launches black</td>
+<td>Overlay / display mode drift — re-run ladder from overlays</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Multi-monitor / HDR quick checks</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Game on primary display?</td>
+<td>Drag windowed test to known-good monitor</td>
+</tr>
+<tr>
+<td>Unusual resolution / ultrawide first boot</td>
+<td>Windowed native → set mode in-menu</td>
+</tr>
+<tr>
+<td>GPU driver crash (TDR)</td>
+<td>Ctrl+Shift+Win+B then relaunch (Sportskeeda-class lead)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="crash-or-outage-quick-redirect">Crash or outage? (quick redirect)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Stay here</th>
+<th>Leave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black window / stuck startup / music-but-black</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mid-match crash after playing</td>
+<td>—</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Everyone auth-failing, readable <code>1147405308</code></td>
+<td>—</td>
+<td><a href="../wardogs-error-1147405308/">1147405308</a></td>
+</tr>
+<tr>
+<td>JOIN TIMEDOUT</td>
+<td>—</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+<tr>
+<td>Playable but stutter / low FPS</td>
+<td>—</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering</a> · <a href="../wardogs-best-settings/">Settings</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fork music-but-black vs hard crash first</td>
+<td>Treat every black frame as “reinstall Windows”</td>
+</tr>
+<tr>
+<td>One launch option at a time; link Launch Options lab</td>
+<td>Paste ten undocumented UE flags as verified</td>
+</tr>
+<tr>
+<td>Elytra identify/repair after store/tag + on-disk check</td>
+<td>Lead with EAC folder deletes from playtest posts</td>
+</tr>
+<tr>
+<td>Disable overlays one-at-a-time and re-enable to isolate</td>
+<td>Disable Windows security permanently “for launch”</td>
+</tr>
+<tr>
+<td>Wait once on first shader compile if process alive</td>
+<td>Alt-F4 mid-compile then blame “broken shaders” without evidence</td>
+</tr>
+<tr>
+<td>Stamp GPU driver + build on every retest</td>
+<td>Invent FIXED / FPS% claims</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="support-paste-block">Support paste block</h2>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Build / stamp: Symptom: music-but-black / pure black / shader stall / crash-to-desktop
+Audio present?: Y/N
+Crash Reporter / exception text:
+GPU + driver version:
+Overlays tested off: Discord / Steam / GeForce / AMD / Game Bar / Afterburner / other
+Launch options tried (one at a time):
+File verify result:
+Anti-cheat identified: Elytra (store) + on-disk ElytraLauncher.log last lines:
+HAGS on/off tested?: Steps tried (ladder #s):</code></pre>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: WARDOGS black screen on launch — where do I start?</strong><br/>
+A: Decide music-but-black vs hard crash. Then overlays → <code>-windowed</code> test → verify files → GPU driver → Elytra repair. Auth text → auth spoke, not this ladder.</p>
+<p><strong>Q: Is black screen the same as mid-game crash?</strong><br/>
+A: No. Mid-match exits after you already played belong on <a href="../wardogs-crashing/">Crashing</a>. This page is startup / display init / shader-at-boot.</p>
+<p><strong>Q: Should I repair Easy Anti-Cheat?</strong><br/> A: Not as the <strong>current</strong> default. Store tags <strong>Elytra</strong>. Use Elytra identify/repair community path; treat leftover EAC folders.</p>
+<p><strong>Q: Which Steam launch options fix black screen?</strong><br/> A: Community leads often start with <code>-windowed</code>; <code>-dx11</code> appears as an isolated lab flag. All flags need and may no-op — full lab on <a href="../wardogs-launch-options/">Launch Options</a>. Never dump a pile of undocumented miracles.</p>
+<p><strong>Q: How long should I wait on “Compiling Shaders”?</strong><br/>
+A: LagoFast-class public lead: first compile can look stuck for a long stretch yet continue. If the process is alive and disk/GPU active, wait once. If it always crashes at the same point, switch to Crash + cache cleanup leads.</p>
+<p><strong>Q: Overlays keep breaking the picture — which one?</strong><br/>
+A: Disable one at a time and re-enable after success. Discord and vendor overlays are the highest-cited locals; your PC may differ.</p>
+<p><strong>Q: I fixed the black screen but now hitch in matches — next page?</strong><br/>
+A: <a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> for symptom triage; <a href="../wardogs-best-settings/">Best Settings</a> for FPS-vs-clarity slider goals. No invented FPS%.</p>
+<p><strong>Q: Steam says Running then stops with WD-LO14.</strong><br/>
+A: That is Unable to launch / AC init class → <a href="../wardogs-wd-l014/">WD-L014</a> and Crash Elytra section.</p>
+<p><strong>Q: Could this be servers down?</strong><br/>
+A: Only if you actually receive auth/queue dialogs. Pure black local window with no online-services text stays on this page; status habit still useful once via <a href="../wardogs-is-down/">Is Down</a>.</p>
+<hr/>
+<p><strong>Q: Does HDR or multi-monitor cause WARDOGS black screen?</strong><br/> A: Undocumented as official. Treat as A/B: windowed on primary display, then toggle HDR/Auto-HDR once. Document results; don’t invent a universal rule.</p>
+<p><strong>Q: I hear compiling shaders but see black — wait or kill?</strong><br/>
+A: If the process is alive and disk/GPU busy, wait once (LagoFast-class patience lead). If it repeatedly dies at the same percent with a crash reporter, switch to Crash + shader-cache leads — don’t infinite-wait a hard crash.</p>
+<h2 id="related-internal-links">Related internal links</h2>
+<ul>
+<li><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a> — dumps, mid-match, full Elytra ladder  </li>
+<li><a href="../wardogs-launch-options/">Steam Launch Options</a> — <code>-windowed</code>, <code>-dx11</code>, one-change lab  </li>
+<li><a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — hitch after playable  </li>
+<li><a href="../wardogs-best-settings/">Best Settings (FPS vs Clarity)</a> — slider goals once menus work  </li>
+<li><a href="../wardogs-wd-l014/">WD-L014 / Unable to Launch</a> — coded launch failure  </li>
+<li><a href="../wardogs-error-1147405308/">Error 1147405308 Authenticate</a> — auth dialog misread as “black”  </li>
+<li><a href="../wardogs-error-codes/">Error Codes Hub</a> — code index  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>2UpSkill — Black Screen on Launch (Aug 22, 2026; playtest-era; note EAC wording) — https://2upskill.com/wardogs-black-screen-on-launch-11-ways-to-fix-crashing-stuck-on-startup/  </li>
+<li>LagoFast — Stuck on loading / shader compile patience notes — https://www.lagofast.com/en/blog/wardogs-stuck-on-loading-screen/  </li>
+<li>LagoFast — Not launching / black screen overlay notes — https://www.lagofast.com/en/blog/wardogs-not-launching-or-crashing-on-startup/  </li>
+<li>PixelNitro — Won’t launch / shader cache / overlays (2026) — https://pixelnitro.com/wardogs-wont-launch-on-steam-how-to-fix-startup-crashes-and-errors-2026-guide/  </li>
+<li>Sportskeeda — won’t launch / overlay / driver exploration — https://tech.sportskeeda.com/gaming-news/wardogs-working-steam-error-possible-fixes-explored  </li>
+<li>Worldeka — DirectX shader cache clear (stutter/crash/compile) — https://worldeka.com/wardogs-directx-shader-cache-clear-fix-crashes-stuttering-and-compilation-freezes/  </li>
+<li>Creative Collaboration — WD-L014 / Elytra Repair — https://ccstartup.com/blog/2026/09/11/how-to-fix-the-wardogs-wd-l014-error-code/  </li>
+<li>Steam store — <strong>Elytra</strong> tag — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Steam — Launch Stability Hotfix #1 — https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-launch-options/">Steam launch options lab</a></li>
+      <li><a href="../wardogs-wd-l014/">WD-L014 / unable to launch</a></li>
+      <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

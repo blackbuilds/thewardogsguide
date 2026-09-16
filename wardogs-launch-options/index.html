@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)</title>
+  <meta name="description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-launch-options/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
+  <meta property="og:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-launch-options/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
+  <meta name="twitter:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)", "item": "https://thewardogsguide.com/wardogs-launch-options/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</a></li>
+      <li><a href="#symptom-should-you-even-use-launch-options">Symptom → should you even use launch options?</a></li>
+      <li><a href="#community-cited-options-table-may-no-op">Community-cited options table (may no-op)</a></li>
+      <li><a href="#safe-one-change-lab-print-this">Safe one-change lab (print this)</a></li>
+      <li><a href="#display-black-screen-fork-why--windowed-is-first">Display / black-screen fork (why -windowed is first)</a></li>
+      <li><a href="#api-fork--dx11-cautious">API fork (-dx11) — cautious</a></li>
+      <li><a href="#what-launch-options-will-not-fix">What launch options will not fix</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#spacing-steam-exit-and-flag-ignored-hygiene">Spacing, Steam Exit, and “flag ignored” hygiene</a></li>
+      <li><a href="#unreal-style-flags-what-we-will-and-will-not-say">Unreal-style flags: what we will and will not say</a></li>
+      <li><a href="#related-fix-pages">Related fix pages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> This page is a <strong>one-change-at-a-time Steam launch-options lab</strong> for WARDOGS Early Access — not a dump of “10 verified miracle flags.” Community troubleshooting posts (2UpSkill, PixelNitro, Gaming With DaOpa) cite <strong><code>-windowed</code></strong>, <strong><code>-dx11</code></strong>, and sometimes Unreal-style <strong><code>-ResX</code> / <code>-ResY</code></strong> or <strong><code>-DisableInitialFrontEndFlow</code></strong>. Every row below is marked <strong></strong> / <strong>may no-op</strong> until you retest on <em>your</em> build. Do <strong>not</strong> paste a kitchen-sink string of ten flags. Store anti-cheat is <strong>Elytra</strong> (not EAC as current) — launch options do <strong>not</strong> replace Elytra repair. Black screen → <a href="../wardogs-black-screen/">Black Screen</a>. Crash / won’t launch → <a href="../wardogs-crashing/">Crashing</a>. Hitching after launch → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>.</p>
+<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<hr/>
+<h2 id="lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>One change at a time</strong></td>
+<td>Otherwise you cannot tell which flag helped or hurt</td>
+</tr>
+<tr>
+<td>Record GPU + driver + result per step</td>
+<td>“It worked” without notes is useless next patch</td>
+</tr>
+<tr>
+<td>Prefer empty field after you reach a stable menu</td>
+<td>Launch options are <strong>tests</strong>, not permanent FPS cheats</td>
+</tr>
+<tr>
+<td>Never invent undocumented UE “miracle” flags as verified</td>
+<td>No unofficial “fixed” stamps / FPS% / studio mandates</td>
+</tr>
+<tr>
+<td>Elytra first for WD-LO14 / won’t-launch AC class</td>
+<td>Options ≠ anti-cheat repair — see <a href="../wardogs-crashing/">Crashing</a> / <a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>Remove a flag that does nothing or worsens crash rate</td>
+<td><strong>May no-op</strong> on this EA build</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>How to open the Launch Options box</h3>
+<ol>
+<li>Steam Library → right-click <strong>WARDOGS</strong> → <strong>Properties</strong>.  </li>
+<li><strong>General</strong> tab → <strong>Launch Options</strong> field at the bottom.  </li>
+<li>Paste <strong>one</strong> test string (examples below).  </li>
+<li>Close the dialog → launch once → record result.  </li>
+<li>Clear or replace before the next test.</li>
+</ol>
+<pre><code class="language-text">Steam Library
+  → WARDOGS → Properties
+    → General → Launch Options
+      → ONE flag or ONE short combo
+        → Launch once → note result
+          → Clear if no-op / worse
+</code></pre>
+<hr/>
+<h2 id="symptom-should-you-even-use-launch-options">Symptom → should you even use launch options?</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>First home</th>
+<th>Launch options?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auth / queue / Access Denied / <code>1147405308</code> (no crash dump)</td>
+<td><a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-is-down/">Is WARDOGS down?</a></td>
+<td><strong>No</strong> — not a DX flag problem</td>
+</tr>
+<tr>
+<td><code>1628505091</code> JOIN TIMEDOUT</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>WD-L014 / WD-LO14 / Unable to launch</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a> → Elytra repair</td>
+<td>Only <strong>after</strong> verify + Elytra path</td>
+</tr>
+<tr>
+<td>Black screen / music but black / stuck startup</td>
+<td><a href="../wardogs-black-screen/">Black Screen</a></td>
+<td>Yes — <strong><code>-windowed</code></strong> test is a common community lead</td>
+</tr>
+<tr>
+<td>Crash / access violation / never starts</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+<td>Maybe — after overlays + verify + Elytra identify</td>
+</tr>
+<tr>
+<td>Launches, then hitch / low FPS</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+<td>Usually <strong>settings</strong> first; flags are secondary experiments</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Decision tree</h3>
+<pre><code class="language-text">Need a Steam launch option for WARDOGS?
+│
+├─ Is the failure auth / queue / timeout (no local crash)?
+│  └─ YES → STOP — status / Servers / 1628505091 spokes
+│
+├─ Is the dialog WD-L014 / Unable to launch?
+│  └─ YES → Elytra repair + verify first → ../wardogs-wd-l014/
+│           (options only after AC path)
+│
+├─ Black screen / display init / music-but-black?
+│  └─ YES → Test A: -windowed alone
+│           then Test B: -dx11 alone
+│           then (optional) short combo — never 10 flags
+│           → ../wardogs-black-screen/
+│
+├─ Hard crash / access violation?
+│  └─ YES → overlays off + verify + Elytra → then optional -windowed/-dx11
+│           → ../wardogs-crashing/
+│
+└─ Running but stuttering?
+   └─ Settings / stutter spoke first → ../wardogs-stuttering-fps/
+</code></pre>
+<hr/>
+<h2 id="community-cited-options-table-may-no-op">Community-cited options table (may no-op)</h2>
+<p><strong>Important:</strong> Rows are <strong>community-cited</strong>, not Bulkhead-certified. Treat each as a <strong>lab candidate</strong>. Do not dump all of them into Launch Options at once.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Option / string</th>
+<th>Community use-case (dated lead)</th>
+<th>Status</th>
+<th>Source class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empty field (clear all)</td>
+<td>Control test after a successful menu</td>
+<td>Preferred steady state once stable</td>
+<td>Lab hygiene</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Explicitly <strong>not</strong> published as verified here</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Temptation</th>
+<th>Our stance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long strings of 8–12 undocumented UE console flags</td>
+<td><strong>Forbidden</strong> as “verified” — inventing miracle flags is out of scope</td>
+</tr>
+<tr>
+<td>Claiming FPS% gains from any flag</td>
+<td><strong>Forbidden</strong> — no invented FPS%</td>
+</tr>
+<tr>
+<td>“Official Bulkhead launch options list”</td>
+<td><strong>None found</strong> as of 2026-09-16 editorial pass</td>
+</tr>
+<tr>
+<td>Using launch options instead of Elytra Repair for WD-L014</td>
+<td>Wrong tool — see <a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="safe-one-change-lab-print-this">Safe one-change lab (print this)</h2>
+<p>Stop when you reach a stable main menu. Re-enable fullscreen / clear flags only after you can open Settings.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Change</th>
+<th>Exact Launch Options field</th>
+<th>Pass criteria</th>
+<th>Next if fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td>Baseline</td>
+<td><em>(empty)</em></td>
+<td>Note current failure mode</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Windowed only</td>
+<td><code>-windowed</code></td>
+<td>Menu visible / process stable</td>
+<td>Clear → step 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>DX11 only</td>
+<td><code>-dx11</code></td>
+<td>Same</td>
+<td>Clear → step 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Short combo</td>
+<td><code>-windowed -dx11</code></td>
+<td>Same</td>
+<td>Clear → step 4</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Optional resolution</td>
+<td><code>-windowed -ResX=1920 -ResY=1080</code> (adjust)</td>
+<td>Window appears at expected size</td>
+<td>Clear → step 5</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Optional front-end experiment</td>
+<td><code>-windowed -DisableInitialFrontEndFlow</code></td>
+<td>Menu / frontend progresses</td>
+<td><strong>Clear</strong> — do not stack further undocumented flags</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Rollback</td>
+<td><em>(empty)</em> again</td>
+<td>Confirm whether in-game setting can replace the flag</td>
+<td>Document</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Lab log template (copy)</h3>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Build / stamp: GPU + driver:
+OS:
+Baseline failure: black screen / crash / won’t launch / other
+Flag tested:
+Result: better / same / worse
+Overlays off during test?: Y/N
+Elytra repair already tried?: Y/N
+Screenshot:</code></pre>
+<hr/>
+<h2 id="display-black-screen-fork-why--windowed-is-first">Display / black-screen fork (why <code>-windowed</code> is first)</h2>
+<p>Community black-screen writeups distinguish <strong>music-but-black</strong> (display init) from <strong>hard exit</strong>. Launch options sit in the display-init branch — they are not a substitute for overlay/GPU surgery on hard crashes.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Lean</th>
+<th>First tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process alive; audio/menu music; black frame</td>
+<td>Display / fullscreen init</td>
+<td><code>-windowed</code> alone → then resolution string</td>
+</tr>
+<tr>
+<td>Process dies immediately; crash dialog</td>
+<td>Client / overlay / <strong>Elytra</strong></td>
+<td><a href="../wardogs-crashing/">Crashing</a> ladder — options later</td>
+</tr>
+<tr>
+<td>Stuck forever on logo / shader-like stall</td>
+<td>Shader / first-run compile lead</td>
+<td>Patience + Settings/stutter notes; optional windowed</td>
+</tr>
+<tr>
+<td>Auth text, no dump</td>
+<td>Service path</td>
+<td><a href="../wardogs-is-down/">Is down?</a> / Servers — <strong>no flags</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Deep black-screen ladder (overlays, HAGS leads, shader notes) lives on <a href="../wardogs-black-screen/">Black Screen</a>. Keep this page about <strong>how to run the flag lab safely</strong>.</p>
+<hr/>
+<h2 id="api-fork--dx11-cautious">API fork (<code>-dx11</code>) — cautious</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WARDOGS “requires” DX11 forever</td>
+<td><strong>Not claimed</strong></td>
+</tr>
+<tr>
+<td><code>-dx11</code> improves FPS by N%</td>
+<td><strong>Forbidden</strong> — no invented FPS%</td>
+</tr>
+<tr>
+<td><code>-dx12</code> is safer / faster</td>
+<td>Unverified — test alone only if you have a reason</td>
+</tr>
+<tr>
+<td>Studio published an API mandate in launch options</td>
+<td><strong>None found</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If <code>-dx11</code> gets you to the menu, open in-game graphics settings, configure normally, then try clearing the flag on a later session.</p>
+<hr/>
+<h2 id="what-launch-options-will-not-fix">What launch options will <strong>not</strong> fix</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Why flags won’t save you</th>
+<th>Go instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Widespread outage / wave queue</td>
+<td>Service-side</td>
+<td><a href="../wardogs-is-down/">Is WARDOGS down?</a> · <a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>JOIN TIMEDOUT <code>1628505091</code></td>
+<td>Handshake / capacity</td>
+<td><a href="../wardogs-error-1628505091/">1628505091</a></td>
+</tr>
+<tr>
+<td>Failed to authenticate <code>1147405308</code></td>
+<td>Auth spillover</td>
+<td>Servers / error spoke</td>
+</tr>
+<tr>
+<td>WD-L014 / Elytra init failure</td>
+<td>AC components / helper repair</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a> · <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Mid-match hitch only</td>
+<td>Settings / GPU load</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>Ban-style Access Denied (Cheating + Permanent)</td>
+<td>Account action</td>
+<td><a href="../wardogs-error-codes/">Error Codes</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test <strong>one</strong> flag (or one short combo) at a time</td>
+<td>Paste ten undocumented UE flags as “the fix”</td>
+</tr>
+<tr>
+<td>Clear no-ops</td>
+<td>Leave a graveyard of dead flags forever</td>
+</tr>
+<tr>
+<td>Pair black-screen tests with overlay-off runs</td>
+<td>Assume flags replace Discord/Steam overlay isolation</td>
+</tr>
+<tr>
+<td>Stamp driver + build on every retest</td>
+<td>Claim “FIXED for everyone”</td>
+</tr>
+<tr>
+<td>Prefer Elytra repair for Unable-to-launch codes</td>
+<td>Lead with EAC folder deletes (store is <strong>Elytra</strong>)</td>
+</tr>
+<tr>
+<td>Link stutter victims to Settings / stutter spoke</td>
+<td>Invent FPS% from a launch flag</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Boundary cases</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-windowed</code> works; fullscreen crashes</td>
+<td>Stay windowed until in-game borderless/fullscreen retested; document</td>
+</tr>
+<tr>
+<td>Flag ignored after edit</td>
+<td>Full Steam Exit; confirm field spelling/spaces; relaunch</td>
+</tr>
+<tr>
+<td>Combo works; singles don’t</td>
+<td>Rare — still record; prefer shortest string that works</td>
+</tr>
+<tr>
+<td>Any flag + WD-L014 still present</td>
+<td>Stop flag spam → Elytra Repair path</td>
+</tr>
+<tr>
+<td>Guide says “repair EAC” then add <code>-dx11</code></td>
+<td>Ignore EAC-as-current; Elytra-first</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<hr/>
+<h2 id="spacing-steam-exit-and-flag-ignored-hygiene">Spacing, Steam Exit, and “flag ignored” hygiene</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No spaces between flags</td>
+<td>Use spaces: <code>-windowed -dx11</code> not <code>-windowed-dx11</code></td>
+</tr>
+<tr>
+<td>Smart quotes / pasted rich text</td>
+<td>Retype in plain Launch Options box</td>
+</tr>
+<tr>
+<td>Edited options while game still running</td>
+<td>Fully close WARDOGS; Steam → <strong>Exit</strong>; relaunch Steam</td>
+</tr>
+<tr>
+<td>Ten flags from a random UE list</td>
+<td>Delete; return to one-change lab</td>
+</tr>
+<tr>
+<td>Keeping a no-op flag “just in case”</td>
+<td>Clear empties — noise hides the next test</td>
+</tr>
+<tr>
+<td>Using flags during an auth outage</td>
+<td>Wrong tool — <a href="../wardogs-is-down/">Is down?</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>After you reach the menu</h3>
+<ol>
+<li>Open in-game display / graphics settings.  </li>
+<li>Set window mode / resolution intentionally.  </li>
+<li>On a later session, clear Launch Options and retest.  </li>
+<li>If fullscreen crashes return, document and keep the <strong>shortest</strong> working string.  </li>
+<li>If hitching remains with a stable process, leave flags alone → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>.</li>
+</ol>
+<h3>Overlay + flag interaction</h3>
+<p>Launch options do <strong>not</strong> replace overlay isolation. If Discord overlay crashes the client, <code>-windowed</code> may still fail until overlays are off.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlays off (one at a time)</td>
+<td>Highest-yield generic local branch on Crash spoke</td>
+</tr>
+<tr>
+<td>Then <code>-windowed</code></td>
+<td>Display init test with fewer hooks</td>
+</tr>
+<tr>
+<td>Then <code>-dx11</code></td>
+<td>API experiment</td>
+</tr>
+<tr>
+<td>Then Elytra Repair if Unable to launch</td>
+<td>AC path owns WD-L014</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Cross-link: full overlay matrix → <a href="../wardogs-crashing/">Crashing</a>.</p>
+<hr/>
+<h2 id="unreal-style-flags-what-we-will-and-will-not-say">Unreal-style flags: what we will and will not say</h2>
+<p>WARDOGS is widely described as Unreal Engine-based in community tooling (windowed guides cite UE command-line habits). That <strong>does not</strong> mean every UE flag is supported, documented, or safe on this EA build.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>We can say</th>
+<th>We will not say</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Community cites specific strings below as tests</td>
+<td>“Official UE flag list for WARDOGS”</td>
+</tr>
+<tr>
+<td>Flags <strong>may no-op</strong> silently</td>
+<td>“This flag is verified to raise FPS 40%”</td>
+</tr>
+<tr>
+<td>One-change lab is required</td>
+<td>“Paste this 12-flag string”</td>
+</tr>
+<tr>
+<td>Clear after success when possible</td>
+<td>“Keep miracle flags forever”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If a future studio post documents launch options, </p>
+<h2 id="related-fix-pages">Related fix pages</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black screen / stuck startup</td>
+<td><a href="../wardogs-black-screen/">Black Screen</a></td>
+</tr>
+<tr>
+<td>Crash / won’t launch / Elytra</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Hitching / low FPS after launch</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>WD-L014 Unable to launch</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>Status / “is it down?”</td>
+<td><a href="../wardogs-is-down/">Is WARDOGS down?</a></td>
+</tr>
+<tr>
+<td>Code index</td>
+<td><a href="../wardogs-error-codes/">Error Codes Hub</a></td>
+</tr>
+<tr>
+<td>Clarity vs FPS sliders</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: What Steam launch options does WARDOGS officially recommend?</strong><br/> A: As of the 2026-09-16 editorial pass, <strong>no public Bulkhead “official launch options list”</strong> was found for EA. Community cites <code>-windowed</code> and <code>-dx11</code> as <strong>tests</strong>. Everything here is.</p>
+<p><strong>Q: Should I put <code>-windowed -dx11</code> in by default?</strong><br/>
+A: No. Test <code>-windowed</code> alone, then <code>-dx11</code> alone, then a short combo only if needed. Default steady state is an <strong>empty</strong> field once the menu is stable.</p>
+<p><strong>Q: Can launch options fix stuttering / low FPS?</strong><br/>
+A: Unproven. Prefer <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> and <a href="../wardogs-best-settings/">Best Settings</a>. <strong>Do not invent FPS%.</strong></p>
+<p><strong>Q: Will <code>-dx11</code> fix WD-L014?</strong><br/>
+A: Unlikely as a first tool. WD-L014 / Unable to launch is treated as launcher/<strong>Elytra</strong> init class in community posts — verify files + Elytra Repair first → <a href="../wardogs-wd-l014/">WD-L014</a>.</p>
+<p><strong>Q: Is <code>-DisableInitialFrontEndFlow</code> safe / verified?</strong><br/> A: Community-mentioned for front-end startup experiments — <strong>/ may no-op</strong>. Not a studio mandate. Test alone after simpler flags.</p>
+<p><strong>Q: Can I use <code>-ResX</code> / <code>-ResY</code>?</strong><br/> A: Gaming With DaOpa frames them as common Unreal Engine windowed sizing flags. They <strong>may no-op</strong> on a given build — adjust numbers to your display; still.</p>
+<p><strong>Q: Why won’t you list 10 “best” flags?</strong><br/>
+A: Because stacking unverified flags hides causality and invents false confidence. This page is a <strong>lab</strong>, not a myth dump.</p>
+<p><strong>Q: Do launch options replace Elytra?</strong><br/>
+A: <strong>No.</strong> Store tag (2026-09-13 editorial): <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Repair path stays on Crash / WD-L014 spokes.</p>
+<p><strong>Q: Black screen but I hear music — first flag?</strong><br/>
+A: Community lean: try <code>-windowed</code> alone, then continue on <a href="../wardogs-black-screen/">Black Screen</a>.</p>
+<p><strong>Q: Where do auth / “servers down” failures go?</strong><br/>
+A: Not here — <a href="../wardogs-is-down/">Is WARDOGS down?</a> and <a href="../wardogs-servers-down/">Servers</a>.</p>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>2UpSkill — WARDOGS black screen / <code>-windowed</code> / <code>-dx11</code> / front-end flag notes — https://2upskill.com/wardogs-black-screen-on-launch-11-ways-to-fix-crashing-stuck-on-startup/  </li>
+<li>PixelNitro — safer rendering / <code>-windowed -dx11</code> troubleshooting framing — https://pixelnitro.com/how-to-fix-wardogs-out-of-video-memory-error-on-launch-rtx-3060-guide/  </li>
+<li>Gaming With DaOpa — windowed mode / <code>-windowed -ResX -ResY</code> (UE flag framing) — https://gamingwithdaopa.ellatha.com/how-to-play-wardogs-in-windowed-mode-on-the-steam-client/  </li>
+<li>Steam Store — WARDOGS (Elytra tag / AppID 1867240) — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Sibling drafts: <a href="../wardogs-crashing/">Crashing / Elytra</a> · <a href="../wardogs-black-screen/">Black Screen</a> · <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> · <a href="../wardogs-wd-l014/">WD-L014</a> </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-black-screen/">Black screen on launch</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
+      <li><a href="../wardogs-wd-l014/">WD-L014 / unable to launch</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

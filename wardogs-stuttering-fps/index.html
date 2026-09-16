@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)</title>
+  <meta name="description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-stuttering-fps/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)" />
+  <meta property="og:description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-stuttering-fps/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)" />
+  <meta name="twitter:description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)", "item": "https://thewardogsguide.com/wardogs-stuttering-fps/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)</h1>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-this-page-covers-and-refuses-to-invent">What this page covers (and refuses to invent)</a></li>
+      <li><a href="#stutter-vs-low-fps-core-table">Stutter vs low FPS (core table)</a></li>
+      <li><a href="#decision-tree">Decision tree</a></li>
+      <li><a href="#shader-cache-as-public-lead-cite-dont-overclaim">Shader cache as public lead (cite, don’t overclaim)</a></li>
+      <li><a href="#hitching-vs-settings-who-owns-the-fix">Hitching vs settings: who owns the fix?</a></li>
+      <li><a href="#overlay-background-isolation-shared-with-crash">Overlay / background isolation (shared with Crash)</a></li>
+      <li><a href="#symptom-lever-cheat-sheet">Symptom → lever cheat sheet</a></li>
+      <li><a href="#network-lag-vs-render-hitch-dont-confuse">Network lag vs render hitch (don’t confuse)</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-internal-links">Related internal links</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> This is <strong>symptom triage</strong> for WARDOGS Steam Early Access when the game <strong>stays open</strong> but feels bad: micro-stutters, traversal hitching, shader spikes, or a steady low frame rate. It is <strong>not</strong> a duplicate of the <a href="../wardogs-best-settings/">Best Settings FPS-vs-clarity</a> page — go there for slider <em>goals</em> after you know which symptom you have. Fork first: <strong>hitch / hitching</strong> (uneven frame times, spikes when entering new areas) vs <strong>low FPS</strong> (smooth but slow). Public leads repeatedly cite <strong>shader cache</strong> rebuild / clear after driver or patch changes (Worldeka, 2UpSkill, PixelNitro, ComputerSluggish, Recharge) — treat as dated community leads, not studio FIXED. <strong>No invented FPS%.</strong> Overlays and Elytra launch failures → <a href="../wardogs-crashing/">Crashing</a> / <a href="../wardogs-black-screen/">Black Screen</a>.</p>
+<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<figure class="shot"><img alt="TODO: in-match frame-time graph or RTSS overlay showing hitch spikes vs flat low FPS — stamp build/GPU" loading="lazy" src="../assets/shots/TODO-stutter-vs-lowfps.webp"/><figcaption>TODO: in-match frame-time graph or RTSS overlay showing hitch spikes vs flat low FPS — stamp build/GPU</figcaption></figure>
+<hr/>
+<h2 id="what-this-page-covers-and-refuses-to-invent">What this page covers (and refuses to invent)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Covered</th>
+<th>Not invented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hitch vs steady low-FPS diagnosis</td>
+<td>Any “+X% FPS” or fabricated 1% lows</td>
+</tr>
+<tr>
+<td>Shader-cache / first-match compile public leads</td>
+<td>Claiming cache clear “always fixes” EA</td>
+</tr>
+<tr>
+<td>Overlay / background app isolation</td>
+<td>Hardware leaderboards</td>
+</tr>
+<tr>
+<td>When to open Settings vs Crash vs Black Screen</td>
+<td>Undocumented Engine.ini miracles as verified</td>
+</tr>
+<tr>
+<td>Link to Settings for slider families</td>
+<td>Official Bulkhead glossary of hitch causes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Platform fact:</strong> PC Windows Steam EA; store anti-cheat tag <strong>Elytra</strong> (editorial 2026-09-13). Elytra affects launch/AC health — it is not a Shadow slider.</p>
+<hr/>
+<h2 id="stutter-vs-low-fps-core-table">Stutter vs low FPS (core table)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Feels like</th>
+<th>Common public leads</th>
+<th>First fork</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hitch / hitching</strong></td>
+<td>Smooth, then a hitch every few seconds or when turning a corner</td>
+<td>Shader compile/stream; traversal stutter; overlay spike; storage hitch</td>
+<td>Shader + overlay + SSD check before nuking all presets</td>
+</tr>
+<tr>
+<td><strong>Traversal stutter</strong></td>
+<td>Spike when entering new POIs / <strong>Control Zone</strong> edges</td>
+<td>UE5 streaming / shader miss (2UpSkill UE5 stutter article)</td>
+<td>Let shaders settle; cache leads; don’t Ultra textures on HDD</td>
+</tr>
+<tr>
+<td><strong>Shader hitch</strong></td>
+<td>Spike after patch/driver; first match worse than second</td>
+<td>First-launch compile (Settings + Recharge FAQ); DirectX cache clear leads</td>
+<td>Wait one match; then cache cleanup if persistent</td>
+</tr>
+<tr>
+<td><strong>Steady low FPS</strong></td>
+<td>Consistently slow, frame times relatively flat</td>
+<td>Settings too high; CPU/GPU bound in big fights</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a> Maximum FPS path</td>
+</tr>
+<tr>
+<td><strong>1% low feel</strong> (without inventing numbers)</td>
+<td>Avg looks OK; fights feel uneven</td>
+<td>Cap instability; background recorders; thermal throttle</td>
+<td>Cap near refresh <strong>as a test</strong>; overlay off; temps</td>
+</tr>
+<tr>
+<td><strong>Net “lag” misread</strong></td>
+<td>Rubber-banding but FPS solid</td>
+<td>Network / server — not graphics</td>
+<td>Stop lowering shadows; check <a href="../wardogs-servers-down/">Servers</a> if everyone drops</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Quick self-test (2 minutes)</h3>
+<ol>
+<li>Note whether hitch happens in <strong>empty</strong> areas or only in <strong>Hot Zone</strong> / tower fights.  </li>
+<li>Watch GPU/CPU usage during a hitch (your overlay — MSI/RTSS may <em>cause</em> hitch; prefer brief tests).</li>
+<li>Play the <strong>same</strong> route twice after a cold boot.  </li>
+<li>If second run is smoother with no settings change → shader/stream settle lead.  </li>
+<li>If both runs are flat-low → Settings path.  </li>
+<li>If process exits → leave this page for Crash / Black Screen.</li>
+</ol>
+<hr/>
+<h2 id="decision-tree">Decision tree</h2>
+<pre><code class="language-text">Game stays open but feels bad?
+│
+├─ Never reaches menu / black screen / crash dump?
+│ └─./wardogs-black-screen/./wardogs-crashing/
+│
+├─ Auth / queue / 1147405308 / JOIN TIMEDOUT?
+│ └─ Wrong page — Fix hub auth/timeout spokes
+│
+├─ Hitch when entering new areas / after patch/driver?
+│ ├─ First session after install/update?
+│ │ └─ Finish one full match; allow shader compile (community)
+│ ├─ Still hitching next session?
+│ │ ├─ Overlays off (one at a time)
+│ │ ├─ Confirm install on SSD
+│ │ ├─ Shader-cache cleanup public lead (cite Sources)
+│ │ └─ Then Settings: cut expensive families one-by-one
+│ └─ Document — no FPS% claims
+│
+├─ Steady low FPS everywhere?
+│ └─./wardogs-best-settings/ → Maximum FPS goal
+│ (shadows / effects / post / GI families — labels)
+│
+├─ Clarity problem (can’t spot players) more than hitch?
+│ └─./wardogs-best-settings/ → Clarity path (blur/DoF/bloom off)
+│
+└─ FPS fine but delayed online only? └─ Network path; don’t keep deleting shader cache</code></pre>
+<hr/>
+<h2 id="shader-cache-as-public-lead-cite-dont-overclaim">Shader cache as public lead (cite, don’t overclaim)</h2>
+<p>Multiple Sep 2026 guides treat <strong>DirectX / GPU shader cache</strong> as a first-line investigation when WARDOGS:</p>
+<ul>
+<li>hitchs after a <strong>GPU driver</strong> update  </li>
+<li>hitchs after a <strong>game patch</strong> / Hotfix client  </li>
+<li>spikes when entering <strong>new map areas</strong> </li>
+<li>crashed or froze during <strong>Compiling Shaders</strong> and now hitchs on rebuild  </li>
+</ul>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Public lead</th>
+<th>What they claim (paraphrase)</th>
+<th>Our rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2UpSkill — UE5 stuttering</td>
+<td>Clear DirectX cache; avoid tiny NVIDIA Shader Cache Size; SSD; overlays</td>
+<td>Same — no “guaranteed %”</td>
+</tr>
+<tr>
+<td>PixelNitro — lag/stutter guide</td>
+<td>Cache + settings + 1% low language</td>
+<td>We <strong>do not</strong> copy invented percentages</td>
+</tr>
+<tr>
+<td>ComputerSluggish — stutter/lag/low FPS</td>
+<td>Clear cache after driver/game update; change 1–2 settings at a time</td>
+<td>Aligns with our one-change rule</td>
+</tr>
+<tr>
+<td>Recharge — best settings FAQ</td>
+<td>First-match stutter often shaders building; settles after compile</td>
+<td>Good “wait once” lead</td>
+</tr>
+<tr>
+<td>LagoFast — loading/shaders</td>
+<td>First compile can look frozen a long time</td>
+<td>Patience ≠ pad with fake fixes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Practical order (safe → invasive)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Action</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Finish <strong>one</strong> cold session after update without Alt-F4 mid-compile</td>
+<td>Let a healthy cache build</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Disable recording/overlays that hook frames</td>
+<td>Isolates false hitch</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Confirm WARDOGS lives on an <strong>SSD</strong></td>
+<td>Streaming hitch lead (multiple guides)</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Update GPU driver <strong>or</strong> note if hitch started <em>after</em> a driver</td>
+<td>Direction matters</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Clear Windows DirectX Shader Cache / vendor cache <strong>per public guide steps you trust</strong></td>
+<td>Community lead — rebuild will hitch once</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Only then open <a href="../wardogs-best-settings/">Best Settings</a> and cut expensive families</td>
+<td>Symptom was hitch, not “need Ultra→Low dump”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Do not</strong> publish “clearing cache gives +X% FPS.” We refuse invented percentages.</p>
+<figure class="shot"><img alt="TODO: Windows Disk Cleanup “DirectX Shader Cache” checkbox — public UI, not proof of fix" loading="lazy" src="../assets/shots/TODO-dx-shader-cache-cleanup.webp"/><figcaption>TODO: Windows Disk Cleanup “DirectX Shader Cache” checkbox — public UI, not proof of fix</figcaption></figure>
+<hr/>
+<h2 id="hitching-vs-settings-who-owns-the-fix">Hitching vs settings: who owns the fix?</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>If the dominant problem is…</th>
+<th>Use this page</th>
+<th>Then open Settings when…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uneven spikes / traversal hitch / post-patch hitch</td>
+<td>Yes — cache, overlay, SSD, compile patience</td>
+<td>Spikes remain after cache settle</td>
+</tr>
+<tr>
+<td>Flat low FPS in every fight</td>
+<td>Brief confirm here</td>
+<td>Immediately — Maximum FPS path</td>
+</tr>
+<tr>
+<td>Can’t see players past mid-range</td>
+<td>Brief</td>
+<td>Clarity path (not more GI)</td>
+</tr>
+<tr>
+<td>Crash / black screen</td>
+<td>No</td>
+<td>— → Crash / Black Screen</td>
+</tr>
+<tr>
+<td>Auth / queue</td>
+<td>No</td>
+<td>— → Auth / Servers</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Expensive families (direction only — labels)</h3>
+<p>Borrowed as <strong>direction</strong> from the Settings page third-party leads (Hone / 2UpSkill / PixelNitro / dtgre). Exact menu names stay.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Family (third-party names)</th>
+<th>Hitch / GPU stress lead</th>
+<th>Clarity note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Illumination</td>
+<td>Often cited as heavy</td>
+<td>Cut before View Distance if spotting matters</td>
+</tr>
+<tr>
+<td>Shadows</td>
+<td>Fight / <strong>Hot Zone</strong> stress</td>
+<td>Low for FPS goal</td>
+</tr>
+<tr>
+<td>Effects / particles</td>
+<td>Explosion hitch</td>
+<td>Medium→Low in contested areas</td>
+</tr>
+<tr>
+<td>Post-process / blur / DoF / bloom</td>
+<td>Less hitch, more clarity</td>
+<td>Off for competitive clarity</td>
+</tr>
+<tr>
+<td>View Distance / Mesh</td>
+<td>Don’t cut first if you need tower sightlines</td>
+<td>Keep readable</td>
+</tr>
+<tr>
+<td>Texture streaming / filtering</td>
+<td>Traversal hitch lead if storage slow</td>
+<td>High textures on weak VRAM can hitch — observe, don’t invent GB cutoffs</td>
+</tr>
+<tr>
+<td>Upscaling (DLSS/FSR)</td>
+<td>Quality when GPU-limited</td>
+<td>Confirm options exist on your GPU</td>
+</tr>
+<tr>
+<td>Frame Generation</td>
+<td>Off for latency baseline (third-party consensus)</td>
+<td>Not a hitch cure-all</td>
+</tr>
+<tr>
+<td>Frame cap</td>
+<td>Unlimited vs near-Hz cap — <strong>conflict</strong> in guides</td>
+<td>Test both; document hitching either way — no %</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Full skeletons and conflict tables → <a href="../wardogs-best-settings/">Best WARDOGS Settings for FPS vs Clarity</a>.</p>
+<hr/>
+<h2 id="overlay-background-isolation-shared-with-crash">Overlay / background isolation (shared with Crash)</h2>
+<p>Overlays can look like “stutter” or cause true hitch spikes.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Culprit class</th>
+<th>Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discord overlay</td>
+<td>Off → relaunch</td>
+</tr>
+<tr>
+<td>Steam overlay</td>
+<td>Off for WARDOGS</td>
+</tr>
+<tr>
+<td>GeForce / AMD overlay + Instant Replay</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Xbox Game Bar / Widgets</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>MSI Afterburner / RTSS</td>
+<td>Exit tray apps entirely during A/B</td>
+</tr>
+<tr>
+<td>Browser hardware accel + huge RAM use</td>
+<td>Close unused Chrome/Edge profiles</td>
+</tr>
+<tr>
+<td>Second anti-cheat / RGB injectors</td>
+<td>Quit during test</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If disabling an overlay <strong>fixes launch</strong> (not just hitch), you crossed into <a href="../wardogs-black-screen/">Black Screen</a> / <a href="../wardogs-crashing/">Crashing</a> territory — stay there.</p>
+<p>Launch-option experiments (<code>-dx11</code>, windowed) are for <strong>startup</strong> display failures first — lab them on <a href="../wardogs-launch-options/">Launch Options</a>, not as a random FPS ritual.</p>
+<hr/>
+<h2 id="symptom-lever-cheat-sheet">Symptom → lever cheat sheet</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You notice…</th>
+<th>Try first</th>
+<th>Then</th>
+<th>Avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hitch only first match after patch</td>
+<td>Finish match (shader settle)</td>
+<td>Cache cleanup if still bad next day</td>
+<td>Deleting installs</td>
+</tr>
+<tr>
+<td>Hitch when crossing into new POIs</td>
+<td>SSD confirm + cache lead</td>
+<td>Cut streaming-heavy families carefully</td>
+<td>Dropping View Distance first if spotting matters</td>
+</tr>
+<tr>
+<td>Hitch only in <strong>Hot Zone</strong> fights</td>
+<td>Effects / shadows one notch</td>
+<td>Settings Maximum FPS path</td>
+<td>Blaming Elytra</td>
+</tr>
+<tr>
+<td>Flat 40s-feel everywhere</td>
+<td>Settings skeletons</td>
+<td>Cap near Hz as test</td>
+<td>Inventing % gains</td>
+</tr>
+<tr>
+<td>Smooth FPS, rubber-band</td>
+<td>Network / Servers</td>
+<td>—</td>
+<td>Clearing shader cache again</td>
+</tr>
+<tr>
+<td>Hitch started after Afterburner install</td>
+<td>Exit RTSS/Afterburner</td>
+<td>Re-enable to confirm</td>
+<td>Keeping three overlays</td>
+</tr>
+<tr>
+<td>Hitch after new GPU driver</td>
+<td>Cache rebuild patience → clear if stuck</td>
+<td>Roll driver only if crash</td>
+<td>Changing 20 settings at once</td>
+</tr>
+<tr>
+<td>Process crashes while “fixing FPS”</td>
+<td>Leave → Crash / Black Screen</td>
+<td>—</td>
+<td>More Ultra→Low</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Storage / CPU / VRAM notes (no magic numbers)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Public lead direction</th>
+<th>Our rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install on HDD</td>
+<td>Multiple stutter guides: move to SSD</td>
+<td>Observe hitch on traversal</td>
+</tr>
+<tr>
+<td>VRAM pressure</td>
+<td>High textures + ultrawide + busy fights</td>
+<td>Lower textures one step; no invented GB cutoffs</td>
+</tr>
+<tr>
+<td>CPU-bound fights</td>
+<td>100-player destruction spikes</td>
+<td>Effects/particles before killing mesh readability</td>
+</tr>
+<tr>
+<td>Background recording</td>
+<td>Instant Replay / OBS</td>
+<td>Off during A/B</td>
+</tr>
+<tr>
+<td>Thermal throttle</td>
+<td>Sustained low clocks</td>
+<td>Monitor temps — don’t invent undervolt guides here</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="network-lag-vs-render-hitch-dont-confuse">Network lag vs render hitch (don’t confuse)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Clue</th>
+<th>Lean render/settings</th>
+<th>Lean network/service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame-time spikes visible in local overlay</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Hitch in offline/quiet areas too</td>
+<td>Yes</td>
+<td>Unlikely net</td>
+</tr>
+<tr>
+<td>Smooth FPS meter; delayed hitreg / rubber-band</td>
+<td>—</td>
+<td>Net</td>
+</tr>
+<tr>
+<td>Everyone in squad hitch-free; only you spike</td>
+<td>Local</td>
+<td>Maybe</td>
+</tr>
+<tr>
+<td>Whole server rubber-bands / mass kick</td>
+<td>—</td>
+<td><a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-is-down/">Is Down</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Graphics cuts never create server capacity. Auth codes never need a GI toggle.</p>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate hitch vs steady low FPS</td>
+<td>Publish copied “+40% FPS” claims</td>
+</tr>
+<tr>
+<td>Allow one shader settle session after updates</td>
+<td>Alt-F4 mid-compile then declare broken game</td>
+</tr>
+<tr>
+<td>Cite shader-cache guides as leads</td>
+<td>Claim studio-verified cache ritual</td>
+</tr>
+<tr>
+<td>Send slider goals to Settings page</td>
+<td>Duplicate the entire Settings article here</td>
+</tr>
+<tr>
+<td>Isolate overlays before Ultra→Low panic</td>
+<td>Disable Windows security “for FPS”</td>
+</tr>
+<tr>
+<td>Link Crash/Black Screen when process dies</td>
+<td>Treat auth errors as stutter</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Why does WARDOGS stutter in my first match?</strong><br/>
+A: Public FAQ-class leads (Recharge, Settings Batch-1, LagoFast) treat first-match hitch as <strong>shader compilation / cache building</strong>. If the process stays up, finish the session. If it crashes during compile, use Crash / Black Screen + cache cleanup leads.</p>
+<p><strong>Q: Is stuttering the same as low FPS?</strong><br/>
+A: Not always. Hitch = uneven spikes; low FPS = consistently slow. Different first levers (cache/overlay/stream vs settings families).</p>
+<p><strong>Q: Will clearing the DirectX shader cache fix hitching?</strong><br/> A: Community guides (Worldeka, 2UpSkill, ComputerSluggish, PixelNitro) present it as a high-yield lead after driver/patch issues. Outcome on your PC is. Expect a hitchy rebuild once. <strong>No FPS%</strong>.</p>
+<p><strong>Q: Which settings should I lower first for hitching?</strong><br/> A: After cache/overlay checks, cut expensive families one at a time — GI / shadows / effects / post are repeatedly named in third-party guides. Keep view/mesh readable for towers if clarity matters. Exact labels → Settings page.</p>
+<p><strong>Q: Do I need special Steam launch options for FPS?</strong><br/>
+A: Launch options are primarily a <strong>startup</strong> lab (windowed / DX tests). See <a href="../wardogs-launch-options/">Launch Options</a>. Do not invent undocumented UE flags as verified FPS fixes.</p>
+<p><strong>Q: Overlays off fixed my hitch — now what?</strong><br/>
+A: Keep the conflicting overlay disabled for WARDOGS. If launch itself failed before, also skim <a href="../wardogs-black-screen/">Black Screen</a>.</p>
+<p><strong>Q: Can Elytra cause stutter?</strong><br/>
+A: Store tags <strong>Elytra</strong> for anti-cheat. Launch/AC failures belong on Crash / WD-L014. Ongoing hitch while playing is usually render/stream/settings — not “repair Elytra for +FPS.”</p>
+<p><strong>Q: My FPS counter is fine but the game feels delayed online.</strong><br/>
+A: Stop deleting shader caches. Check whether the whole server is unhappy via <a href="../wardogs-is-down/">Is Down</a> / <a href="../wardogs-servers-down/">Servers</a>.</p>
+<p><strong>Q: Where are the actual FPS-vs-clarity presets?</strong><br/>
+A: <a href="../wardogs-best-settings/">Best Settings</a> — skeletons only; no invented percentages.</p>
+<hr/>
+<p><strong>Q: Should I edit Engine.ini for WARDOGS stutter?</strong><br/> A: Third-party UE5 guides sometimes list ini tweaks <strong>last</strong>. We do <strong>not</strong> publish undocumented miracle flags as verified. Prefer cache / overlay / Settings lab first; mark any ini experiment and reversible.</p>
+<p><strong>Q: Is Unlimited FPS better than a cap for hitching?</strong><br/>
+A: Guides conflict. Test both on your display Hz, note hitching either way, and refuse to invent which is “best for all PCs.”</p>
+<h2 id="related-internal-links">Related internal links</h2>
+<ul>
+<li><a href="../wardogs-best-settings/">Best Settings (FPS vs Clarity)</a> — slider goals after triage  </li>
+<li><a href="../wardogs-black-screen/">Black Screen on Launch</a> — stuck at startup, not hitch  </li>
+<li><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a> — exits / dumps  </li>
+<li><a href="../wardogs-launch-options/">Steam Launch Options</a> — safe one-flag tests  </li>
+<li><a href="../wardogs-error-codes/">Error Codes Hub</a> — if “performance” is actually a dialog  </li>
+<li><a href="../wardogs-towers-hot-zone/">Towers + Hot Zone</a> — fight stress context for effects hitch  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Worldeka — DirectX Shader Cache Clear (crashes, stuttering, compilation freezes) — https://worldeka.com/wardogs-directx-shader-cache-clear-fix-crashes-stuttering-and-compilation-freezes/  </li>
+<li>2UpSkill — Unreal Engine 5 stuttering / low FPS — https://2upskill.com/wardogs-unreal-engine-5-stuttering-fix-how-to-stop-lag-frame-drops-and-fix-low-fps/  </li>
+<li>PixelNitro — Lag and stuttering fix guide (2026) — https://pixelnitro.com/wardogs-lag-and-stuttering-fix-guide-how-to-boost-fps-and-fix-1-lows-in-2026/  </li>
+<li>ComputerSluggish — Stuttering, lag or low FPS — https://computersluggish.com/guides/wardogs-stuttering-lag-low-fps-pc/  </li>
+<li>Recharge — Best settings; first-match shader FAQ — https://www.recharge.com/blog/en-gb/wardogs-best-settings  </li>
+<li>LagoFast — Stuck on loading / shader compile patience — https://www.lagofast.com/en/blog/wardogs-stuck-on-loading-screen/  </li>
+<li>Worldeka — NVIDIA Control Panel stutter notes (Shader Cache Size lead) — https://worldeka.com/wardogs-nvidia-control-panel-settings-guide-max-fps-visibility-and-stutter-fixes-2026/  </li>
+<li>Hone — Best PC settings (named options leads) — https://hone.gg/blog/wardogs-best-pc-settings/  </li>
+<li>Steam store — Elytra / EA platform — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+      <li><a href="../wardogs-black-screen/">Black screen on launch</a></li>
+      <li><a href="../wardogs-launch-options/">Steam launch options lab</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>
