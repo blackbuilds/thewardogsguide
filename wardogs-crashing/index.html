@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</title>
-  <meta name="description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <title>WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)</title>
+  <meta name="description" content="WARDOGS crashing, black screen, or won’t launch on Steam EA. Elytra (not EAC) repair, WD-LO14, mid-match crash, AMD overlay notes. Last checked 2026-09-16." />
   <link rel="canonical" href="https://thewardogsguide.com/wardogs-crashing/" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
-  <meta property="og:title" content="WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)" />
-  <meta property="og:description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <meta property="og:title" content="WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)" />
+  <meta property="og:description" content="WARDOGS crashing, black screen, or won’t launch on Steam EA. Elytra (not EAC) repair, WD-LO14, mid-match crash, AMD overlay notes. Last checked 2026-09-16." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://thewardogsguide.com/wardogs-crashing/" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)" />
-  <meta name="twitter:description" content="WARDOGS crashing or won’t launch on Steam EA. Elytra (not EAC) identify path, symptom matrix, overlays. Last checked 2026-09-13." />
+  <meta name="twitter:title" content="WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)" />
+  <meta name="twitter:description" content="WARDOGS crashing, black screen, or won’t launch on Steam EA. Elytra (not EAC) repair, WD-LO14, mid-match crash, AMD overlay notes. Last checked 2026-09-16." />
   <link rel="stylesheet" href="../assets/site.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)", "item": "https://thewardogsguide.com/wardogs-crashing/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)", "item": "https://thewardogsguide.com/wardogs-crashing/"}]}</script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
   <script>
@@ -78,11 +78,11 @@
       <ol>
         <li><a href="../">Home</a></li>
         <li><a href="../wardogs-fixes/">Fix</a></li>
-        <li aria-current="page">WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</li>
+        <li aria-current="page">WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)</li>
       </ol>
     </nav>
     <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
-    <h1>WARDOGS Crashing or Won’t Launch on Steam — Elytra Anti-Cheat Fixes (EA)</h1>
+    <h1>WARDOGS Crashing, Black Screen, or Won’t Launch — Elytra Fixes (EA)</h1>
     <nav class="toc" aria-label="On this page">
     <p class="toc-label">On this page</p>
     <ol>
@@ -98,13 +98,17 @@
       <li><a href="#decision-tree">Decision tree</a></li>
       <li><a href="#support-paste-block">Support paste block</a></li>
       <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#wont-launch-wont-launch-on-steam">Won’t launch / wont launch on Steam</a></li>
+      <li><a href="#stuttering-after-launch-fps-hitching-not-crash">Stuttering after launch (FPS hitching, not crash)</a></li>
+      <li><a href="#mid-game-crash-mid-match-crash">Mid-game crash / mid-match crash</a></li>
+      <li><a href="#amd-gpu-driver-overlay-notes-community-leads">AMD GPU driver / overlay notes (community leads)</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#related">Related</a></li>
       <li><a href="#sources">Sources</a></li>
     </ol>
   </nav>
-    <p><strong>TL;DR:</strong> As of <strong>2026-09-13</strong>, the Steam store feature tag reads <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Build crash triage around <strong>Elytra</strong>, not legacy “EAC fix” posts. Separate <strong>never starts / before menu / black screen / mid-match</strong> from <strong>auth/queue</strong> codes like public lead <code>1147405308</code> (spillover → <a href="../wardogs-servers-down/">Servers</a>). Community WD-LO14 / WD-L014 reports block past the launcher — repair paths below are <strong>community-cited</strong> and stay for exact UI. JOIN TIMEDOUT → <a href="../wardogs-error-1628505091/">1628505091</a>. Settings after you can launch → <a href="../wardogs-best-settings/">Best Settings</a>. Code index → <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
-<p><strong>Last checked 2026-09-13 (Early Access).</strong></p>
+    <p><strong>TL;DR:</strong> As of <strong>2026-09-13</strong>, the Steam store feature tag reads <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Build crash triage around <strong>Elytra</strong>, not legacy “EAC fix” posts. This page covers <strong>crashing</strong>, <strong>won’t launch / wont launch</strong>, <strong>black screen / blackscreen</strong>, <strong>mid-game / mid-match crash</strong>, <strong>WD-LO14 / WD-L014</strong>, and <strong>AMD</strong> overlay/driver community leads — without inventing FIXED stamps. Separate launch failures from <strong>auth/queue</strong> codes like public lead <code>1147405308</code> (spillover → <a href="../wardogs-servers-down/">Servers</a>). <strong>Stuttering</strong> after a successful launch (FPS hitching, not exit) → <a href="../wardogs-best-settings/">Best Settings</a>. JOIN TIMEDOUT → <a href="../wardogs-error-1628505091/">1628505091</a>. Code index → <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
+<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
 <figure class="shot"><img alt="Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not live client crash UI) — captured 2026-09-13" loading="lazy" src="../assets/shots/steam-store-elytra-tag.webp"/><figcaption>Steam store feature tag: Uses Kernel Level Anti-Cheat Elytra (public store page, not live client crash UI) — captured 2026-09-13</figcaption></figure><figure class="shot"><img alt="Steam Launch Stability Hotfix #1 thread header (public community page, not a live crash dialog) — 2026-09-13" loading="lazy" src="../assets/shots/steam-hotfix1-thread-header.webp"/><figcaption>Steam Launch Stability Hotfix #1 thread header (public community page, not a live crash dialog) — 2026-09-13</figcaption></figure>
 <hr/>
 <h2 id="anti-cheat-reality-check-store-vs-disk">Anti-cheat reality check (store vs disk)</h2>
@@ -722,6 +726,117 @@ Playtest leftover uninstalled?: Y/N/NA</code></pre>
 <h3>Post-Hotfix #1 crash-adjacent notes</h3>
 <p>Hotfix #1 targeted join/kick/queue stability (studio). Community replies also mentioned launch/auth failures (<code>WD-LO14-c70b81e405df</code>, Access Denied). If your “crash” is actually an auth dialog with no dump, you are on the wrong page — bounce to <a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-error-codes/">Error hub</a>.</p>
 <hr/>
+<h2 id="wont-launch-wont-launch-on-steam">Won’t launch / wont launch on Steam</h2>
+<p>If Steam shows Running then stops, or the client never reaches the main menu, stay on this page — that is a <strong>won’t launch / wont launch</strong> class failure, not a join-timeout guide.</p>
+<ol>
+<li>Run the <strong>symptom matrix</strong> and <strong>fix ladder</strong> above (verify files → overlays → GPU driver → Elytra repair).</li>
+<li>If the dialog is <strong>WD-LO14 / WD-L014 / Unable to launch</strong>, jump to that section.</li>
+<li>If the dialog is auth / Access Denied / <code>1147405308</code> with <strong>no</strong> crash dump → <a href="../wardogs-servers-down/">Servers</a>.</li>
+<li>If JOIN TIMEDOUT / <code>1628505091</code> → <a href="../wardogs-error-1628505091/">1628505091</a>.</li>
+</ol>
+<p>Community repair paths are <strong>not</strong> stamped FIXED here — record what you tried.</p>
+<hr/>
+<h2 id="stuttering-after-launch-fps-hitching-not-crash">Stuttering after launch (FPS hitching, not crash)</h2>
+<p><strong>Stuttering</strong> / hitching while the game <strong>stays open</strong> is usually a settings/GPU load problem, not Elytra launch repair.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Stay here?</th>
+<th>Go instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process exits / crash dialog / never starts</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Black screen then exit</td>
+<td>Yes (black screen section + ladder)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Launches, then FPS hitch / stutter in fights</td>
+<td>No (after confirming launch works)</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a></td>
+</tr>
+<tr>
+<td>Whole lobby drops at once</td>
+<td>Check status first</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Do not invent FPS%.</strong> Overlay conflicts that cause hard exits stay on this crash ladder.</p>
+<hr/>
+<h2 id="mid-game-crash-mid-match-crash">Mid-game crash / mid-match crash</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only you crash with a local dialog / exception</td>
+<td>Stay — fix ladder + overlay/GPU + Elytra identify</td>
+</tr>
+<tr>
+<td>Everyone drops mid-match at once</td>
+<td>Check <a href="../wardogs-servers-down/">Servers</a> once, then ladder if it was only you</td>
+</tr>
+<tr>
+<td>Auth dialog mid-queue with no dump</td>
+<td>Servers hub — not a GPU guide</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Reuse the support paste block (timing: mid-match). No FIXED claim without a dated retest on your build.</p>
+<hr/>
+<h2 id="amd-gpu-driver-overlay-notes-community-leads">AMD GPU driver / overlay notes (community leads)</h2>
+<p>AMD-specific notes here are <strong>community leads</strong>, not studio mandates:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Lead</th>
+<th>What to try</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMD Software / Adrenalin overlay</td>
+<td>Disable overlay for a WARDOGS test (same as GeForce overlay row)</td>
+<td>Community lead — record your result</td>
+</tr>
+<tr>
+<td>Clean GPU driver install</td>
+<td>Vendor AMD driver package — avoid random “FPS booster” packs</td>
+<td>Same ladder step as NVIDIA/Intel</td>
+</tr>
+<tr>
+<td>Overlay off fixes launch; overlay on crashes</td>
+<td>Keep the conflicting overlay disabled for WARDOGS; document which one</td>
+<td>Boundary case above</td>
+</tr>
+<tr>
+<td>AMD + stuttering after launch works</td>
+<td>Settings page for hitching; stay here only if it hard-crashes</td>
+<td>Split intentionally</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Do <strong>not</strong> publish “AMD FIXED” or invented driver version blacklists unless filled from dated retests.</p>
+<hr/>
 <h2 id="faq">FAQ</h2>
 <p><strong>Q: Does WARDOGS use Easy Anti-Cheat or Elytra?</strong><br/> A: Steam store feature tag as of <strong>2026-09-13</strong> lists <strong>Uses Kernel Level Anti-Cheat Elytra</strong>. Confirm folder/UI on your install before repair. Do not follow old EAC-only guides as current default — even some access-violation posts still say EAC from closed-test era.</p>
 <p><strong>Q: What does error 1147405308 mean?</strong><br/> A: Public lead (Bisect): Failed to Authenticate With Online Services. Triage as <strong>auth spillover</strong> → <a href="../wardogs-servers-down/">Servers</a> before local GPU steps. Confirm the dialog on your screenshot.</p>
@@ -740,6 +855,20 @@ A: <a href="../wardogs-best-settings/">Best WARDOGS Settings</a>. No invented FP
 <p><strong>Q: Where is the full error code table?</strong><br/>
 A: <a href="../wardogs-error-codes/">Error Codes Hub</a>.</p>
 <hr/>
+<p><strong>Q: WARDOGS black screen / blackscreen on launch — what first?</strong><br/>
+A: Treat <strong>black screen / blackscreen</strong> as a launch-class failure: file verify → overlays off (one at a time) → GPU driver → Elytra identify/repair → read ElytraLauncher.log. Capture exact on-screen text before chasing “shader fix” blogs. If the process stays open but only hitch-stutters, continue on <a href="../wardogs-best-settings/">Best Settings</a>. No invented FIXED stamp.</p>
+<p><strong>Q: WARDOGS won’t launch / wont launch on Steam — where do I start?</strong><br/>
+A: Use the symptom matrix: never starts / before menu / WD-LO14 vs auth-only codes. Default local path is verify + overlays + <strong>Elytra</strong> repair (not old EAC folder deletes). Auth / Access Denied / <code>1147405308</code> without a crash dump → <a href="../wardogs-servers-down/">Servers</a>.</p>
+<p><strong>Q: WARDOGS stuttering — is that this crash page?</strong><br/>
+A: If the client <strong>launches</strong> and only <strong>stuttering</strong> / FPS hitching remains, go to <a href="../wardogs-best-settings/">Best Settings</a>. Stay here when stutter ends in a crash dialog, black screen exit, or won’t-launch loop.</p>
+<p><strong>Q: Mid-game crash / mid-match crash — always my PC?</strong><br/>
+A: Not always. If the whole server dumps players, check <a href="../wardogs-servers-down/">Servers</a>. If only you crash with a local dialog, stay on this ladder (overlays / GPU / Elytra). Same rule as the mid-match FAQ above.</p>
+<p><strong>Q: WD-L014 / WD-LO14 Unable to launch — exact spelling?</strong><br/>
+A: Steam Hotfix community example used <code>WD-LO14-…</code>; third-party posts also write <strong>WD-L014</strong>. Treat them as the same launcher/AC-init cluster until proven otherwise. Community path: verify files → Elytra Repair → log read. Official meaning stays unverified — do not invent.</p>
+<p><strong>Q: AMD GPU — any special WARDOGS crash steps?</strong><br/>
+A: Same ladder as other GPUs. Community often cites <strong>AMD overlay</strong> (Adrenalin) alongside Discord/Steam/GeForce overlays for access-violation class launch crashes — disable overlay, keep the driver, retest. No AMD-specific FIXED claim published here.</p>
+<p><strong>Q: Does WARDOGS still use Easy Anti-Cheat (EAC)?</strong><br/>
+A: Store feature tag as of <strong>2026-09-13</strong> is <strong>Elytra</strong> (kernel-level). Keep <strong>Elytra-first</strong>. Residual EasyAntiCheat folders, if any, are anomalies to document — not the default repair path.</p>
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../wardogs-best-settings/">Best Settings / Performance</a></li>
