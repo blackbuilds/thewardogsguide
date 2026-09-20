@@ -1243,3 +1243,45 @@ body.layout-home .hero-home h1 {
   color: var(--muted);
   font-size: 0.92rem;
 }
+
+
+/* Adsterra ad slots - below sticky nav; not sticky; no layout blowout */
+.ad-slot {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+.ad-slot--mpu {
+  min-height: 250px;
+}
+.ad-slot--mobile-banner {
+  min-height: 50px;
+}
+@media (min-width: 768px) {
+  .ad-slot--mobile-banner {
+    display: none;
+  }
+}
+
+
+/* Adsterra ad slots - below sticky nav; not sticky; no layout blowout */
+.ad-slot {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+.ad-slot--mpu {
+  min-height: 250px;
+}
+.ad-slot--mobile-banner {
+  min-height: 50px;
+}
+@media (min-width: 768px) {
+  .ad-slot--mobile-banner {
+    display: none;
+  }
+}
