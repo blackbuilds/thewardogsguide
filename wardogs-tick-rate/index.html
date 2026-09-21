@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Tick Rate Explained (What Players Mean in EA)</title>
+  <meta name="description" content="What WARDOGS tick rate / server tick means in EA. Not FPS or ping; no invented Hz. Last checked 2026-09-21." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-tick-rate/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Tick Rate Explained (What Players Mean in EA)" />
+  <meta property="og:description" content="What WARDOGS tick rate / server tick means in EA. Not FPS or ping; no invented Hz. Last checked 2026-09-21." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-tick-rate/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Tick Rate Explained (What Players Mean in EA)" />
+  <meta name="twitter:description" content="What WARDOGS tick rate / server tick means in EA. Not FPS or ping; no invented Hz. Last checked 2026-09-21." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Tick Rate Explained (What Players Mean in EA)", "item": "https://thewardogsguide.com/wardogs-tick-rate/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Tick Rate Explained (What Players Mean in EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Tick Rate Explained (What Players Mean in EA)</h1>
+    <div class="ad-slot ad-slot--mobile-banner" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'd9357d46935e504df76263de91946b45',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/d9357d46935e504df76263de91946b45/invoke.js"></script>
+</div>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-tick-rate-means-plain-english">What “tick rate” means (plain English)</a></li>
+      <li><a href="#honest-ea-status-ui-netgraph">Honest EA status (UI / netgraph)</a></li>
+      <li><a href="#disambiguation-table-stop-landing-on-the-wrong-page">Disambiguation table (stop landing on the wrong page)</a></li>
+      <li><a href="#public-leads-on-hz-cite-carefully-do-not-invent">Public leads on Hz (cite carefully — do not invent)</a></li>
+      <li><a href="#lag-feel-tick-vs-servers-vs-local-hitch">Lag feel: tick vs servers vs local hitch</a></li>
+      <li><a href="#related-player-questions-scope-control">Related player questions (scope control)</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read-related">Also read / Related</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> In shooters, <strong>tick rate</strong> (tickrate) usually means how often the <strong>server simulates and updates</strong> game state per second — not your FPS, not your ping, and not a hitch spike. Players searching <strong>wardogs tick rate</strong> / <strong>war dogs tick rate</strong> want a plain-English definition plus honesty about Early Access: whether the client UI / netgraph <strong>exposes</strong> tick is <strong>not confirmed in public UI as of 2026-09-21</strong> . Hosting-provider packaging sometimes advertises a locked <strong>30 Hz</strong> community-server figure (QONZER / Guided.news class) — treat that as a <strong>dated provider claim</strong>, not a Bulkhead matchmaking glossary entry, and do <strong>not</strong> invent official Hz for official servers. Feeling lagged? Fork: local hitch → <a href="../wardogs-stuttering-fps/">Stuttering</a>; everyone delayed → <a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-is-down/">Is Down</a>. <strong>No fake Hz numbers. No FIXED stamps.</strong></p><div class="ad-slot ad-slot--native" aria-hidden="true">
+<script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
+<div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
+</div>
+<p><strong>Last checked 2026-09-21 (Early Access).</strong></p>
+<hr/>
+<h2 id="what-tick-rate-means-plain-english">What “tick rate” means (plain English)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'cba1c97fde9723c1b43804fe5a2f8e9f',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/cba1c97fde9723c1b43804fe5a2f8e9f/invoke.js"></script>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain meaning</th>
+<th>Player-facing feel when it’s low / uneven</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tick rate</strong></td>
+<td>How many times per second the <strong>server</strong> advances simulation and replicates state</td>
+<td>Hit-reg feels mushy; “I shot first”; rubber-band in fights</td>
+</tr>
+<tr>
+<td><strong>Tick</strong> (one)</td>
+<td>A single server simulation step</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Tickrate</strong> (spelling)</td>
+<td>Same idea; community shorthand</td>
+<td>Same searches</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Analogy: your PC draws <strong>frames</strong> (FPS). The server advances the <strong>shared world</strong> on its own clock (ticks). A silky 200 FPS client cannot invent server ticks that never happened.</p>
+<h3>What tick rate is not</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Not this</th>
+<th>Why people confuse it</th>
+<th>Right page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FPS / frame rate</td>
+<td>Both are “per second” numbers</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> · <a href="../wardogs-best-settings/">Best Settings</a> · <a href="../wardogs-fps-counter/">How to Show FPS</a></td>
+</tr>
+<tr>
+<td>Ping / latency (ms)</td>
+<td>Delay to the server ≠ simulation rate</td>
+<td>Network / <a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Hitching / stutter</td>
+<td>Uneven frame times on <strong>your</strong> GPU/CPU/storage</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering</a></td>
+</tr>
+<tr>
+<td>Packet loss</td>
+<td>Delivery failures, not tick frequency</td>
+<td>Network troubleshooting — don’t lower shadows</td>
+</tr>
+<tr>
+<td>Anti-cheat “ticks”</td>
+<td>Folklore</td>
+<td>Elytra is launch/AC health — <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="honest-ea-status-ui-netgraph">Honest EA status (UI / netgraph)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Status as of <strong>2026-09-21</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Official Bulkhead glossary entry for matchmaking tick Hz?</td>
+<td><strong>None found</strong> for this page — do not invent</td>
+</tr>
+<tr>
+<td>Community-server hosting marketing figures?</td>
+<td>Provider packaging claims exist (see below) — not the same as “official UI shows X”</td>
+</tr>
+<tr>
+<td>Steam Overlay FPS counter?</td>
+<td>Shows <strong>FPS</strong>, not tick — useful for the wrong metric</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Editorial rule:</strong> If a future patch adds a netgraph tick readout, rebuild this section with a dated screenshot. Until then, do <strong>not</strong> teach CS-style <code>net_graph</code> commands as WARDOGS facts.</p>
+<p>![TODO: Settings / HUD search for net / performance — mark “tick absent” if still true]</p>
+<hr/>
+<h2 id="disambiguation-table-stop-landing-on-the-wrong-page">Disambiguation table (stop landing on the wrong page)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You feel…</th>
+<th>Likely metric</th>
+<th>First fork</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth picture, but shots “don’t count” / peekers advantage talk</td>
+<td>Tick / netcode / server sim (or ping)</td>
+<td>This page for definition → then Servers if lobby-wide</td>
+</tr>
+<tr>
+<td>Picture hitchs when entering new areas; FPS overlay spikes</td>
+<td>Hitch / shader / streaming</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>Steady low FPS everywhere</td>
+<td>Client frame rate</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a></td>
+</tr>
+<tr>
+<td>High ms / rubber-band; friends same region also suffer</td>
+<td>Ping / server / routing</td>
+<td><a href="../wardogs-is-down/">Is Down</a> · <a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Only you rubber-band; friends fine; FPS solid</td>
+<td>Local net / Wi-Fi / VPN</td>
+<td>Network path — not Ultra→Low dump</td>
+</tr>
+<tr>
+<td>Game exits to desktop</td>
+<td>CTD</td>
+<td><a href="../wardogs-crash-to-desktop/">Crash to Desktop</a></td>
+</tr>
+<tr>
+<td>Can’t open the game</td>
+<td>Launch</td>
+<td><a href="../wardogs-wont-launch/">Won’t Launch</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Decision tree</h3>
+<pre><code class="language-text">Searching “WARDOGS tick rate” or “feels like bad tick”?
+│
+├─ Want a definition only?
+│ └─ Stay — tick = server simulation rate (not FPS)
+│
+├─ Looking for an on-screen tick number?
+│ └─ Not confirmed in public UI as of 2026-09-21 │ Use Steam/vendor FPS counter for FPS only — not tick
+│
+├─ Picture hitching / low FPS (process stays open)?
+│ └─./wardogs-stuttering-fps/ → then./wardogs-best-settings/
+│
+├─ Lobby-wide delay / auth / queue / “is it down”?
+│ └─./wardogs-is-down/./wardogs-servers-down/
+│
+├─ Learning modes / how matches work?
+│ └─./how-to-play-wardogs/ — tick ≠ tutorial
+│
+└─ Hosting a community server / provider “30 Hz” ads? └─ Treat as provider packaging claim — cite Sources; not matchmaking proof</code></pre>
+<hr/>
+<h2 id="public-leads-on-hz-cite-carefully-do-not-invent">Public leads on Hz (cite carefully — do not invent)</h2>
+<p><strong>Hard rule:</strong> This page will not invent an official matchmaking tick rate or paste marketing “60 tick” as studio fact.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Lead (dated)</th>
+<th>What it says</th>
+<th>How we use it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QONZER WARDOGS hosting page</td>
+<td>Marketing: locked <strong>30 Hz</strong> tick — “max this game supports” (provider wording)</td>
+<td><strong>Provider packaging claim</strong> — cite URL; not a Bulkhead UI screenshot</td>
+</tr>
+<tr>
+<td>Guided.news hosting explainer (2026-09-10)</td>
+<td>Lists <strong>30 Hz tick rate</strong> among QONZER package bullets; notes weak hardware could <strong>lower</strong> tick</td>
+<td>Press summary of provider packaging — same caution</td>
+</tr>
+<tr>
+<td>Official Steam store / News</td>
+<td>Playable EA; no public “tick = N Hz” glossary found for this shell</td>
+<td>Absence ≠ invent</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If Bulkhead later publishes an official figure, replace this table with a dated studio citation and rebuild.</p>
+<h3>Why hosts talk about tick at all</h3>
+<p>Large 100-player fights with destruction and vehicles are <strong>server-heavy</strong>. Provider pages sell CPU headroom as “holding tick” during three-team pushes. That marketing language is about <strong>dedicated community instances</strong>, not proof of what your current matchmaking server is running this minute.</p>
+<hr/>
+<h2 id="lag-feel-tick-vs-servers-vs-local-hitch">Lag feel: tick vs servers vs local hitch</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Lean tick/net</th>
+<th>Lean local</th>
+<th>Lean service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everyone in lobby rubber-bands together</td>
+<td>Possible server sim / capacity</td>
+<td>Unlikely if FPS solid for all</td>
+<td>Check <a href="../wardogs-is-down/">Is Down</a></td>
+</tr>
+<tr>
+<td>Only you hitch when turning corners; FPS overlay spikes</td>
+<td>Unlikely</td>
+<td>Shader / disk / settings</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Auth errors / queue / Access Denied</td>
+<td>No</td>
+<td>No</td>
+<td><a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Fine offline menus; bad only in dense Hot Zone fights</td>
+<td>Maybe server load <strong>or</strong> your GPU</td>
+<td>Settings / stutter fork</td>
+<td>Status if widespread</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Practical habit:</strong> Before arguing “bad tick,” open an FPS counter (Steam overlay) once. If FPS is collapsing, fix <a href="../wardogs-stuttering-fps/">Stuttering</a> / <a href="../wardogs-best-settings/">Best Settings</a> first. If FPS is flat and the whole lobby agrees shots feel delayed, use status channels — you still may <strong>not</strong> see a tick readout.</p>
+<hr/>
+<h2 id="related-player-questions-scope-control">Related player questions (scope control)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer on this page?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is tick rate?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>How do I show FPS?</td>
+<td>Pointer only → <a href="../wardogs-fps-counter/">How to Show FPS</a> · <a href="../wardogs-best-settings/">Best Settings</a></td>
+</tr>
+<tr>
+<td>How do I raise tick rate as a client?</td>
+<td>You generally <strong>cannot</strong> raise authoritative server tick from the client</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Define tick as server simulation rate</td>
+<td>Equate tick with FPS</td>
+</tr>
+<tr>
+<td>Say UI tick readout is unconfirmed as of 2026-09-21</td>
+<td>Invent a netgraph command as WARDOGS fact</td>
+</tr>
+<tr>
+<td>Cite provider <strong>30 Hz</strong> claims as packaging leads</td>
+<td>Invent official matchmaking Hz or FIXED</td>
+</tr>
+<tr>
+<td>Send hitchers to Stutter / Settings</td>
+<td>Tell people to lower shadows for “tick”</td>
+</tr>
+<tr>
+<td>Send lobby-wide lag to Is Down / Servers</td>
+<td>Blame Elytra for rubber-banding alone</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: What is WARDOGS tick rate?</strong><br/> A: Players mean the <strong>server simulation rate</strong> (how often the server updates the shared world). It is not your FPS. An official public Hz figure for matchmaking is <strong>not invented here</strong>; see provider packaging notes and stamps above.</p>
+<p><strong>Q: What is war dogs tick rate / tickrate?</strong><br/>
+A: Same question — spelling variants. Stay on this explain page for the definition; use Stutter/Servers when the <em>feel</em> is hitch or outage.</p>
+<p><strong>Q: Does WARDOGS show tick rate in-game?</strong><br/> A: <strong>Not confirmed in public UI as of 2026-09-21.</strong> on your build. Steam’s FPS counter shows frames, not ticks.</p>
+<p><strong>Q: Is WARDOGS 30 tick / 60 tick / 128 tick?</strong><br/>
+A: Do <strong>not</strong> trust random forum numbers. QONZER hosting marketing cites a locked <strong>30 Hz</strong> for its community servers (provider claim). Conflicting host ads exist. Official matchmaking Hz: <strong>none found</strong> for this shell — no fake numbers.</p>
+<p><strong>Q: Why does the game feel lagged if my FPS is high?</strong><br/>
+A: High FPS only proves the client is drawing frames. Ping, packet loss, server load, or true low/uneven tick can still feel bad. Fork with the disambiguation table; check <a href="../wardogs-is-down/">Is Down</a> if everyone suffers.</p>
+<p><strong>Q: Can launch options or best settings raise tick rate?</strong><br/>
+A: No — client settings and Steam launch options do not raise authoritative server tick. Settings help <strong>FPS/clarity</strong>; see <a href="../wardogs-best-settings/">Best Settings</a>. Launch options are a display/API lab → <a href="../wardogs-launch-options/">Launch Options</a>.</p>
+<p><strong>Q: Is hitching the same as bad tick?</strong><br/>
+A: Usually no. Hitching is uneven <strong>frame times</strong> on your machine (shaders, storage, overlays). Start at <a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a>.</p>
+<p><strong>Q: Servers down vs bad tick?</strong><br/>
+A: If joins fail, queues stall, or auth codes appear, use <a href="../wardogs-servers-down/">Servers</a> / <a href="../wardogs-is-down/">Is Down</a>. “Bad tick” talk without a readable outage still needs honesty: you may not have a tick readout to prove it.</p>
+<hr/>
+<h2 id="also-read-related">Also read / Related</h2>
+<ul>
+<li><a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — hitch vs low FPS  </li>
+<li><a href="../wardogs-servers-down/">Servers Down / Queue / Access Denied</a> — service-shaped lag  </li>
+<li><a href="../wardogs-is-down/">Is WARDOGS Down?</a> — 60-second status habit  </li>
+<li><a href="../how-to-play-wardogs/">How to Play</a> — modes / basics (not netcode)  </li>
+<li><a href="../wardogs-best-settings/">Best Settings</a> — FPS vs clarity (not tick)  </li>
+<li><a href="../wardogs-fps-counter/">How to Show FPS</a> — FPS readout (not tick)  </li>
+<li><a href="../wardogs-launch-options/">Steam Launch Options</a> — unrelated to server tick  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>QONZER — WARDOGS server hosting (marketing: locked 30 Hz tick claim): https://qonzer.com/game-servers/wardogs  </li>
+<li>Guided.news — Server hosting explained (2026-09-10; lists 30 Hz among QONZER package bullets): https://guided.news/en/news/wardogs-server-hosting-providers-prices-self-hosting/  </li>
+<li>Steam Store — WARDOGS (EA; no tick glossary relied on here): https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>Steam — Launch Stability Hotfix #1 (service/stability context, not tick Hz): https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>Sibling explain/fix: <a href="../wardogs-stuttering-fps/">Stuttering</a> · <a href="../wardogs-servers-down/">Servers</a> · <a href="../wardogs-is-down/">Is Down</a> · <a href="../wardogs-best-settings/">Best Settings</a> </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-servers-down/">Servers down / queue</a></li>
+      <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+      <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
+      <li><a href="../how-to-play-wardogs/">How to play WARDOGS</a></li>
+      <li><a href="../wardogs-fps-counter/">How to show FPS</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-wont-launch/">Won’t launch</a></li>
+          <li><a href="../wardogs-crash-to-desktop/">Crash to desktop</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-map-zestafona/">Zestafona map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

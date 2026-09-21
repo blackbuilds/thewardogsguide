@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Show FPS in WARDOGS (Counter Options in EA)</title>
+  <meta name="description" content="How to show / see FPS in WARDOGS on Steam EA: Steam overlay and vendor counters. No invented FPS%. Last checked 2026-09-21." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-fps-counter/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="How to Show FPS in WARDOGS (Counter Options in EA)" />
+  <meta property="og:description" content="How to show / see FPS in WARDOGS on Steam EA: Steam overlay and vendor counters. No invented FPS%. Last checked 2026-09-21." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-fps-counter/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="How to Show FPS in WARDOGS (Counter Options in EA)" />
+  <meta name="twitter:description" content="How to show / see FPS in WARDOGS on Steam EA: Steam overlay and vendor counters. No invented FPS%. Last checked 2026-09-21." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "How to Show FPS in WARDOGS (Counter Options in EA)", "item": "https://thewardogsguide.com/wardogs-fps-counter/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">How to Show FPS in WARDOGS (Counter Options in EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>How to Show FPS in WARDOGS (Counter Options in EA)</h1>
+    <div class="ad-slot ad-slot--mobile-banner" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'd9357d46935e504df76263de91946b45',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/d9357d46935e504df76263de91946b45/invoke.js"></script>
+</div>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-this-page-covers-and-refuses-to-invent">What this page covers (and refuses to invent)</a></li>
+      <li><a href="#decision-tree-which-counter-first">Decision tree: which counter first?</a></li>
+      <li><a href="#in-game-wardogs-fps-option">In-game WARDOGS FPS option</a></li>
+      <li><a href="#steam-overlay-fps-primary-path">Steam overlay FPS (primary path)</a></li>
+      <li><a href="#nvidia-overlay-fps">NVIDIA overlay FPS</a></li>
+      <li><a href="#amd-overlay-fps">AMD overlay FPS</a></li>
+      <li><a href="#overlay-conflict-table-fps-visible-vs-playable">Overlay conflict table (FPS visible vs playable)</a></li>
+      <li><a href="#after-you-can-see-fps-this-page-settings">After you can see FPS (this page ≠ settings)</a></li>
+      <li><a href="#quick-checklist">Quick checklist</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read-related">Also read / Related</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> This page answers <strong>how to show / see FPS</strong> in WARDOGS Steam Early Access — Steam overlay (classic FPS counter <strong>and</strong> newer Overlay Performance Monitor), NVIDIA / AMD vendor overlays, and whether an <strong>in-game</strong> WARDOGS FPS option exists (not confirmed in public settings guides as of 2026-09-21). <strong>No invented FPS%.</strong> After the counter is visible, improve frames via <a href="../wardogs-best-settings/">Best Settings</a> and hitch triage via <a href="../wardogs-stuttering-fps/">Stuttering / Low FPS</a> — this page is <strong>not</strong> a full settings guide. Overlay fights binds / Elytra / crash → <a href="../wardogs-controls-hotas/">Controls</a> · <a href="../wardogs-crashing/">Crashing</a>.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
+<script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
+<div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
+</div>
+<p><strong>Last checked 2026-09-21 (Early Access).</strong></p>
+<figure class="shot"><img alt="TODO: Steam Overlay Performance Monitor or classic FPS corner read in WARDOGS — stamp build/GPU" loading="lazy" src="../assets/shots/TODO-wardogs-fps-counter-steam.webp"/><figcaption>TODO: Steam Overlay Performance Monitor or classic FPS corner read in WARDOGS — stamp build/GPU</figcaption></figure>
+<hr/>
+<h2 id="what-this-page-covers-and-refuses-to-invent">What this page covers (and refuses to invent)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'cba1c97fde9723c1b43804fe5a2f8e9f',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/cba1c97fde9723c1b43804fe5a2f8e9f/invoke.js"></script>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Covered</th>
+<th>Not invented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How to <strong>show</strong> FPS (Steam / NVIDIA / AMD paths)</td>
+<td>Any “+X% FPS” or fabricated 1% lows</td>
+</tr>
+<tr>
+<td>Overlay conflict checklist (binds / crash / hitch)</td>
+<td>Claiming an in-game FPS toggle exists without screenshot</td>
+</tr>
+<tr>
+<td>When to leave this page for Settings / Stutter</td>
+<td>Hardware FPS leaderboards</td>
+</tr>
+<tr>
+<td>Frame Generation vs “true” FPS note</td>
+<td>Official Bulkhead FPS counter docs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Platform fact:</strong> PC Windows Steam EA; store anti-cheat tag <strong>Elytra</strong> (editorial 2026-09-13). Overlays that fight Elytra belong on Crash / WD-L014 — not “force overlay for FPS.”</p>
+<hr/>
+<h2 id="decision-tree-which-counter-first">Decision tree: which counter first?</h2>
+<pre><code class="language-text">Need to see FPS in WARDOGS?
+│
+├─ Prefer one overlay only (fewest hooks)
+│ └─ Steam first (game is Steam-native)
+│ ├─ Classic: Settings → In-Game → In-game FPS counter → corner
+│ └─ Newer: Overlay Performance Monitor / Performance Overlay
+│ (Steam FAQ + press — labels on your client)
+│
+├─ Already use NVIDIA App / GeForce Experience?
+│ └─ NVIDIA Statistics / FPS HUD (Alt+Z → Statistics; Alt+R toggle lead)
+│ Labels — App vs older GFE differ
+│
+├─ Already use AMD Software: Adrenalin Edition?
+│ └─ Performance → Metrics → Show Metrics Overlay + Frame Rate / FPS
+│ Toggle lead: Ctrl+Shift+O (AMD FAQ family) — hotkey
+│
+├─ Counter missing / blank / causes hitch or crash?
+│ ├─ Overlay conflict → disable extras one at a time
+│ ├─ Process exits / black screen./wardogs-crashing/./wardogs-black-screen/
+│ └─ Elytra / WD-L014 launch fail → do not stack more overlays
+│
+└─ Counter works — want higher / smoother FPS? ├─ Steady low./wardogs-best-settings/ └─ Hitch / uneven./wardogs-stuttering-fps/</code></pre>
+<hr/>
+<h2 id="in-game-wardogs-fps-option">In-game WARDOGS FPS option</h2>
+<p>Public Sep 2026 settings guides (Hone, games.gg, showgamer-class) document <strong>Frame Limit / Frame Rate Limit</strong>, <strong>Main Menu FPS Limit</strong>, upscaling, and Frame Generation — they do <strong>not</strong> document a dedicated <strong>in-game FPS counter</strong> toggle.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Status</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“Main Menu FPS Limit”</td>
+<td>Third-party settings lead (caps menu FPS)</td>
+<td><strong>Not</strong> a counter — do not confuse with Show FPS</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rule:</strong> Until a live-client screenshot proves an in-game Show FPS row, treat <strong>Steam</strong> (or one vendor overlay) as the answer for <code>wardogs fps counter</code> / <code>how to show fps in wardogs</code>.</p>
+<figure class="shot"><img alt="TODO: full Video / Graphics / HUD menus — search for any Show FPS / Performance HUD label" loading="lazy" src="../assets/shots/TODO-wardogs-settings-show-fps-search.webp"/><figcaption>TODO: full Video / Graphics / HUD menus — search for any Show FPS / Performance HUD label</figcaption></figure>
+<hr/>
+<h2 id="steam-overlay-fps-primary-path">Steam overlay FPS (primary path)</h2>
+<p>Steam ships the counter through the <strong>Steam Overlay</strong>. If the overlay is off globally or for WARDOGS, no FPS number appears.</p>
+<h3>A) Classic In-game FPS counter (HowToGeek / long-standing Steam UI)</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Action</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Steam → <strong>Settings</strong> → <strong>In-Game</strong></td>
+<td>Mac: Steam → Preferences</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Enable <strong>Enable the Steam Overlay while in-game</strong></td>
+<td>Required</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><strong>In-game FPS counter</strong> → Top-left / Top-right / Bottom-left / Bottom-right</td>
+<td>Not Off</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Optional: <strong>High contrast color</strong></td>
+<td>Brighter digits</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Launch WARDOGS from Steam</td>
+<td>Alt-Tab changes may need a full relaunch</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>B) Overlay Performance Monitor (newer Steam UI — labels)</h3>
+<p>Valve’s public FAQ and 2025–2026 press describe a richer <strong>Overlay Performance Monitor</strong> / performance overlay under <strong>In-Game</strong> (sometimes described near Performance Overlay wording). Clients differ — match what you see.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Action</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Steam → <strong>Settings</strong> → <strong>In-Game</strong></td>
+<td>Restart Steam if options missing (press lead)</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Set to <strong>Show</strong> / enable; pick screen position</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Optional: detail level, text scale, opacity</td>
+<td>Extra graphs ≠ more FPS</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Launch WARDOGS; confirm digits appear</td>
+<td>Frame Gen may show dual FPS lines (Steam press lead)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>WARDOGS-specific Steam checks</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Where</th>
+<th>If fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay on for this game</td>
+<td>Library → WARDOGS → <strong>Properties</strong> → enable Steam Overlay</td>
+<td>Counter never appears</td>
+</tr>
+<tr>
+<td>Overlay hotkey</td>
+<td>Default <strong>Shift+Tab</strong></td>
+<td>Confirm overlay opens at all</td>
+</tr>
+<tr>
+<td>Multiple OSDs</td>
+<td>Steam + NVIDIA + AMD + Discord + RTSS</td>
+<td>Keep <strong>one</strong> FPS source</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="shot"><img alt="TODO: Steam Settings → In-Game with FPS counter / Performance Monitor visible" loading="lazy" src="../assets/shots/TODO-steam-in-game-fps-settings.webp"/><figcaption>TODO: Steam Settings → In-Game with FPS counter / Performance Monitor visible</figcaption></figure>
+<hr/>
+<h2 id="nvidia-overlay-fps">NVIDIA overlay FPS</h2>
+<p>NVIDIA documents an in-game <strong>Statistics</strong> / performance overlay via <strong>NVIDIA App</strong> (successor path) and older <strong>GeForce Experience</strong>. Menu names move between versions — mark.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Steps (public lead)</th>
+<th>Toggle lead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NVIDIA App</strong></td>
+<td>Settings → enable <strong>In-Game Overlay</strong> / NVIDIA Overlay → in-game <strong>Alt+Z</strong> → <strong>Statistics</strong> → configure HUD / enable FPS metrics</td>
+<td><strong>Alt+R</strong> toggle (NVIDIA help)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Rules:</strong></p>
+<ul>
+<li>Prefer FPS-only metrics if the full HUD hitchs (see Stutter page).  </li>
+<li>Do <strong>not</strong> claim NVIDIA overlay “adds FPS.”  </li>
+<li>If WARDOGS won’t launch with NVIDIA overlay + <strong>Elytra</strong>, disable overlay and use Crash / WD-L014 — not this page.</li>
+</ul>
+<hr/>
+<h2 id="amd-overlay-fps">AMD overlay FPS</h2>
+<p>AMD Software: <strong>Adrenalin Edition</strong> exposes <strong>Performance → Metrics</strong> with a <strong>Show Metrics Overlay</strong> (AMD FAQ DH3-038 family). Tracked metrics include <strong>Frame Rate / FPS</strong>.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Action</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Open <strong>AMD Software: Adrenalin Edition</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><strong>Performance</strong> → <strong>Metrics</strong></td>
+<td>Layout can vary by driver</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Enable <strong>Show Metrics Overlay</strong> / Metrics Overlay</td>
+<td>Separate from merely opening Radeon Overlay</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>In-match toggle lead: <strong>Ctrl+Shift+O</strong></td>
+<td>Confirm under Settings → Hotkeys</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Older “Radeon Overlay” docs also mention <strong>Alt+R</strong> for the overlay menu and metrics location picks — treat hotkeys as against your Adrenalin build.</p>
+<hr/>
+<h2 id="overlay-conflict-table-fps-visible-vs-playable">Overlay conflict table (FPS visible vs playable)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely fork</th>
+<th>Next page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No FPS number, overlay won’t open</td>
+<td>Overlay disabled / wrong game Properties</td>
+<td>Stay here — Steam checklist</td>
+</tr>
+<tr>
+<td>FPS shows; game hitchs more</td>
+<td>Extra OSD / recording hook</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering</a> — one overlay</td>
+</tr>
+<tr>
+<td>FPS shows; binds / chat / Shift+Tab fight</td>
+<td>Hotkey clash</td>
+<td><a href="../wardogs-controls-hotas/">Controls</a></td>
+</tr>
+<tr>
+<td>Overlay on → crash / black / won’t launch</td>
+<td>Elytra / hook conflict</td>
+<td><a href="../wardogs-crashing/">Crashing</a> · <a href="../wardogs-black-screen/">Black Screen</a> · <a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>FPS fine; still “laggy” online</td>
+<td>Net / servers — not graphics</td>
+<td><a href="../wardogs-is-down/">Is Down</a> · <a href="../wardogs-servers-down/">Servers</a></td>
+</tr>
+<tr>
+<td>Counter high; fights feel uneven</td>
+<td>Hitch / 1% feel — not average FPS</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Isolation order (safe → invasive)</h3>
+<ol>
+<li>Steam FPS <strong>only</strong> (vendor overlays off).  </li>
+<li>If Steam blank → NVIDIA <strong>or</strong> AMD alone (not both).  </li>
+<li>Disable Discord / Xbox Game Bar / RTSS / Afterburner / recording overlays one by one.  </li>
+<li>If process dies → leave this page.  </li>
+<li>Never “repair Windows Defender” for a counter.</li>
+</ol>
+<hr/>
+<h2 id="after-you-can-see-fps-this-page-settings">After you can see FPS (this page ≠ settings)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Do this</th>
+<th>Do not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise steady FPS</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a> — Maximum FPS path</td>
+<td>Copy “+40% FPS” blogs</td>
+</tr>
+<tr>
+<td>Fix hitch / traversal spikes</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / Low FPS</a></td>
+<td>Spam Ultra→Low before overlay/cache triage</td>
+</tr>
+<tr>
+<td>Competitive clarity</td>
+<td>Settings → Clarity path (blur/DoF/bloom off leads)</td>
+<td>Chase overlay digits only</td>
+</tr>
+<tr>
+<td>Cap vs unlimited</td>
+<td>Test both; document feel</td>
+<td>Invent which is “best for all PCs”</td>
+</tr>
+<tr>
+<td>Frame Generation</td>
+<td>Note displayed vs base FPS if dual counters</td>
+<td>Treat generated FPS as simulation proof</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Honest line:</strong> A visible counter measures; it does not optimize. Slider goals live on Settings; hitch forks live on Stutter.</p>
+<hr/>
+<h2 id="quick-checklist">Quick checklist</h2>
+<ul>
+<li>[ ] Steam Overlay enabled globally <strong>and</strong> on WARDOGS Properties  </li>
+<li>[ ] Classic FPS corner <strong>or</strong> Performance Monitor showing digits  </li>
+<li>[ ] Only <strong>one</strong> primary FPS OSD active  </li>
+<li>[ ] Photographed any in-game Show FPS row if found</li>
+<li>[ ] If hitching with OSD → Stutter page; if exiting → Crash / Black Screen  </li>
+<li>[ ] Ready to tune → Best Settings (no % claims)</li>
+</ul>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: How do I show FPS in WARDOGS?</strong><br/> A: Enable Steam Overlay, then set <strong>In-game FPS counter</strong> to a screen corner (Steam → Settings → In-Game), or enable Steam’s newer Overlay Performance Monitor if present. Launch from Steam. In-game Show FPS is unverified.</p>
+<p><strong>Q: Does WARDOGS have a built-in FPS counter?</strong><br/>
+A: Not confirmed in public Sep 2026 settings guides. <strong>Main Menu FPS Limit</strong> is a cap, not a counter. Prove with a Settings screenshot before publishing “in-game option.”</p>
+<p><strong>Q: How do I enable the Steam FPS counter?</strong><br/>
+A: Steam → Settings → In-Game → In-game FPS counter → choose a corner; keep Overlay enabled. Relaunch the game after changes.</p>
+<p><strong>Q: NVIDIA FPS overlay — where is it?</strong><br/> A: NVIDIA App / GeForce Experience → enable In-Game Overlay → <strong>Alt+Z</strong> → Statistics / HUD FPS → <strong>Alt+R</strong> toggle lead. Exact labels by app version.</p>
+<p><strong>Q: AMD FPS overlay — where is it?</strong><br/> A: Adrenalin → Performance → Metrics → Show Metrics Overlay + Frame Rate/FPS; in-game toggle lead <strong>Ctrl+Shift+O</strong>. Hotkeys.</p>
+<p><strong>Q: My FPS counter causes stutter or crash in WARDOGS.</strong><br/>
+A: Run one OSD only. Hitch → <a href="../wardogs-stuttering-fps/">Stuttering</a>. Crash / black / Elytra → <a href="../wardogs-crashing/">Crashing</a> / <a href="../wardogs-black-screen/">Black Screen</a>.</p>
+<p><strong>Q: I can see FPS — how do I raise it?</strong><br/>
+A: This page stops at visibility. Use <a href="../wardogs-best-settings/">Best Settings</a> and <a href="../wardogs-stuttering-fps/">Stuttering</a>. <strong>No invented FPS%.</strong></p>
+<p><strong>Q: Does Elytra block FPS counters?</strong><br/>
+A: Store tags <strong>Elytra</strong> for anti-cheat. Overlay + AC conflicts usually present as launch/crash — not “FPS locked.” Fix launch first; then re-enable one counter.</p>
+<hr/>
+<h2 id="also-read-related">Also read / Related</h2>
+<ul>
+<li><a href="../wardogs-best-settings/">Best Settings (FPS vs Clarity)</a> — after the counter works  </li>
+<li><a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — hitch vs steady low  </li>
+<li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a> — overlay / bind conflicts  </li>
+<li><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a> — process exits  </li>
+<li><a href="../wardogs-black-screen/">Black Screen on Launch</a> — never reaches menu  </li>
+<li><a href="../wardogs-launch-options/">Steam Launch Options</a> — startup lab, not FPS%  </li>
+<li><a href="../wardogs-wd-l014/">WD-L014 Unable to Launch</a> — Elytra repair path  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam Support — Understanding the In-Game Overlay Performance Monitor — https://help.steampowered.com/en/faqs/view/3462-CD4C-36BD-5767  </li>
+<li>HowToGeek — Display Steam’s built-in FPS counter — https://www.howtogeek.com/706145/how-to-display-steams-built-in-fps-counter-in-pc-games/  </li>
+<li>Tom’s Hardware — Steam Overlay Performance Monitor (FPS / frame gen) — https://www.tomshardware.com/pc-components/gpus/how-to-use-steams-in-game-performance-monitor-to-display-real-fps-with-dlss-or-fsr-frame-generation-active  </li>
+<li>NVIDIA — In-Game Performance and Latency Overlay (App / GFE family) — https://nvidia.custhelp.com/app/answers/detail/a_id/5084  </li>
+<li>AMD — Monitor Performance Metrics (Adrenalin / Show Metrics Overlay) — https://www.amd.com/en/resources/support-articles/faqs/DH3-038.html  </li>
+<li>Hone — WARDOGS best PC settings (Frame Limit / Main Menu FPS Limit leads — not Show FPS) — https://hone.gg/blog/wardogs-best-pc-settings/  </li>
+<li>Steam store WARDOGS — Elytra / EA platform — https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+      <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
+      <li><a href="../wardogs-tick-rate/">Tick rate explained</a></li>
+      <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
+      <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-wont-launch/">Won’t launch</a></li>
+          <li><a href="../wardogs-crash-to-desktop/">Crash to desktop</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-map-zestafona/">Zestafona map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

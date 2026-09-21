@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WARDOGS Crash to Desktop: Mid-Game &amp; On-Start Forks (EA)</title>
+  <meta name="description" content="WARDOGS crash to desktop: on-start vs mid-game vs alt-tab forks, overlays, Elytra. No invented FIXED stamps. Last checked 2026-09-21." />
+  <link rel="canonical" href="https://thewardogsguide.com/wardogs-crash-to-desktop/" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <meta property="og:title" content="WARDOGS Crash to Desktop: Mid-Game &amp; On-Start Forks (EA)" />
+  <meta property="og:description" content="WARDOGS crash to desktop: on-start vs mid-game vs alt-tab forks, overlays, Elytra. No invented FIXED stamps. Last checked 2026-09-21." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://thewardogsguide.com/wardogs-crash-to-desktop/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WARDOGS Crash to Desktop: Mid-Game &amp; On-Start Forks (EA)" />
+  <meta name="twitter:description" content="WARDOGS crash to desktop: on-start vs mid-game vs alt-tab forks, overlays, Elytra. No invented FIXED stamps. Last checked 2026-09-21." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Crash to Desktop: Mid-Game & On-Start Forks (EA)", "item": "https://thewardogsguide.com/wardogs-crash-to-desktop/"}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V32PWJH9N8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <a class="brand-home" href="../">
+          <img class="brand-logo" src="../assets/logo.png" width="32" height="32" alt="" />
+          <span class="brand-wordmark">WARDOGS</span>
+        </a>
+        <span class="brand-tag">Steam EA Guides</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu"><span></span></label>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="../wardogs/">Guides</a>
+        <a href="../wardogs-fixes/" aria-current="page" class="is-active">Fixes</a>
+        <a href="../wardogs-maps/">Maps</a>
+        <a href="../about/">About</a>
+      </nav>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" data-site-prefix="site:thewardogsguide.com ">
+        <label class="visually-hidden" for="q">Search guides</label>
+        <input type="search" name="q" id="q" placeholder="Search guides…" enterkeyhint="search" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cluster-row" aria-label="Guide clusters">
+      <a href="../wardogs-fixes/" class="cluster-chip is-active">Fix</a>
+      <a href="../wardogs/" class="cluster-chip">Play</a>
+      <a href="../wardogs-info/" class="cluster-chip">Info</a>
+    </div>
+  </header>
+  <script>
+  (function () {
+    var form = document.querySelector('.site-search');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var box = form.querySelector('#q');
+      if (!box) return;
+      e.preventDefault();
+      var term = (box.value || '').trim();
+      var prefix = form.getAttribute('data-site-prefix') || '';
+      var q = term.indexOf('site:') === 0 ? term : (prefix + term);
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+    });
+  })();
+  </script>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li><a href="../wardogs-fixes/">Fix</a></li>
+        <li aria-current="page">WARDOGS Crash to Desktop: Mid-Game &amp; On-Start Forks (EA)</li>
+      </ol>
+    </nav>
+    <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
+    <h1>WARDOGS Crash to Desktop: Mid-Game &amp; On-Start Forks (EA)</h1>
+    <div class="ad-slot ad-slot--mobile-banner" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'd9357d46935e504df76263de91946b45',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/d9357d46935e504df76263de91946b45/invoke.js"></script>
+</div>
+    <nav class="toc" aria-label="On this page">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#what-this-page-is-and-is-not">What this page is (and is not)</a></li>
+      <li><a href="#fork-table-on-start-vs-mid-match-vs-after-alt-tab">Fork table: on-start vs mid-match vs after alt-tab</a></li>
+      <li><a href="#decision-tree">Decision tree</a></li>
+      <li><a href="#hitch-vs-true-ctd-dont-kill-a-healthy-compile">Hitch vs true CTD (don’t kill a healthy compile)</a></li>
+      <li><a href="#evidence-crashlog-dump-public-leads-only">Evidence: crashlog / dump (public leads only)</a></li>
+      <li><a href="#fix-ladder-ctd-shaped">Fix ladder (CTD-shaped)</a></li>
+      <li><a href="#vram-pressure-link-out-dont-invent-numbers">VRAM pressure — link out, don’t invent numbers</a></li>
+      <li><a href="#boundary-cases">Boundary cases</a></li>
+      <li><a href="#do-dont">Do / Don’t</a></li>
+      <li><a href="#support-paste-block">Support paste block</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#also-read-related">Also read / Related</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+    <p><strong>TL;DR:</strong> This page is for <strong>crash to desktop (CTD)</strong> intent on WARDOGS Steam Early Access — <strong>on-start CTD</strong>, <strong>mid-match / mid-game CTD</strong>, and <strong>after alt-tab</strong> — without inventing FIXED stamps or VRAM numbers. Parent hub remains <a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a>. Fork first: instant desktop before menu vs exit during a match vs focus-loss crash. Collect crashlog / dump <strong>only from public leads</strong> (else). Highest-yield locals: overlays, fullscreen exclusive, shader first-boot hitch vs true CTD. Suspected VRAM pressure → link <a href="../wardogs-best-settings/">Best Settings</a> / <a href="../wardogs-stuttering-fps/">Stuttering</a> — <strong>no invented VRAM figures</strong>. Store anti-cheat is <strong>Elytra</strong> (not EAC as current). Silent “won’t launch” without a dump → <a href="../wardogs-wont-launch/">Won’t Launch</a>. Black frame without exit → <a href="../wardogs-black-screen/">Black Screen</a>.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
+<script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
+<div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
+</div>
+<p><strong>Last checked 2026-09-21 (Early Access).</strong></p>
+<hr/>
+<h2 id="what-this-page-is-and-is-not">What this page is (and is not)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
+<script>
+  atOptions = {
+    'key' : 'cba1c97fde9723c1b43804fe5a2f8e9f',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/cba1c97fde9723c1b43804fe5a2f8e9f/invoke.js"></script>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Covered</th>
+<th>Send elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crash to desktop / CTD (on-start)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mid-game / mid-match crash / exit to desktop</td>
+<td>—</td>
+</tr>
+<tr>
+<td>After alt-Tab / focus-loss CTD</td>
+<td>Alt-tab fork below</td>
+</tr>
+<tr>
+<td>Crash Reporter / exception dialog then desktop</td>
+<td>Ladder + evidence</td>
+</tr>
+<tr>
+<td>No window, no dump, Steam Idle</td>
+<td><a href="../wardogs-wont-launch/">Won’t Launch</a></td>
+</tr>
+<tr>
+<td>Black screen, process still alive</td>
+<td><a href="../wardogs-black-screen/">Black Screen</a></td>
+</tr>
+<tr>
+<td>WD-L0… Unable to launch string</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>Auth / queue text, no crash dump</td>
+<td><a href="../wardogs-servers-down/">Servers</a> · <a href="../wardogs-is-down/">Is Down</a></td>
+</tr>
+<tr>
+<td>Hitching while process stays open</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Why a CTD spoke exists:</strong> GSC / SERP show “crash to desktop”, “crash on start”, “crashing mid game”, and memory-dump curiosity. This page owns the <strong>CTD-shaped</strong> forks; the parent <a href="../wardogs-crashing/">Crashing</a> hub owns the full Elytra + exception ladder.</p>
+<hr/>
+<h2 id="fork-table-on-start-vs-mid-match-vs-after-alt-tab">Fork table: on-start vs mid-match vs after alt-tab</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>When it dies</th>
+<th>Feels like</th>
+<th>Lean</th>
+<th>First moves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>On-start CTD</strong></td>
+<td>Play → splash/AC → instant desktop</td>
+<td>Launch / render / AC / overlay</td>
+<td>Overlays off → verify → Elytra identify → optional <code>-windowed</code>/<code>-dx11</code></td>
+</tr>
+<tr>
+<td><strong>Crash on start</strong> (same class)</td>
+<td>Never reaches menu; may show Crash Reporter</td>
+<td>Same as on-start</td>
+<td>Capture exception text; don’t only reinstall</td>
+</tr>
+<tr>
+<td><strong>Mid-match / mid-game CTD</strong></td>
+<td>Playing, then desktop; may lose progress</td>
+<td>Overlay / GPU / VRAM pressure / shader spike / rare service drop</td>
+<td>Overlays + fullscreen mode + settings link; check if <em>everyone</em> dropped</td>
+</tr>
+<tr>
+<td><strong>Shader first-boot hitch</strong></td>
+<td>Long stall / “Compiling Shaders”; process alive</td>
+<td>Not true CTD yet</td>
+<td>Wait once if alive — see hitch vs CTD</td>
+</tr>
+<tr>
+<td><strong>True CTD during compile</strong></td>
+<td>Stall then Crash Reporter / process exit</td>
+<td>Crash path</td>
+<td>Dump + verify + driver + cache leads on Stutter page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>![TODO: three captures — on-start reporter / mid-match desktop / Compiling Shaders still running]</p>
+<hr/>
+<h2 id="decision-tree">Decision tree</h2>
+<pre><code class="language-text">WARDOGS crash to desktop?
+│
+├─ Auth / 1147405308 / Access Denied / JOIN TIMEDOUT (readable, no dump)?
+│ └─ Wrong page./wardogs-servers-down/ or error spokes
+│
+├─ Unable to launch + WD-L0…?
+│ └─./wardogs-wd-l014/ (Elytra) — not “CTD mid-match”
+│
+├─ No window / silent Idle / never a reporter?
+│ └─./wardogs-wont-launch/ first
+│
+├─ Black frame, music, process alive?
+│ └─./wardogs-black-screen/
+│
+├─ When did it die?
+│ ├─ On-start / crash on start
+│ │ ├─ Overlays off (one at a time)
+│ │ ├─ Verify integrity
+│ │ ├─ Elytra identify → Repair if AC-class
+│ │ ├─ GPU driver sanity
+│ │ ├─ Optional one flag: -windowed or -dx11./wardogs-launch-options/
+│ │ └─ Still CTD → parent./wardogs-crashing/ + support paste
+│ │
+│ ├─ Mid-match / mid-game
+│ │ ├─ Did the whole server/friends drop too?./wardogs-is-down/ once
+│ │ ├─ Overlays / recording hooks off
+│ │ ├─ Fullscreen exclusive → borderless/windowed A/B │ │ ├─ Suspected VRAM pressure./wardogs-best-settings/ +./wardogs-stuttering-fps/
+│ │ │ (NO invented VRAM numbers)
+│ │ └─ Capture dump/log → support
+│ │
+│ └─ After alt-Tab / multi-monitor
+│ ├─ Borderless or -windowed test
+│ ├─ Overlay off during focus tests
+│ └─ Document which display / HDR toggle │
+└─ Long shader stall only (process alive)? └─ Wait once → if exits with reporter, treat as CTD; if hitchs later → stutter page</code></pre>
+<hr/>
+<h2 id="hitch-vs-true-ctd-dont-kill-a-healthy-compile">Hitch vs true CTD (don’t kill a healthy compile)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Public lead class</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First launch long “Compiling Shaders,” process alive, then OK</td>
+<td>LagoFast / black-screen patience leads</td>
+<td>Wait once; don’t Alt-F4 mid-compile if GPU/disk busy</td>
+</tr>
+<tr>
+<td>Stall every launch → Crash Reporter</td>
+<td>Compile crash / cache / GPU</td>
+<td>Verify → driver → stutter-page cache leads → Crash hub</td>
+</tr>
+<tr>
+<td>Smooth play → sudden desktop mid-fight</td>
+<td>Mid-match CTD</td>
+<td>Overlay + settings/VRAM fork</td>
+</tr>
+<tr>
+<td>FPS hitch but process stays open</td>
+<td>Not CTD</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="evidence-crashlog-dump-public-leads-only">Evidence: crashlog / dump (public leads only)</h2>
+<p><strong>Official Bulkhead path catalog:</strong><strong>None published as a studio glossary here.</strong> Use community / player-pasted paths only, and re-confirm on your machine.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Public lead path / pattern</th>
+<th>Status</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client log</td>
+<td><code>%LOCALAPPDATA%\Wardogs\Saved\Logs\Wardogs.log</code> (community / Steam Reports paste class)</td>
+<td>public lead — confirm folder on disk</td>
+<td>Tail last lines for support</td>
+</tr>
+<tr>
+<td>Dump file</td>
+<td><code>%LOCALAPPDATA%\Temp\PACKER_….dmp</code> (Steam discussion crash pastes)</td>
+<td>public lead — name prefix may vary</td>
+<td>Attach if support asks; don’t invent module blame</td>
+</tr>
+<tr>
+<td>Elytra launcher log</td>
+<td><code>%LOCALAPPDATA%\Wardogs\ElytraLauncher.log</code> (AxeeTech-class)</td>
+<td>public lead</td>
+<td>Launch/AC class more than mid-match</td>
+</tr>
+<tr>
+<td>Crash Reporter on-screen text</td>
+<td>Whatever <em>your</em> dialog shows</td>
+<td>Quote exactly</td>
+<td>Include EXCEPTION / module if present</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If you <strong>cannot</strong> find these folders: note “path not found on this install” and still run verify + overlays — do <strong>not</strong> invent alternate paths.</p>
+<h3>Collect checklist</h3>
+<ol>
+<li>Screenshot the Crash Reporter / last on-screen line.  </li>
+<li>Note timing: on-start / mid-match / after alt-Tab / during shader stall.  </li>
+<li>Copy last 30–50 lines of <code>Wardogs.log</code> if present.</li>
+<li>Note GPU + driver + whether overlays were on.  </li>
+<li>Note whether friends on the same server also dropped.  </li>
+<li>Then run the ladder — evidence before reinstall loops.</li>
+</ol>
+<hr/>
+<h2 id="fix-ladder-ctd-shaped">Fix ladder (CTD-shaped)</h2>
+<p>Stop when the game stays in menu <strong>and</strong> survives a short match test. Record GPU + driver + result per step.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Step</th>
+<th>Detail</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Classify fork</td>
+<td>On-start / mid-match / alt-tab / shader-stall-then-exit</td>
+<td>Screenshot + timing</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Widespread check once</td>
+<td>Friends / Discord / X / Steam — everyone dropping?</td>
+<td>If yes → <a href="../wardogs-is-down/">Is Down</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Full Steam Exit + reboot</td>
+<td>Clear stuck helpers / GPU recovery</td>
+<td>Note if TDR-like black preceded CTD</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Overlays off one-at-a-time</td>
+<td>Discord, Steam, GeForce/AMD, Game Bar, Afterburner/RTSS</td>
+<td>Team17 Assist crash thread cites close RTSS / overlays</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Verify integrity</td>
+<td>Steam → Installed Files → Verify</td>
+<td>Repaired count</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>GPU driver sanity</td>
+<td>Clean vendor install; disable overclocks for test</td>
+<td>Team17 Assist: update drivers; disable OC</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Display mode A/B</td>
+<td>Fullscreen exclusive → borderless / windowed</td>
+<td>Especially after alt-Tab CTD</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Optional one launch flag</td>
+<td><code>-windowed</code> or <code>-dx11</code> alone</td>
+<td><a href="../wardogs-launch-options/">Launch Options</a> — may no-op</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Settings / VRAM pressure fork</td>
+<td>Lower expensive families; link Settings + Stutter</td>
+<td><strong>No invented VRAM MB/%</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Cap FPS as temporary test</td>
+<td>Team17 Assist community tip: try max FPS <strong>60</strong> as a stability experiment</td>
+<td>Revert if irrelevant; not an FPS% claim</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Still CTD</td>
+<td>Support paste + Discord/Steam ticket</td>
+<td>Parent <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Overlay / fullscreen notes</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exit RTSS / Afterburner fully</td>
+<td>Common CTD / hook lead; cited in official Assist troubleshooting thread</td>
+</tr>
+<tr>
+<td>Discord overlay off</td>
+<td>Generic access-violation / CTD community lead</td>
+</tr>
+<tr>
+<td>Exclusive fullscreen → borderless</td>
+<td>Alt-tab and multi-monitor CTD class</td>
+</tr>
+<tr>
+<td>Multi-monitor: launch on primary</td>
+<td>Wrong-display focus loss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="vram-pressure-link-out-dont-invent-numbers">VRAM pressure — link out, don’t invent numbers</h2>
+<p>Players often describe mid-match CTD after long fights, high texture presets, or when recording overlays add memory pressure. That <strong>may</strong> be VRAM-related on some hardware — we do <strong>not</strong> publish invented “needs X GB” or “+Y% VRAM free” claims.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>If you suspect…</th>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTD only in dense fights / high presets</td>
+<td>Open <a href="../wardogs-best-settings/">Best Settings</a> — cut expensive families one-by-one</td>
+<td>Invent a VRAM requirement table</td>
+</tr>
+<tr>
+<td>Hitch then CTD</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> for hitch; return here if process exits</td>
+<td>Blame “tick rate” for a local dump</td>
+</tr>
+<tr>
+<td>CTD only with ShadowPlay/OBS</td>
+<td>Disable recording overlay; retest</td>
+<td>Keep recording while “testing stability”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="boundary-cases">Boundary cases</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-start CTD <strong>with</strong> WD-L0… dialog</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a> first</td>
+</tr>
+<tr>
+<td>Mid-match everyone rubber-bands then kicks — no local dump</td>
+<td>Servers / Is Down — not GPU wipe</td>
+</tr>
+<tr>
+<td>Verify 0 files; still CTD</td>
+<td>Continue overlays + Elytra + driver</td>
+</tr>
+<tr>
+<td>Guide says delete EasyAntiCheat</td>
+<td>Outdated as default — store is <strong>Elytra</strong></td>
+</tr>
+<tr>
+<td>Shader stall recovers; later hitch only</td>
+<td>Leave CTD page → Stutter</td>
+</tr>
+<tr>
+<td>Alt-tab CTD fixed by borderless; exclusive still dies</td>
+<td>Keep borderless for WARDOGS; document</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="do-dont">Do / Don’t</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fork on-start vs mid-match vs alt-tab</td>
+<td>Treat every CTD as “reinstall Windows”</td>
+</tr>
+<tr>
+<td>Capture log/dump paths from public leads only</td>
+<td>Invent official dump folders</td>
+</tr>
+<tr>
+<td>Overlays + verify before kitchen-sink flags</td>
+<td>Paste ten UE launch options</td>
+</tr>
+<tr>
+<td>Link Settings/Stutter for VRAM pressure</td>
+<td>Invent VRAM numbers or FIXED</td>
+</tr>
+<tr>
+<td>Elytra Repair for AC/on-start class</td>
+<td>Lead with EAC folder deletes</td>
+</tr>
+<tr>
+<td>Check Is Down once if the whole lobby dies</td>
+<td>Ignore service incidents</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h2 id="support-paste-block">Support paste block</h2>
+<pre><code class="language-text">Game: WARDOGS (Steam) AppID 1867240
+Build / stamp: CTD fork: on-start / mid-match / after alt-tab / shader-stall-then-exit
+Crash Reporter / exception text:
+Wardogs.log last lines (if found):
+PACKER dump present?: Y/N — path GPU + driver:
+Display mode: exclusive / borderless / windowed
+Overlays on during crash: Discord / Steam / NVIDIA / AMD / Game Bar / RTSS / OBS / other
+Elytra Repair tried?: Y/N
+Launch options tried (one at a time):
+Friends on same server also dropped?: Y/N/?
+Settings notes (no invented VRAM #s):
+Steps tried (ladder #s):</code></pre>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: WARDOGS crash to desktop — where do I start?</strong><br/>
+A: Fork timing: on-start vs mid-match vs after alt-tab. Then overlays → verify → Elytra if launch/AC class → display mode A/B. Capture log/dump if present.</p>
+<p><strong>Q: Is crash on start the same as won’t launch?</strong><br/>
+A: Overlap exists. If you get a Crash Reporter / dump, stay on this CTD spoke + <a href="../wardogs-crashing/">Crashing</a>. If Steam goes Idle with <strong>no</strong> reporter, start at <a href="../wardogs-wont-launch/">Won’t Launch</a>.</p>
+<p><strong>Q: WARDOGS crashing mid game — GPU or servers?</strong><br/>
+A: If only you drop with a local dump, lean local (overlays / GPU / settings). If the whole lobby dies with auth/timeout text, check <a href="../wardogs-is-down/">Is Down</a> / <a href="../wardogs-servers-down/">Servers</a> once before driver surgery.</p>
+<p><strong>Q: Where is the crashlog / memory dump?</strong><br/> A: Community pastes cite <code>%LOCALAPPDATA%\Wardogs\Saved\Logs\Wardogs.log</code> and Temp <code>PACKER_….dmp</code>. Confirm on your disk. No official Bulkhead path catalog claimed here.</p>
+<p><strong>Q: Is a long “Compiling Shaders” a crash to desktop?</strong><br/>
+A: Not while the process is alive. Wait once. If it always exits with a reporter at the same point, treat as CTD and continue the ladder + stutter-page cache leads.</p>
+<p><strong>Q: Can launch options stop CTD?</strong><br/>
+A: Maybe as a <strong>lab</strong> after overlays/verify — one flag (<code>-windowed</code> or <code>-dx11</code>). Full rules → <a href="../wardogs-launch-options/">Launch Options</a>. Not a substitute for Elytra on WD-L0… launches.</p>
+<p><strong>Q: How much VRAM do I need?</strong><br/>
+A: <strong>Not invented here.</strong> If fights CTD on high presets, use <a href="../wardogs-best-settings/">Best Settings</a> and <a href="../wardogs-stuttering-fps/">Stuttering</a> — cut families one-by-one and stamp your own results.</p>
+<p><strong>Q: Does WARDOGS use Elytra or EAC for crash fixes?</strong><br/>
+A: Store tags <strong>Elytra</strong>. Team17 Assist troubleshooting also points at Elytra Repair. Keep Elytra-first.</p>
+<p><strong>Q: Black screen without desktop return?</strong><br/>
+A: <a href="../wardogs-black-screen/">Black Screen</a>. Return here only when the process actually exits to desktop.</p>
+<hr/>
+<h2 id="also-read-related">Also read / Related</h2>
+<ul>
+<li><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a> — parent hub / full ladder  </li>
+<li><a href="../wardogs-wont-launch/">Won’t Launch checklist</a> — no-window / silent Idle  </li>
+<li><a href="../wardogs-black-screen/">Black Screen on Launch</a> — process alive, no picture  </li>
+<li><a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — hitch without exit  </li>
+<li><a href="../wardogs-launch-options/">Steam Launch Options</a> — one-flag lab  </li>
+<li><a href="../wardogs-best-settings/">Best Settings</a> — VRAM pressure / slider goals (no invented %)  </li>
+<li><a href="../wardogs-wd-l014/">WD-L014</a> — Unable to launch codes  </li>
+<li><a href="../wardogs-is-down/">Is Down</a> · <a href="../wardogs-servers-down/">Servers</a> — lobby-wide drops  </li>
+</ul>
+<hr/>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Steam — Team17 Assist pinned <strong>Crashes</strong> thread (verify, Elytra Repair, overlays/RTSS, GPU drivers, OC off, max FPS 60 test): https://steamcommunity.com/app/1867240/discussions/3/562541634873810804/  </li>
+<li>Steam — Launch Stability Hotfix #1: https://steamcommunity.com/app/1867240/discussions/0/562541634873654728/  </li>
+<li>Steam Store — Elytra kernel AC tag: https://store.steampowered.com/app/1867240/WARDOGS/  </li>
+<li>GamesRadar — error codes / Elytra-Setup Repair: https://www.gamesradar.com/games/fps/wardogs-error-codes/  </li>
+<li>Creative Collaboration — WD-L014 / Elytra Repair: https://ccstartup.com/blog/2026/09/11/how-to-fix-the-wardogs-wd-l014-error-code/  </li>
+<li>LagoFast — startup crash / loading notes: https://www.lagofast.com/en/blog/wardogs-not-launching-or-crashing-on-startup/  </li>
+<li>PixelNitro — startup crashes / overlays: https://pixelnitro.com/wardogs-wont-launch-on-steam-how-to-fix-startup-crashes-and-errors-2026-guide/  </li>
+<li>Community dump/log path examples (Steam Reports pastes; confirm locally): Wardogs.log under <code>%LOCALAPPDATA%\Wardogs\Saved\Logs\</code>; Temp <code>PACKER_*.dmp</code> </li>
+<li>Sibling: <a href="../wardogs-crashing/">Crashing</a> · <a href="../wardogs-wont-launch/">Won’t Launch</a> · <a href="../wardogs-stuttering-fps/">Stuttering</a> · <a href="../wardogs-launch-options/">Launch Options</a> </li>
+</ul>
+<hr/>
+
+  </main>
+  <aside class="related-reads" aria-label="Related reads">
+    <h2>Related reads</h2>
+    <ul>
+      <li><a href="../wardogs-crashing/">Crashing / won’t launch (Elytra)</a></li>
+      <li><a href="../wardogs-wont-launch/">Won’t launch checklist</a></li>
+      <li><a href="../wardogs-black-screen/">Black screen on launch</a></li>
+      <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
+      <li><a href="../wardogs-launch-options/">Steam launch options lab</a></li>
+      <li><a href="../wardogs-best-settings/">Best WARDOGS settings</a></li>
+    </ul>
+  </aside>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-heading">Fix</h2>
+        <ul>
+          <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
+          <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
+          <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-wont-launch/">Won’t launch</a></li>
+          <li><a href="../wardogs-crash-to-desktop/">Crash to desktop</a></li>
+          <li><a href="../wardogs-black-screen/">Black screen</a></li>
+          <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
+          <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
+          <li><a href="../wardogs-fixes/">All fixes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Play</h2>
+        <ul>
+          <li><a href="../how-to-play-wardogs/">How to play</a></li>
+          <li><a href="../wardogs-towers-hot-zone/">Towers &amp; Hot Zone</a></li>
+          <li><a href="../wardogs-economy-starter-loadout/">Economy &amp; loadout</a></li>
+          <li><a href="../wardogs-best-settings/">Best settings</a></li>
+          <li><a href="../wardogs-controls-hotas/">Controls / HOTAS</a></li>
+          <li><a href="../wardogs/">All play guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Info &amp; Maps</h2>
+        <ul>
+          <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
+          <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
+          <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-map-zestafona/">Zestafona map</a></li>
+          <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
+          <li><a href="../wardogs-info/">Info hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../editorial-policy/">Editorial policy</a></li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+          <li><a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer">Steam store (official)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-disclaimer">Independent unofficial guides for WARDOGS on Steam Early Access. Not affiliated with BULKHEAD or Team17.</p>
+      <p class="footer-stamp">Last checked 2026-09-14 · © 2026 WARDOGS Guides</p>
+    </div>
+    <!-- ad slot later -->
+  </footer>
+</body>
+</html>

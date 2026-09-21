@@ -116,7 +116,7 @@
       <li><a href="#sources">Sources</a></li>
     </ol>
   </nav>
-    <p><strong>TL;DR:</strong> This page is a <strong>one-change-at-a-time Steam launch-options lab</strong> for WARDOGS Early Access — not a dump of “10 verified miracle flags.” Community troubleshooting posts (2UpSkill, PixelNitro, Gaming With DaOpa) cite <strong><code>-windowed</code></strong>, <strong><code>-dx11</code></strong>, and sometimes Unreal-style <strong><code>-ResX</code> / <code>-ResY</code></strong> or <strong><code>-DisableInitialFrontEndFlow</code></strong>. Every row below is marked <strong></strong> / <strong>may no-op</strong> until you retest on <em>your</em> build. Do <strong>not</strong> paste a kitchen-sink string of ten flags. Store anti-cheat is <strong>Elytra</strong> (not EAC as current) — launch options do <strong>not</strong> replace Elytra repair. Black screen → <a href="../wardogs-black-screen/">Black Screen</a>. Crash / won’t launch → <a href="../wardogs-crashing/">Crashing</a>. Hitching after launch → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
+    <p><strong>TL;DR:</strong> This page is a <strong>one-change-at-a-time Steam launch-options lab</strong> for WARDOGS Early Access — not a dump of “10 verified miracle flags.” Community troubleshooting posts (2UpSkill, PixelNitro, Gaming With DaOpa) cite <strong><code>-windowed</code></strong>, <strong><code>-dx11</code></strong>, and sometimes Unreal-style <strong><code>-ResX</code> / <code>-ResY</code></strong> or <strong><code>-DisableInitialFrontEndFlow</code></strong>. Every row below is marked <strong></strong> / <strong>may no-op</strong> until you retest on <em>your</em> build. Do <strong>not</strong> paste a kitchen-sink string of ten flags. Store anti-cheat is <strong>Elytra</strong> (not EAC as current) — launch options do <strong>not</strong> replace Elytra repair. Black screen → <a href="../wardogs-black-screen/">Black Screen</a>. Won’t launch → <a href="../wardogs-wont-launch/">Won’t Launch</a>. CTD → <a href="../wardogs-crash-to-desktop/">Crash to Desktop</a>. Crash hub → <a href="../wardogs-crashing/">Crashing</a>. Hitching after launch → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
 <script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
@@ -516,7 +516,7 @@ Screenshot:</code></pre>
 <tr>
 <td>Crash / CTD before menu</td>
 <td>Maybe — after overlays + verify + Elytra</td>
-<td><a href="../wardogs-crashing/">Crashing</a></td>
+<td><a href="../wardogs-crash-to-desktop/">Crash to Desktop</a> · <a href="../wardogs-crashing/">Crashing</a></td>
 </tr>
 </tbody>
 </table>
@@ -625,13 +625,13 @@ Screenshot:</code></pre>
 </tr>
 <tr>
 <td>Mid-game crash to desktop (process exits after a good launch)</td>
-<td>Not a startup-flag class by default; dedicated CTD guide coming</td>
-<td>For now → <a href="../wardogs-crashing/">Crashing</a></td>
+<td>Not a startup-flag class by default</td>
+<td><a href="../wardogs-crash-to-desktop/">Crash to Desktop</a> · <a href="../wardogs-crashing/">Crashing</a></td>
 </tr>
 <tr>
 <td>Won’t open / unable to launch / won’t start</td>
 <td>Wrong first tool if AC/verify path owns it</td>
-<td><a href="../wardogs-crashing/">Crashing</a> · <a href="../wardogs-black-screen/">Black Screen</a> · <a href="../wardogs-wd-l014/">WD-L014</a></td>
+<td><a href="../wardogs-wont-launch/">Won’t Launch</a> · <a href="../wardogs-black-screen/">Black Screen</a> · <a href="../wardogs-wd-l014/">WD-L014</a></td>
 </tr>
 <tr>
 <td>Ban-style Access Denied (Cheating + Permanent)</td>
@@ -837,7 +837,15 @@ Screenshot:</code></pre>
 <td><a href="../wardogs-black-screen/">Black Screen</a></td>
 </tr>
 <tr>
-<td>Crash / won’t launch / Elytra</td>
+<td>Won’t launch / won’t open</td>
+<td><a href="../wardogs-wont-launch/">Won’t Launch</a></td>
+</tr>
+<tr>
+<td>Crash to desktop (CTD)</td>
+<td><a href="../wardogs-crash-to-desktop/">Crash to Desktop</a></td>
+</tr>
+<tr>
+<td>Crash / Elytra hub</td>
 <td><a href="../wardogs-crashing/">Crashing</a></td>
 </tr>
 <tr>
@@ -851,10 +859,6 @@ Screenshot:</code></pre>
 <tr>
 <td>Status / “is it down?”</td>
 <td><a href="../wardogs-is-down/">Is WARDOGS down?</a></td>
-</tr>
-<tr>
-<td>Code index</td>
-<td><a href="../wardogs-error-codes/">Error Codes Hub</a></td>
 </tr>
 <tr>
 <td>Clarity vs FPS sliders</td>
@@ -912,6 +916,8 @@ A: <strong>Usually no.</strong> Hitching after a successful launch → <a href="
     <h2>Related reads</h2>
     <ul>
       <li><a href="../wardogs-black-screen/">Black screen on launch</a></li>
+      <li><a href="../wardogs-wont-launch/">Won’t launch checklist</a></li>
+      <li><a href="../wardogs-crash-to-desktop/">Crash to desktop (CTD)</a></li>
       <li><a href="../wardogs-crashing/">WARDOGS crashing / Elytra</a></li>
       <li><a href="../wardogs-stuttering-fps/">Stuttering / low FPS</a></li>
       <li><a href="../wardogs-wd-l014/">WD-L014 / unable to launch</a></li>
@@ -925,6 +931,8 @@ A: <strong>Usually no.</strong> Hitching after a successful launch → <a href="
           <li><a href="../wardogs-error-codes/">Error codes hub</a></li>
           <li><a href="../wardogs-error-1147405308/">Error 1147405308</a></li>
           <li><a href="../wardogs-is-down/">Is WARDOGS down?</a></li>
+          <li><a href="../wardogs-wont-launch/">Won’t launch</a></li>
+          <li><a href="../wardogs-crash-to-desktop/">Crash to desktop</a></li>
           <li><a href="../wardogs-black-screen/">Black screen</a></li>
           <li><a href="../wardogs-wd-l014/">WD-L014</a></li>
           <li><a href="../wardogs-crashing/">Crashing / Elytra</a></li>
@@ -948,6 +956,7 @@ A: <strong>Usually no.</strong> Hitching after a successful launch → <a href="
           <li><a href="../wardogs-maps/">Maps &amp; objectives</a></li>
           <li><a href="../wardogs-map-bakurani/">Bakurani map</a></li>
           <li><a href="../wardogs-map-ozeti/">Ozeti map</a></li>
+          <li><a href="../wardogs-map-zestafona/">Zestafona map</a></li>
           <li><a href="../wardogs-patch-notes/">Patch 0.11 notes</a></li>
           <li><a href="../wardogs-info/">Info hub</a></li>
         </ul>
