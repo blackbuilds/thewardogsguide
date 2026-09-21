@@ -118,7 +118,6 @@
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
 <p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
-<figure class="shot"><img alt="TODO: full client dialog showing ERROR CODE 1147405308 + “Failed to Authenticate With Online Services” body — stamp build/date" loading="lazy" src="../assets/shots/TODO-1147405308-dialog.webp"/><figcaption>TODO: full client dialog showing ERROR CODE 1147405308 + “Failed to Authenticate With Online Services” body — stamp build/date</figcaption></figure>
 <hr/>
 <h2 id="read-the-dialog-before-you-fix-anything">Read the dialog before you “fix” anything</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
 <script>
@@ -286,7 +285,6 @@
 <p>Bulkhead posted <strong>Launch Stability Hotfix #1</strong> (G_Medlin, Steam discussion ~1:28pm Sep 10): forced close → download client → relaunch into login queue → controlled admission. Studio targets: unable to join, unexpected kicks, extended queues. Press (mp1st) noted ~200+ MB download and possible further server restarts.</p>
 <p>Thread replies <strong>immediately</strong> reported Access Denied / auth failed / <code>WD-LO14-c70b81e405df</code>. Bisect’s Sep 10 piece framed <code>1147405308</code> as everyone-at-once at writing. That cluster is <strong>auth/wave context</strong>, not proof your GPU is broken.</p>
 <p><strong>Editorial caution:</strong> Day-1 headlines age fast. Re-run the status habit on <a href="../wardogs-is-down/"><code>../wardogs-is-down/</code></a> before copying launch-day steps as current truth.</p>
-<figure class="shot"><img alt="TODO: Steam Hotfix #1 thread header + Downloads showing WARDOGS update — public pages, stamp date" loading="lazy" src="../assets/shots/TODO-hotfix1-auth-context.webp"/><figcaption>TODO: Steam Hotfix #1 thread header + Downloads showing WARDOGS update — public pages, stamp date</figcaption></figure>
 <hr/>
 <h2 id="decision-tree">Decision tree</h2>
 <pre><code class="language-text">See 1147405308 / “Failed to Authenticate With Online Services”?
