@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)</title>
-  <meta name="description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <meta name="description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
   <link rel="canonical" href="https://thewardogsguide.com/wardogs-launch-options/" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
   <meta property="og:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
-  <meta property="og:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <meta property="og:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://thewardogsguide.com/wardogs-launch-options/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
-  <meta name="twitter:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. May no-op until verified. Last checked 2026-09-16." />
+  <meta name="twitter:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
   <link rel="stylesheet" href="../assets/site.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)", "item": "https://thewardogsguide.com/wardogs-launch-options/"}]}</script>
   <!-- Google tag (gtag.js) -->
@@ -104,6 +104,9 @@
       <li><a href="#safe-one-change-lab-print-this">Safe one-change lab (print this)</a></li>
       <li><a href="#display-black-screen-fork-why--windowed-is-first">Display / black-screen fork (why -windowed is first)</a></li>
       <li><a href="#api-fork--dx11-cautious">API fork (-dx11) — cautious</a></li>
+      <li><a href="#launch-commands-vs-launch-options">Launch commands vs launch options</a></li>
+      <li><a href="#hitching-after-it-launches">Hitching after it launches?</a></li>
+      <li><a href="#dx11-directx-11-decision-when-vs--windowed">-dx11 / DirectX 11 decision (when vs -windowed)</a></li>
       <li><a href="#what-launch-options-will-not-fix">What launch options will not fix</a></li>
       <li><a href="#do-dont">Do / Don’t</a></li>
       <li><a href="#spacing-steam-exit-and-flag-ignored-hygiene">Spacing, Steam Exit, and “flag ignored” hygiene</a></li>
@@ -117,7 +120,7 @@
 <script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
-<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<p><strong>Last checked 2026-09-21 (Early Access).</strong></p>
 <hr/>
 <h2 id="lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
 <script>
@@ -293,7 +296,7 @@
 </tr>
 <tr>
 <td>“Official Bulkhead launch options list”</td>
-<td><strong>None found</strong> as of 2026-09-16 editorial pass</td>
+<td><strong>None found</strong> as of 2026-09-21 editorial pass</td>
 </tr>
 <tr>
 <td>Using launch options instead of Elytra Repair for WD-L014</td>
@@ -448,6 +451,137 @@ Screenshot:</code></pre>
 </div>
 <p>If <code>-dx11</code> gets you to the menu, open in-game graphics settings, configure normally, then try clearing the flag on a later session.</p>
 <hr/>
+<h2 id="launch-commands-vs-launch-options">Launch commands vs launch options</h2>
+<p>Steam’s <strong>Launch Options</strong> field is what players usually mean by <strong>launch commands</strong>, <strong>startup parameters</strong>, or “Steam launch commands.” Same box — different search phrasing.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Players say</th>
+<th>Steam UI label</th>
+<th>Same thing?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Launch commands / startup parameters</td>
+<td><strong>Launch Options</strong> (Properties → General)</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td>“Put <code>-dx11</code> in Steam”</td>
+<td>Launch Options field</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td>In-game console / settings sliders</td>
+<td>Graphics menu</td>
+<td><strong>No</strong> — different tool</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Exact path to the Launch Options box</h3>
+<ol>
+<li>Open <strong>Steam</strong> → <strong>Library</strong>.  </li>
+<li>Right-click <strong>WARDOGS</strong> → <strong>Properties</strong>.  </li>
+<li>Open the <strong>General</strong> tab.  </li>
+<li>Find <strong>Launch Options</strong> at the bottom of the panel.  </li>
+<li>Enter <strong>one</strong> test flag (or clear the field), close the dialog, launch once, record the result.</li>
+</ol>
+<p>![TODO OK: Steam → Library → WARDOGS → Properties → General → Launch Options box (empty vs one flag)]</p>
+<hr/>
+<h2 id="hitching-after-it-launches">Hitching after it launches?</h2>
+<p>If WARDOGS <strong>reaches a menu or match</strong> but hitching / stuttering / uneven frame times continue, <strong>launch options rarely fix that</strong>. Treat flags as a startup / display-init lab — not an FPS ritual.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Launch options?</th>
+<th>Go instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hitching / micro-stutters after a successful launch</td>
+<td>Usually <strong>no</strong> — one display flag only if the hitch is black-screen-adjacent at startup</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> · <a href="../wardogs-best-settings/">Best Settings</a></td>
+</tr>
+<tr>
+<td>Black screen / music-but-black at boot</td>
+<td>Yes — start with <strong><code>-windowed</code></strong> alone</td>
+<td><a href="../wardogs-black-screen/">Black Screen</a> + lab below</td>
+</tr>
+<tr>
+<td>Crash / CTD before menu</td>
+<td>Maybe — after overlays + verify + Elytra</td>
+<td><a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>FAQ lean:</strong> Does <code>-dx11</code> fix hitching? <strong>Usually no.</strong> Community cites <code>-dx11</code> for API / render <strong>startup</strong> experiments, not mid-match hitch cures. Retest on your build and prefer the stutter + settings spokes.</p>
+<hr/>
+<h2 id="dx11-directx-11-decision-when-vs--windowed"><code>-dx11</code> / DirectX 11 decision (when vs <code>-windowed</code>)</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Short answer</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FPS gain from <code>-dx11</code>?</td>
+<td><strong>Forbidden claim</strong> — no invented FPS%</td>
+<td>Lab only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>When to try <code>-dx11</code> first vs <code>-windowed</code> first</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>Try first</th>
+<th>Then</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black screen / music but black / stuck display init</td>
+<td><code>-windowed</code> alone</td>
+<td><code>-dx11</code> alone if still stuck</td>
+<td>Display-init branch — see <a href="../wardogs-black-screen/">Black Screen</a></td>
+</tr>
+<tr>
+<td>Crash-on-boot / access violation with GPU / render suspicion (overlays already off)</td>
+<td>Cautious <code>-dx11</code> alone</td>
+<td><code>-windowed</code> alone if still failing</td>
+<td>After overlays + file verify + Elytra identify — see <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>WD-L014 / Unable to launch</td>
+<td><strong>Neither first</strong></td>
+<td>Elytra repair path</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>Hitching / low FPS after a good launch</td>
+<td><strong>Neither as FPS fix</strong></td>
+<td>Settings / stutter triage</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
 <h2 id="what-launch-options-will-not-fix">What launch options will <strong>not</strong> fix</h2>
 <div class="table-wrap">
 <table>
@@ -483,6 +617,21 @@ Screenshot:</code></pre>
 <td>Mid-match hitch only</td>
 <td>Settings / GPU load</td>
 <td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>VRAM / out-of-memory / “out of video memory” style symptoms</td>
+<td>Flags are not a VRAM budget tool</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a> · <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>Mid-game crash to desktop (process exits after a good launch)</td>
+<td>Not a startup-flag class by default; dedicated CTD guide coming</td>
+<td>For now → <a href="../wardogs-crashing/">Crashing</a></td>
+</tr>
+<tr>
+<td>Won’t open / unable to launch / won’t start</td>
+<td>Wrong first tool if AC/verify path owns it</td>
+<td><a href="../wardogs-crashing/">Crashing</a> · <a href="../wardogs-black-screen/">Black Screen</a> · <a href="../wardogs-wd-l014/">WD-L014</a></td>
 </tr>
 <tr>
 <td>Ban-style Access Denied (Cheating + Permanent)</td>
@@ -716,7 +865,7 @@ Screenshot:</code></pre>
 </div>
 <hr/>
 <h2 id="faq">FAQ</h2>
-<p><strong>Q: What Steam launch options does WARDOGS officially recommend?</strong><br/> A: As of the 2026-09-16 editorial pass, <strong>no public Bulkhead “official launch options list”</strong> was found for EA. Community cites <code>-windowed</code> and <code>-dx11</code> as <strong>tests</strong>. Everything here is.</p>
+<p><strong>Q: What Steam launch options does WARDOGS officially recommend?</strong><br/> A: As of the 2026-09-21 editorial pass, <strong>no public Bulkhead “official launch options list”</strong> was found for EA. Community cites <code>-windowed</code> and <code>-dx11</code> as <strong>tests</strong>. Everything here is.</p>
 <p><strong>Q: Should I put <code>-windowed -dx11</code> in by default?</strong><br/>
 A: No. Test <code>-windowed</code> alone, then <code>-dx11</code> alone, then a short combo only if needed. Default steady state is an <strong>empty</strong> field once the menu is stable.</p>
 <p><strong>Q: Can launch options fix stuttering / low FPS?</strong><br/>
@@ -733,6 +882,20 @@ A: <strong>No.</strong> Store tag (2026-09-13 editorial): <strong>Uses Kernel Le
 A: Community lean: try <code>-windowed</code> alone, then continue on <a href="../wardogs-black-screen/">Black Screen</a>.</p>
 <p><strong>Q: Where do auth / “servers down” failures go?</strong><br/>
 A: Not here — <a href="../wardogs-is-down/">Is WARDOGS down?</a> and <a href="../wardogs-servers-down/">Servers</a>.</p>
+<p><strong>Q: Are “launch commands” the same as Steam launch options?</strong><br/>
+A: <strong>Yes.</strong> Players searching “WARDOGS launch commands” mean the Steam <strong>Launch Options</strong> field (Properties → General). Same box.</p>
+<p><strong>Q: Exact path to the Steam launch options box?</strong><br/>
+A: Library → right-click <strong>WARDOGS</strong> → <strong>Properties</strong> → <strong>General</strong> → <strong>Launch Options</strong> (bottom). One flag at a time; clear no-ops.</p>
+<p><strong>Q: Can launch options fix hitching / FPS drops after the game is running?</strong><br/>
+A: <strong>Unlikely.</strong> Prefer <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a> and <a href="../wardogs-best-settings/">Best Settings</a>. Flags are a startup lab, not an FPS ritual. <strong>No invented FPS%.</strong></p>
+<p><strong>Q: Best first flag for black screen with audio / music-but-black?</strong><br/>
+A: Community lean: <strong><code>-windowed</code></strong> alone, then continue on <a href="../wardogs-black-screen/">Black Screen</a>. Do not stack a kitchen-sink string.</p>
+<p><strong>Q: Best first flag for crash-on-boot with GPU / render suspicion?</strong><br/> A: After overlays off + file verify + Elytra identify: cautious <strong><code>-dx11</code> alone</strong> (/ may no-op). See <a href="../wardogs-crashing/">Crashing</a>.</p>
+<p><strong>Q: What does <code>-dx11</code> do in WARDOGS?</strong><br/>
+A: Community posts treat it as forcing a <strong>DirectX 11</strong> startup path for API/render experiments. It is <strong>not</strong> a verified FPS fix and <strong>may no-op</strong> on your build.</p>
+<p><strong>Q: <code>-dx11</code> vs DirectX 12 — which is the WARDOGS default?</strong><br/> A: <strong></strong> — this editorial pass does not claim a studio-published default API. Test one flag at a time only when the symptom fork points to an API experiment.</p>
+<p><strong>Q: Does <code>-dx11</code> fix hitching?</strong><br/>
+A: <strong>Usually no.</strong> Hitching after a successful launch → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>. Keep <code>-dx11</code> for startup / render-init labs.</p>
 <hr/>
 <h2 id="sources">Sources</h2>
 <ul>
