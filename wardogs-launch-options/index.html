@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)</title>
-  <meta name="description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
+  <meta name="description" content="Force DirectX 11 with WARDOGS -dx11 Steam launch options. When to try -dx11 vs -windowed, launch commands, one flag at a time. Last checked 2026-09-26." />
   <link rel="canonical" href="https://thewardogsguide.com/wardogs-launch-options/" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
   <meta property="og:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
-  <meta property="og:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
+  <meta property="og:description" content="Force DirectX 11 with WARDOGS -dx11 Steam launch options. When to try -dx11 vs -windowed, launch commands, one flag at a time. Last checked 2026-09-26." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://thewardogsguide.com/wardogs-launch-options/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)" />
-  <meta name="twitter:description" content="WARDOGS Steam launch options lab: -dx11, -windowed, one flag at a time. Also covers launch commands / DirectX 11 tests. One flag at a time. Last checked 2026-09-21." />
+  <meta name="twitter:description" content="Force DirectX 11 with WARDOGS -dx11 Steam launch options. When to try -dx11 vs -windowed, launch commands, one flag at a time. Last checked 2026-09-26." />
   <link rel="stylesheet" href="../assets/site.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Steam Launch Options: -dx11, -windowed, and Safe Tests (EA)", "item": "https://thewardogsguide.com/wardogs-launch-options/"}]}</script>
   <!-- Google tag (gtag.js) -->
@@ -98,6 +98,7 @@
     <nav class="toc" aria-label="On this page">
     <p class="toc-label">On this page</p>
     <ol>
+      <li><a href="#looking-for-wardogs-dx11-directx-11">Looking for WARDOGS -dx11 / DirectX 11?</a></li>
       <li><a href="#lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</a></li>
       <li><a href="#symptom-should-you-even-use-launch-options">Symptom → should you even use launch options?</a></li>
       <li><a href="#community-cited-options-table-may-no-op">Community-cited options table (may no-op)</a></li>
@@ -120,9 +121,9 @@
 <script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
-<p><strong>Last checked 2026-09-21 (Early Access).</strong></p>
+<p><strong>Last checked 2026-09-26 (Early Access).</strong></p>
 <hr/>
-<h2 id="lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
+<h2 id="looking-for-wardogs-dx11-directx-11">Looking for WARDOGS <code>-dx11</code> / DirectX 11?</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
 <script>
   atOptions = {
     'key' : 'cba1c97fde9723c1b43804fe5a2f8e9f',
@@ -134,6 +135,54 @@
 </script>
 <script src="https://www.highrevenueformat.com/cba1c97fde9723c1b43804fe5a2f8e9f/invoke.js"></script>
 </div>
+<p>If you searched <strong>wardogs dx11</strong> or <strong>DirectX 11</strong>, you are in the right lab — this is the Steam Launch Options page, not a separate DX11 guide.</p>
+<p><strong>Working rule:</strong> community posts treat <code>-dx11</code> as a <strong>startup / render-init experiment</strong> that may force a DirectX 11 path. It is <strong>not</strong> a verified FPS boost and <strong>may no-op</strong> on your build.</p>
+<p><strong>First move:</strong></p>
+<ol>
+<li>Empty the Launch Options field.</li>
+<li>Add <strong>only</strong> <code>-dx11</code>.</li>
+<li>Fully <strong>Exit</strong> Steam (not just close the window).</li>
+<li>Relaunch once and note the result.</li>
+<li>If nothing changes, clear the field.</li>
+</ol>
+<p><strong>Do not</strong> stack <code>-dx11 -windowed -ResX…</code> on the first try. One flag at a time is the whole point of this lab.</p>
+<p><strong>Fork:</strong></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>First move</th>
+<th>Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Music but black / no usable window</td>
+<td>Try <code>-windowed</code> alone first</td>
+<td><a href="../wardogs-black-screen/">Black Screen</a></td>
+</tr>
+<tr>
+<td>Crash-on-boot with GPU/API suspicion <strong>after</strong> overlays off + file verify + Elytra identify</td>
+<td>Cautious <code>-dx11</code> alone</td>
+<td><a href="../wardogs-crashing/">Crashing</a> if dump</td>
+</tr>
+<tr>
+<td>Hitching <strong>after</strong> a successful menu</td>
+<td>Leave flags</td>
+<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+</tr>
+<tr>
+<td>WD-L014 / Unable to launch dialog</td>
+<td>No launch flags first</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>:</strong> whether this EA build defaults to DX12 in any official Bulkhead / Steam note — do <strong>not</strong> claim a studio default without a dated source. As of 2026-09-26, this editorial pass found none.</p>
+<hr/>
+<h2 id="lab-rules-read-before-pasting-anything">Lab rules (read before pasting anything)</h2>
 <div class="table-wrap">
 <table>
 <thead>
@@ -546,40 +595,41 @@ Screenshot:</code></pre>
 <table>
 <thead>
 <tr>
-<th>You see</th>
-<th>Try first</th>
-<th>Then</th>
-<th>Notes</th>
+<th>Symptom</th>
+<th>First flag</th>
+<th>Why</th>
+<th>Next</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Black screen / music but black / stuck display init</td>
+<td>Music but black / no menu</td>
 <td><code>-windowed</code> alone</td>
-<td><code>-dx11</code> alone if still stuck</td>
-<td>Display-init branch — see <a href="../wardogs-black-screen/">Black Screen</a></td>
+<td>Display/window path</td>
+<td><a href="../wardogs-black-screen/">../wardogs-black-screen/</a></td>
 </tr>
 <tr>
-<td>Crash-on-boot / access violation with GPU / render suspicion (overlays already off)</td>
-<td>Cautious <code>-dx11</code> alone</td>
-<td><code>-windowed</code> alone if still failing</td>
-<td>After overlays + file verify + Elytra identify — see <a href="../wardogs-crashing/">Crashing</a></td>
+<td>Crash on boot, GPU/API suspicion after verify + Elytra check</td>
+<td><code>-dx11</code> alone</td>
+<td>API experiment</td>
+<td><a href="../wardogs-crashing/">../wardogs-crashing/</a> if dump</td>
 </tr>
 <tr>
-<td>WD-L014 / Unable to launch</td>
-<td><strong>Neither first</strong></td>
-<td>Elytra repair path</td>
-<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+<td>Already in menu, hitching / low FPS</td>
+<td><em>(none)</em></td>
+<td>Flags are not an FPS ritual</td>
+<td><a href="../wardogs-stuttering-fps/">../wardogs-stuttering-fps/</a></td>
 </tr>
 <tr>
-<td>Hitching / low FPS after a good launch</td>
-<td><strong>Neither as FPS fix</strong></td>
-<td>Settings / stutter triage</td>
-<td><a href="../wardogs-stuttering-fps/">Stuttering / FPS</a></td>
+<td>WD-L014 / Unable to launch dialog</td>
+<td><em>(none first)</em></td>
+<td>Elytra/launcher class</td>
+<td><a href="../wardogs-wd-l014/">../wardogs-wd-l014/</a></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>Same fork as the above-fold DX11 block — test <strong>one</strong> flag, clear no-ops, never stack on attempt one.</p>
 <hr/>
 <h2 id="what-launch-options-will-not-fix">What launch options will <strong>not</strong> fix</h2>
 <div class="table-wrap">
@@ -894,11 +944,14 @@ A: <strong>Unlikely.</strong> Prefer <a href="../wardogs-stuttering-fps/">Stutte
 <p><strong>Q: Best first flag for black screen with audio / music-but-black?</strong><br/>
 A: Community lean: <strong><code>-windowed</code></strong> alone, then continue on <a href="../wardogs-black-screen/">Black Screen</a>. Do not stack a kitchen-sink string.</p>
 <p><strong>Q: Best first flag for crash-on-boot with GPU / render suspicion?</strong><br/> A: After overlays off + file verify + Elytra identify: cautious <strong><code>-dx11</code> alone</strong> (/ may no-op). See <a href="../wardogs-crashing/">Crashing</a>.</p>
-<p><strong>Q: What does <code>-dx11</code> do in WARDOGS?</strong><br/>
-A: Community posts treat it as forcing a <strong>DirectX 11</strong> startup path for API/render experiments. It is <strong>not</strong> a verified FPS fix and <strong>may no-op</strong> on your build.</p>
+<p><strong>Q: What does wardogs dx11 / <code>-dx11</code> do?</strong><br/>
+A: Community troubleshooting treats <code>-dx11</code> as forcing a DirectX 11 startup path for API/render experiments on Steam. It is not a verified FPS fix and may no-op. Test alone after overlays off + file verify when the symptom fork says “API experiment.”</p>
 <p><strong>Q: <code>-dx11</code> vs DirectX 12 — which is the WARDOGS default?</strong><br/> A: <strong></strong> — this editorial pass does not claim a studio-published default API. Test one flag at a time only when the symptom fork points to an API experiment.</p>
-<p><strong>Q: Does <code>-dx11</code> fix hitching?</strong><br/>
-A: <strong>Usually no.</strong> Hitching after a successful launch → <a href="../wardogs-stuttering-fps/">Stuttering / FPS</a>. Keep <code>-dx11</code> for startup / render-init labs.</p>
+<p><strong>Q: Does -dx11 fix hitching or stuttering?</strong><br/>
+A: Usually no. After a successful launch, use <a href="../wardogs-stuttering-fps/">../wardogs-stuttering-fps/</a>. Keep <code>-dx11</code> for startup/render-init labs.</p>
+<p><strong>Q: How do I force DirectX 11 in WARDOGS?</strong><br/> A: Steam → Library → WARDOGS → Properties → General → Launch Options → enter <code>-dx11</code> only → Exit Steam fully → launch once. Clear the field if nothing changes. No official Bulkhead “force DX11” menu was found in the 2026-09-26 pass (: in-client Graphics API dropdown if any).</p>
+<p><strong>Q: wardogs dx11 vs -windowed — which first?</strong><br/>
+A: Black screen with audio → <code>-windowed</code> first. Crash-on-boot GPU/API suspicion after verify + Elytra → <code>-dx11</code> alone. Never both on attempt one.</p>
 <hr/>
 <h2 id="sources">Sources</h2>
 <ul>

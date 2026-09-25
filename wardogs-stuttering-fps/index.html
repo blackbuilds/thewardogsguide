@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)</title>
-  <meta name="description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <meta name="description" content="WARDOGS stuttering, hitching, or stuck on Compiling Shaders: wait vs cache clear vs crash path. No invented FPS%. Last checked 2026-09-26." />
   <link rel="canonical" href="https://thewardogsguide.com/wardogs-stuttering-fps/" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
   <meta property="og:title" content="WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)" />
-  <meta property="og:description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <meta property="og:description" content="WARDOGS stuttering, hitching, or stuck on Compiling Shaders: wait vs cache clear vs crash path. No invented FPS%. Last checked 2026-09-26." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://thewardogsguide.com/wardogs-stuttering-fps/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)" />
-  <meta name="twitter:description" content="WARDOGS stuttering or low FPS triage: hitch vs steady low FPS, shader cache leads. No invented FPS%. Last checked 2026-09-16." />
+  <meta name="twitter:description" content="WARDOGS stuttering, hitching, or stuck on Compiling Shaders: wait vs cache clear vs crash path. No invented FPS%. Last checked 2026-09-26." />
   <link rel="stylesheet" href="../assets/site.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Stuttering or Low FPS: Hitching vs Settings Fixes (EA)", "item": "https://thewardogsguide.com/wardogs-stuttering-fps/"}]}</script>
   <!-- Google tag (gtag.js) -->
@@ -102,6 +102,7 @@
       <li><a href="#stutter-vs-low-fps-core-table">Stutter vs low FPS (core table)</a></li>
       <li><a href="#decision-tree">Decision tree</a></li>
       <li><a href="#shader-cache-as-public-lead-cite-dont-overclaim">Shader cache as public lead (cite, don’t overclaim)</a></li>
+      <li><a href="#stuck-compiling-shaders">Stuck Compiling Shaders</a></li>
       <li><a href="#hitching-vs-settings-who-owns-the-fix">Hitching vs settings: who owns the fix?</a></li>
       <li><a href="#overlay-background-isolation-shared-with-crash">Overlay / background isolation (shared with Crash)</a></li>
       <li><a href="#symptom-lever-cheat-sheet">Symptom → lever cheat sheet</a></li>
@@ -116,7 +117,7 @@
 <script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
-<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<p><strong>Last checked 2026-09-26 (Early Access).</strong></p>
 <hr/>
 <h2 id="what-this-page-covers-and-refuses-to-invent">What this page covers (and refuses to invent)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
 <script>
@@ -344,6 +345,76 @@
 </table>
 </div>
 <p><strong>Do not</strong> publish “clearing cache gives +X% FPS.” We refuse invented percentages.</p>
+<hr/>
+<h2 id="stuck-compiling-shaders">Stuck Compiling Shaders</h2>
+<p>Players searching <strong>War Dogs stuck on compiling shaders</strong> usually mean: first boot, or after a GPU driver / game patch, the progress bar or status text sits on <strong>Compiling Shaders</strong> for a long time and the game looks frozen.</p>
+<p><strong>Fork (critical — pick one before you delete anything):</strong></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>What you observe</th>
+<th>Do this</th>
+<th>Do not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process <strong>alive</strong>, disk/GPU active, no crash reporter</td>
+<td><strong>Wait out one full compile</strong> (LagoFast-class public patience lead). Let a healthy cache build.</td>
+<td>Alt-F4 mid-compile if progress continues</td>
+</tr>
+<tr>
+<td>Same percent repeatedly, then <strong>dies</strong> / dump / desktop</td>
+<td>Stop waiting → <a href="../wardogs-crashing/">Crashing</a> + community DirectX shader-cache clear lead below</td>
+<td>Endless “wait longer” loops on a dead process</td>
+</tr>
+<tr>
+<td>Black window + compile audio/text</td>
+<td>Also open <a href="../wardogs-black-screen/">Black Screen</a> (shader vs true black fork already there)</td>
+<td>Treat every black frame as “just shaders” forever</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>After a bad compile crash — cache cleanup lead (cite, don’t overclaim):</strong><br/>
+Community guides (Worldeka / 2UpSkill-class) clear the Windows <strong>DirectX Shader Cache</strong> (Disk Cleanup checkbox) and/or vendor cache, then accept <strong>one hitchy rebuild</strong> on the next launch. Steps are <strong>community leads</strong>, not a studio FIXED ritual.</p>
+<pre><code class="language-text">After crash-during-compile: 1) Confirm process is gone (no leftover WARDOGS) 2) Community lead: Disk Cleanup → DirectX Shader Cache (checkbox): exact Windows path / UI labels on your PC before sounding absolute 3) Optional vendor cache step per a guide you trust (cite Sources) 4) Launch once → expect a hitchy rebuild 5) If it dies at the same percent again → Crash ladder, not more cache deletes</code></pre>
+<p><strong>What this is not:</strong></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Wrong tool here</th>
+<th>Go instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-match hitch after shaders already built</td>
+<td>Endless cache deletes</td>
+<td>Rest of this page (overlay / settings decision tree)</td>
+</tr>
+<tr>
+<td>Won’t launch with WD-L014 / Unable to launch</td>
+<td>Shader patience</td>
+<td><a href="../wardogs-wd-l014/">WD-L014</a></td>
+</tr>
+<tr>
+<td>Compile never starts because display init failed</td>
+<td>FPS ritual flags</td>
+<td><a href="../wardogs-launch-options/">Launch Options</a> only for startup display — not as an FPS ritual</td>
+</tr>
+<tr>
+<td>Flat low FPS with no compile bar</td>
+<td>Compiling Shaders fork</td>
+<td><a href="../wardogs-best-settings/">Best Settings</a> Maximum FPS path</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>No invented FPS%.</strong> Clearing cache is a rebuild lead, not “+40 FPS.”</p>
 <hr/>
 <h2 id="hitching-vs-settings-who-owns-the-fix">Hitching vs settings: who owns the fix?</h2>
 <div class="table-wrap">
@@ -674,7 +745,7 @@
 <hr/>
 <h2 id="faq">FAQ</h2>
 <p><strong>Q: Why does WARDOGS stutter in my first match?</strong><br/>
-A: Public FAQ-class leads (Recharge, Settings Batch-1, LagoFast) treat first-match hitch as <strong>shader compilation / cache building</strong>. If the process stays up, finish the session. If it crashes during compile, use Crash / Black Screen + cache cleanup leads.</p>
+A: Public FAQ-class leads (Recharge, Settings Batch-1, LagoFast) treat first-match hitch as <strong>shader compilation / cache building</strong>. If the status text is literally <strong>Compiling Shaders</strong>, use <a href="#stuck-compiling-shaders">#stuck-compiling-shaders</a>. If the process stays up, finish the session. If it crashes during compile, use Crash / Black Screen + cache cleanup leads.</p>
 <p><strong>Q: Is stuttering the same as low FPS?</strong><br/>
 A: Not always. Hitch = uneven spikes; low FPS = consistently slow. Different first levers (cache/overlay/stream vs settings families).</p>
 <p><strong>Q: Will clearing the DirectX shader cache fix hitching?</strong><br/> A: Community guides (Worldeka, 2UpSkill, ComputerSluggish, PixelNitro) present it as a high-yield lead after driver/patch issues. Outcome on your PC is. Expect a hitchy rebuild once. <strong>No FPS%</strong>.</p>

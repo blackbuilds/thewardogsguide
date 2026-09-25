@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</title>
-  <meta name="description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <title>WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)</title>
+  <meta name="description" content="WARDOGS black screen on launch or startup: music-but-black vs crash, overlays, -windowed, verify files, Elytra. Last checked 2026-09-26." />
   <link rel="canonical" href="https://thewardogsguide.com/wardogs-black-screen/" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
-  <meta property="og:title" content="WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)" />
-  <meta property="og:description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <meta property="og:title" content="WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)" />
+  <meta property="og:description" content="WARDOGS black screen on launch or startup: music-but-black vs crash, overlays, -windowed, verify files, Elytra. Last checked 2026-09-26." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://thewardogsguide.com/wardogs-black-screen/" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)" />
-  <meta name="twitter:description" content="WARDOGS black screen on launch: music-but-black vs hard crash, overlays, windowed test, Elytra. Last checked 2026-09-16." />
+  <meta name="twitter:title" content="WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)" />
+  <meta name="twitter:description" content="WARDOGS black screen on launch or startup: music-but-black vs crash, overlays, -windowed, verify files, Elytra. Last checked 2026-09-26." />
   <link rel="stylesheet" href="../assets/site.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)", "item": "https://thewardogsguide.com/wardogs-black-screen/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewardogsguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Fix", "item": "https://thewardogsguide.com/wardogs-fixes/"}, {"@type": "ListItem", "position": 3, "name": "WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)", "item": "https://thewardogsguide.com/wardogs-black-screen/"}]}</script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V32PWJH9N8"></script>
   <script>
@@ -78,11 +78,11 @@
       <ol>
         <li><a href="../">Home</a></li>
         <li><a href="../wardogs-fixes/">Fix</a></li>
-        <li aria-current="page">WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</li>
+        <li aria-current="page">WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)</li>
       </ol>
     </nav>
     <p class="version-stamp">Last checked 14 Sep 2026 · Steam Early Access. Guides may change after patches.</p>
-    <h1>WARDOGS Black Screen on Launch: Stuck at Startup Fixes (Steam EA)</h1>
+    <h1>WARDOGS Black Screen on Launch or Startup: Fixes (Steam EA)</h1>
     <div class="ad-slot ad-slot--mobile-banner" aria-hidden="true">
 <script>
   atOptions = {
@@ -113,11 +113,11 @@
       <li><a href="#sources">Sources</a></li>
     </ol>
   </nav>
-    <p><strong>TL;DR:</strong> This page is for <strong>black screen / blackscreen / stuck at startup</strong> on Steam Early Access — the process starts (or Steam says Running) but you never reach a usable menu. It is <strong>distinct from mid-match crash</strong> and from auth/queue codes like <code>1147405308</code>. Fork first: <strong>music-but-black</strong> (display / window / overlay) vs <strong>hard crash</strong> (dump / instant desktop). Store anti-cheat is <strong>Elytra</strong> (not EAC as current). Safe tests: overlays off one-at-a-time → windowed launch option (<strong></strong> flags on <a href="../wardogs-launch-options/">Launch Options</a>) → file verify → GPU driver sanity → <strong>Elytra</strong> identify/repair if launch dies at AC init. Shader-compile stalls that later recover → patience + stutter notes; process exit → Crash ladder. No invented FIXED stamps.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
+    <p><strong>TL;DR:</strong> This page is for <strong>black screen on launch or startup</strong> (also: blackscreen / stuck at startup) on Steam Early Access — the process starts (or Steam says Running) but you never reach a usable menu. It is <strong>distinct from mid-match crash</strong> and from auth/queue codes like <code>1147405308</code>. Fork first: <strong>music-but-black</strong> (display / window / overlay) vs <strong>hard crash</strong> (dump / instant desktop). Store anti-cheat is <strong>Elytra</strong> (not EAC as current). Safe tests: overlays off one-at-a-time → windowed launch option (<strong></strong> flags on <a href="../wardogs-launch-options/">Launch Options</a>) → file verify → GPU driver sanity → <strong>Elytra</strong> identify/repair if launch dies at AC init. Shader-compile stalls that later recover → patience + stutter notes; process exit → Crash ladder. No invented FIXED stamps.</p><div class="ad-slot ad-slot--native" aria-hidden="true">
 <script async="async" data-cfasync="false" src="https://pl31430801.profitableratecpmnetwork.com/04d1cbeeef830f75d761b0cbea8899a6/invoke.js"></script>
 <div id="container-04d1cbeeef830f75d761b0cbea8899a6"></div>
 </div>
-<p><strong>Last checked 2026-09-16 (Early Access).</strong></p>
+<p><strong>Last checked 2026-09-26 (Early Access).</strong></p>
 <hr/>
 <h2 id="what-this-page-is-and-is-not">What this page is (and is not)</h2><div class="ad-slot ad-slot--mpu" aria-hidden="true">
 <script>
@@ -437,7 +437,8 @@
 </tbody>
 </table>
 </div>
-<p>After you can enter matches but hitch when entering new areas, continue on <a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — that is <strong>not</strong> the same as stuck-at-startup black screen.</p>
+<p>After you can enter matches but hitch when entering new areas, continue on <a href="../wardogs-stuttering-fps/">Stuttering or Low FPS</a> — that is <strong>not</strong> the same as stuck-at-startup black screen.
+Longer wait-vs-crash decision for “stuck on Compiling Shaders” → <a href="../wardogs-stuttering-fps/#stuck-compiling-shaders">Stuttering — Compiling Shaders</a>.</p>
 <hr/>
 <h2 id="boundary-cases">Boundary cases</h2>
 <div class="table-wrap">
@@ -615,7 +616,11 @@ A: Only if you actually receive auth/queue dialogs. Pure black local window with
 <hr/>
 <p><strong>Q: Does HDR or multi-monitor cause WARDOGS black screen?</strong><br/> A: Undocumented as official. Treat as A/B: windowed on primary display, then toggle HDR/Auto-HDR once. Document results; don’t invent a universal rule.</p>
 <p><strong>Q: I hear compiling shaders but see black — wait or kill?</strong><br/>
-A: If the process is alive and disk/GPU busy, wait once (LagoFast-class patience lead). If it repeatedly dies at the same percent with a crash reporter, switch to Crash + shader-cache leads — don’t infinite-wait a hard crash.</p>
+A: If the process is alive and disk/GPU busy, wait once (LagoFast-class patience lead). If it repeatedly dies at the same percent with a crash reporter, switch to Crash + shader-cache leads — don’t infinite-wait a hard crash. Longer Compiling Shaders fork → <a href="../wardogs-stuttering-fps/#stuck-compiling-shaders">../wardogs-stuttering-fps/#stuck-compiling-shaders</a>.</p>
+<p><strong>Q: WARDOGS black screen on startup — same as on launch?</strong><br/>
+A: Yes on this page — treat “on startup” / “on launch” / “stuck at startup” as the same fork (music-but-black vs hard crash), then overlays → <code>-windowed</code> → verify → GPU → Elytra.</p>
+<p><strong>Q: Black screen on launch but I hear compiling shaders?</strong><br/>
+A: If process alive, wait once; if it dies repeatedly, Crash + shader-cache leads; details also on Stuttering “Compiling Shaders” section (<a href="../wardogs-stuttering-fps/#stuck-compiling-shaders">../wardogs-stuttering-fps/#stuck-compiling-shaders</a>).</p>
 <h2 id="related-internal-links">Related internal links</h2>
 <ul>
 <li><a href="../wardogs-crashing/">Crashing / Won’t Launch (Elytra)</a> — dumps, mid-match, full Elytra ladder  </li>
